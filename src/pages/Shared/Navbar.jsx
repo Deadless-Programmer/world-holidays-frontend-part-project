@@ -1,66 +1,59 @@
-
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-blue-600 text-white">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <div className="text-2xl font-bold">Brand</div>
-        <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
-          >
-            <svg
-              className="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              )}
-            </svg>
-          </button>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+        isScrolled
+          ? "bg-white shadow-lg transform translate-y-0"
+          : "bg-transparent transform translate-y-0"
+      }`}
+    >
+      <div className="container mx-auto flex justify-between items-center px-4 py-3 lg:px-8">
+        <div className="text-lg font-bold">
+          <a href="/" className="text-gray-800">
+            My Logo
+          </a>
         </div>
-        <div
-          className={`md:flex md:items-center md:space-x-6 ${
-            isOpen ? "block" : "hidden"
-          }`}
+        <ul className="hidden md:flex space-x-6">
+          <li>
+            <a href="#home" className="text-gray-700 hover:text-blue-500">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="text-gray-700 hover:text-blue-500">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#services" className="text-gray-700 hover:text-blue-500">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="text-gray-700 hover:text-blue-500">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <button
+          className="md:hidden bg-blue-500 text-white px-4 py-2 rounded"
+          aria-label="Toggle Menu"
         >
-          <Link to="/" className="block py-2 px-4 hover:bg-blue-500 rounded">
-            Home
-          </Link>
-          <a href="#" className="block py-2 px-4 hover:bg-blue-500 rounded">
-            About
-          </a>
-          <a href="#" className="block py-2 px-4 hover:bg-blue-500 rounded">
-            Services
-          </a>
-          <Link to="contact" className="block py-2 px-4 hover:bg-blue-500 rounded">
-            Contact
-          </Link>
-        </div>
+          Menu
+        </button>
       </div>
     </nav>
   );
