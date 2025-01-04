@@ -5,7 +5,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -14,42 +14,42 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all text-white duration-1000 ease-in-out  ${
         isScrolled
-          ? "bg-white shadow-lg transform translate-y-0"
+          ? "bg-white text-black  shadow-lg transform translate-y-0"
           : "bg-transparent transform translate-y-0"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center px-4 py-3 lg:px-8">
-        <div className="text-lg font-bold">
-          <a href="/" className="text-gray-800">
+      <div className="container max-w-6xl mx-auto flex justify-between items-center px-4 py-6 lg:px-8">
+        <div className="text-lg font-bold ">
+          <a href="/" className="">
             My Logo
           </a>
         </div>
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#home" className="text-gray-700 hover:text-blue-500">
+            <a href="#home" className=" hover:text-blue-500">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="text-gray-700 hover:text-blue-500">
+            <a href="#about" className=" hover:text-blue-500">
               About
             </a>
           </li>
           <li>
-            <a href="#services" className="text-gray-700 hover:text-blue-500">
+            <a href="#services" className=" hover:text-blue-500">
               Services
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-gray-700 hover:text-blue-500">
+            <a href="#contact" className=" hover:text-blue-500">
               Contact
             </a>
           </li>
         </ul>
         <button
-          className="md:hidden bg-blue-500 text-white px-4 py-2 rounded"
+          className="md:hidden bg-blue-500  px-4 py-2 rounded"
           aria-label="Toggle Menu"
         >
           Menu
