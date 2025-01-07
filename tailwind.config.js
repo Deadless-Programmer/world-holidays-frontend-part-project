@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */ 
 export default {
   content: [
     "./index.html",
@@ -7,19 +7,23 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        moveBg: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+        zoomOutLeftToRight: {
+          '0%': {
+            transform: 'scale(1.2)', // Start zoomed in
+            backgroundPosition: '0% 50%', // Start from the left
+          },
+          '100%': {
+            transform: 'scale(1)', // End at normal size
+            backgroundPosition: '100% 50%', // End at the right
+          },
         },
       },
       animation: {
-        moveBg: 'moveBg 15s infinite linear',
+        zoomOutLeftToRight: 'zoomOutLeftToRight 10s ease-in-out infinite',
       },
     },
   },
   plugins: [
     require('daisyui'),
   ],
-}
-
+};
