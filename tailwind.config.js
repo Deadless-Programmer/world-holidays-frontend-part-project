@@ -21,6 +21,11 @@ export default {
       animation: {
         zoomOutLeftToRight: 'zoomOutLeftToRight 10s ease-in-out infinite',
       },
+
+      fontFamily: {
+        playfair: ['"Playfair Display"', 'serif'],
+        nunito: ['"Nunito"', 'sans-serif'],
+      },
     },
   },
   plugins: [

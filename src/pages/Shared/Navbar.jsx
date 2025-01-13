@@ -38,6 +38,11 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="#about" className=" hover:text-blue-500">
+              Packages
+            </a>
+          </li>
+          <li>
             <a href="#services" className=" hover:text-blue-500">
               Services
             </a>
@@ -45,6 +50,11 @@ const Navbar = () => {
           <li>
             <a href="#contact" className=" hover:text-blue-500">
               Contact
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className=" hover:text-blue-500">
+              Login
             </a>
           </li>
         </ul>

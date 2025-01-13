@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 const Banner = () => {
   const images = [
-    'https://i.postimg.cc/QCzPRdHW/bastei-3014467-1920.jpg',
-    'https://i.postimg.cc/P5fjnBRK/polynesia-3021072-1920.jpg',
-    'https://i.postimg.cc/3x9vF461/beach-666122-1280.jpg',
+    'https://i.postimg.cc/6QfSNKPQ/parthenon-4396367-1920.jpg',
+    // 'https://i.postimg.cc/P5fjnBRK/polynesia-3021072-1920.jpg',
+    // 'https://i.postimg.cc/3x9vF461/beach-666122-1280.jpg',
   ];
   
-  const [currentIndex, setCurrentIndex] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(2);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change image every 5 seconds
+    }, 1000); // Change image every 5 seconds
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -30,18 +30,15 @@ const Banner = () => {
           }}
         ></div>
       ))}
-
+ {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20"></div> 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 ">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Welcome to Your Adventure
+        <p className='font-nunito text-sm text-white uppercase tracking-widest '> Discoer    the    World’s   Hidden   Gemss</p>
+        <h1 className="font-playfair text-6xl font-black leading-tight text-white mb-4  pt-3 w-4/5 tracking-wide">
+        Create memories with exclusive adventure packages
         </h1>
-        <p className="text-lg md:text-xl mb-8">
-          Explore the beauty of the world with us.
-        </p>
-        <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-semibold">
-          Get Started
-        </button>
+       
       </div>
     </div>
   );
