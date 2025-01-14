@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    ::selection {
+      @apply bg-orange-500 text-customSelectionText;
+    }
+  }
+
+
+
+  /* @layer components {
+    select {
+      @apply bg-gray-100 border border-gray-300 rounded-lg p-2 text-gray-700;
+    }
+  
+    option {
+      @apply bg-white text-gray-700 p-10 hover:bg-gray-200;
+    }
+  } */

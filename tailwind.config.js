@@ -26,6 +26,12 @@ export default {
         playfair: ['"Playfair Display"', 'serif'],
         nunito: ['"Nunito"', 'sans-serif'],
       },
+
+      colors: {
+       // customSelectionBg: '#1e40af', // Your custom background color
+        customSelectionText: '#ffffff', // Your custom text color
+        
+      },
     },
   },
   plugins: [
