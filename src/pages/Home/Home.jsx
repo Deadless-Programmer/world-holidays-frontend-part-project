@@ -70,8 +70,9 @@ const Home = () => {
         <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600">Load more posts...</button>
       </div>
     </div>
-  </section></div>
+  </section>
+  </div>
   )
 }
 
-export default Home
+export default Home;
