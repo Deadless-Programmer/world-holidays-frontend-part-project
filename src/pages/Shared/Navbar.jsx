@@ -32,27 +32,27 @@ const Navbar = () => {
       <div className="container max-w-6xl mx-auto  flex justify-between items-center px-4 py-6 lg:px-8">
         {/* Logo */}
         <div className="text-lg font-bold">
-          <a href="/" className="">
-           Logo
-          </a>
+        {isScrolled ? <img className="w-22 h-10" src='https://i.postimg.cc/w3K0SWMK/artboard-loog-01.png' alt="" />
+        : <img className="w-22 h-10" src='https://i.postimg.cc/d0mPnyWt/artboard-loog.png' alt="" /> }
+        
         </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#home" className="hover:text-orange-500 transition-colors">
+            <a href="#home" className="hover:text-orange-500 transition-colors font-nunito ">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-orange-500 transition-colors">
+            <a href="#about" className="hover:text-orange-500 transition-colors font-nunito">
               About
             </a>
           </li>
           <li>
             <a
               href="#packages"
-              className="hover:text-orange-500 transition-colors"
+              className="hover:text-orange-500 transition-colors font-nunito"
             >
               Packages
             </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <li>
             <a
               href="#services"
-              className="hover:text-orange-500 transition-colors"
+              className="hover:text-orange-500 transition-colors font-nunito"
             >
               Services
             </a>
@@ -68,13 +68,13 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="hover:text-orange-500 transition-colors"
+              className="hover:text-orange-500 transition-colors font-nunito"
             >
               Contact
             </a>
           </li>
           <li>
-            <a href="#login" className="hover:text-orange-500 transition-colors">
+            <a href="#login" className="hover:text-orange-500 transition-colors font-nunito">
               Login
             </a>
           </li>
@@ -92,7 +92,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed top-20 left-0 w-full bg-white text-black shadow-lg transition-all duration-500 ease-in-out ${
+        className={`md:hidden fixed top-[104PX] left-0 w-full bg-white text-black shadow-lg transition-all duration-500 ease-in-out ${
           isMenuOpen
             ? "opacity-100 translate-y-0 max-h-screen"
             : "opacity-0 -translate-y-10 max-h-0 overflow-hidden"
@@ -100,14 +100,14 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-center space-y-4 py-4">
           <li>
-            <a href="#home" className="hover:text-orange-500" onClick={toggleMenu}>
+            <a href="#home" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
               Home
             </a>
           </li>
           <li>
             <a
               href="#about"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               About
@@ -116,7 +116,7 @@ const Navbar = () => {
           <li>
             <a
               href="#packages"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Packages
@@ -125,7 +125,7 @@ const Navbar = () => {
           <li>
             <a
               href="#services"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Services
@@ -134,7 +134,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Contact
@@ -143,7 +143,7 @@ const Navbar = () => {
           <li>
             <a
               href="#login"
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Login
