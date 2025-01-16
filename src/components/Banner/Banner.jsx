@@ -46,10 +46,14 @@ const Banner = () => {
            <SearchBar/>
           
        </div> */}
-      <div className='flex justify-center  z-10 absolute left-0 right-0   md:bottom-24 m-auto	 '>
+      <div className='hidden md:flex justify-center  z-10 absolute left-0 right-0   md:bottom-24 m-auto   '>
            <SearchBar/>
           
        </div>
+
+       
+       
+   
       
     </div>
   );

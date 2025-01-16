@@ -7,11 +7,11 @@ const Home = () => {
     <div>
       <Banner></Banner>
       
- <div className='md:hidden mt-10'>
+ <div className='md:hidden flex justify-center py-14 '>
  <SearchBar/>
  </div>
       
-      <section className="dark:bg-gray-100 dark:text-gray-800 mt-20 md:mt-0">
+      {/* <section className="dark:bg-gray-100 dark:text-gray-800 mt-32 md:mt-0">
     <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12" bis_skin_checked="1">
       <a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
         <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
@@ -75,7 +75,7 @@ const Home = () => {
         <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600">Load more posts...</button>
       </div>
     </div>
-  </section>
+  </section> */}
   </div>
   )
 }
