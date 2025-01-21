@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../../components/Banner/Banner'
 import SearchBar from '../../components/SearchBar/SearchBar';
 import WhoAreWe from '../../components/home/WhoAreWe/WhoAreWe';
+import PopularTours from '../../components/home/PopularTours/PopularTours';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
  </div>
       
       <WhoAreWe/>
+      <PopularTours/>
      
   </div>
   )

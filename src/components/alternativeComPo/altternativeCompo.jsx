@@ -76,3 +76,53 @@ export default App;
 
 // Tailwind Config
 // Add "@tailwind base; @tailwind components; @tailwind utilities;" to your main CSS file.
+
+
+import React from "react";
+
+const Gallery = () => {
+  const images = [
+    {
+      src: "https://images.unsplash.com/photo-1431818563807-927945852ab6?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=",
+      author: "Paul Gilmore",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1443397646383-16272048780e?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=",
+      author: "M. O'Neil",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1442965416224-f6a7eca980fa?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+      author: "N. Mehta",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 font-sans">
+      <h1 className="text-xl font-semibold text-gray-800 mb-6">
+        Gallery with Hover Effect
+      </h1>
+      <div className="flex flex-wrap justify-center gap-4">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="relative group max-w-xs overflow-hidden rounded-lg shadow-lg"
+          >
+            <img
+              src={image.src}
+              alt={`Image by ${image.author}`}
+              className="w-full h-auto object-cover transform group-hover:scale-110 transition duration-500"
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+              <p className="text-gray-800 font-medium text-lg">
+                + {image.author}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Gallery;
+
