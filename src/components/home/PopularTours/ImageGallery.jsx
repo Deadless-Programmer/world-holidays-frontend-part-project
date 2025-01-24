@@ -1,0 +1,60 @@
+import React from "react";
+
+const ImageGallery = () => {
+  const images = [
+    {
+      id: 1,
+      src: "https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      text: "Image 1",
+    },
+    {
+      id: 2,
+      src: "https://images.unsplash.com/photo-1566976273017-6e6df9bbdbee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      text: "Image 2",
+    },
+    {
+      id: 3,
+      src: "https://images.unsplash.com/photo-1548957175-84f0f9af659e?q=80&w=1782&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      text: "Image 3",
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1722526933541-9a9cdfcdb28f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      text: "Image 4",
+    },
+    {
+      id: 5,
+      src: "https://images.unsplash.com/photo-1544750040-4ea9b8a27d38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      text: "Image 5",
+    },
+    {
+      id: 6,
+      src: "https://images.unsplash.com/photo-1732162933719-b618142c1ad3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      text: "Image 6",
+    },
+  ];
+
+  return (
+    <div className="grid gap-4 lg:gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        {images.map((image) => (
+          <div
+            key={image.id}
+            className="relative group overflow-hidden"
+          >
+            <img
+              src={image.src}
+              alt={image.text}
+              className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white text-center p-2 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+              {image.text}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ImageGallery;
