@@ -36,7 +36,7 @@ const ImageGallery = () => {
   ];
 
   return (
-    <div className="grid gap-4 lg:gap-6 mt-8">
+    <div className="grid gap-4 lg:gap-6 mt-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
         {images.map((image) => (
           <div

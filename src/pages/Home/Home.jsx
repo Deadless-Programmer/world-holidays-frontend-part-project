@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import WhoAreWe from '../../components/home/WhoAreWe/WhoAreWe';
 import PopularTours from '../../components/home/PopularTours/PopularTours';
 import NextTour from '../../components/home/NextTour/NextTour';
+import PopularDestination from '../../components/home/PopularDestination/PopularDestination';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <WhoAreWe/>
       <PopularTours/>
       <NextTour/>
+      <PopularDestination/>
      
   </div>
   )

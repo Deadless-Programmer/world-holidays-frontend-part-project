@@ -1,16 +1,19 @@
 import React from "react";
 import ImageGallery from "./ImageGallery";
-
+import SectionHeading from "../../SectionHeading/SectionHeading";
 
 const PopularTours = () => {
- 
-
   return (
-   <section className="container max-w-7xl p-6 mx-auto ">
-	 <p className='font-nunito text-xs  uppercase tracking-widest '>Choose your dream place</p>
-     <h1 className="text-2xl font-semibold sm:text-4xl font-playfair mt-1 uppercase">Popular <span className='text-orange-500 '>Tours</span></h1>
-       <ImageGallery/>
-</section>
+    <div className="mt-16">
+      <SectionHeading className=''
+        subHeadingTag={"Choose your dream place"}
+        headingFirst={"Popular"}
+        heading2nd={"Tours"}
+      ></SectionHeading>
+      <section className="container max-w-7xl px-6 mx-auto ">
+        <ImageGallery />
+      </section>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import { BiCalendar } from "react-icons/bi";
 
 const NextTour = () => {
   return (
-    <div className='overflow-x-hidden w-auto mt-16 relative h-[30vh] md:h-[70vh]' >
+    <div className='overflow-x-hidden w-auto mt-24 relative h-[30vh] md:h-[70vh]' >
       
 
 <video
@@ -34,7 +34,7 @@ const NextTour = () => {
 
       {/* text section */}
       <div className="absolute  top-0 left-0 w-full h-full  flex flex-col items-center justify-center">
-        <h1 className="text-white text-2xl md:text-4xl z-50 font-playfair font-bold">
+        <h1 className="text-white text-2xl md:text-4xl z-10 font-playfair font-bold">
           Our Next Tour Is Maldives
         </h1>
         <div className='flex items-center justify-center gap-4 mt-3'>
