@@ -3,10 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 import SectionHeading from "../../SectionHeading/SectionHeading";
+import { Link } from "react-router-dom";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { SlArrowRightCircle } from "react-icons/sl";
 
 function PopularDestination() {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -18,7 +21,7 @@ function PopularDestination() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          dots: true
+          // dots: true
         }
       },
       {
@@ -59,22 +62,37 @@ function PopularDestination() {
         headingFirst={"Most Popular"}
         heading2nd={"Destination"}
       ></SectionHeading>
-      <Slider className=" mt-4 max-w-7xl mx-auto px-6" {...settings}>
-        {destinations.map((item) => (
-          <div className=""
-            
-            key={item.id}
-          >
-            <div className="h-[60vh] md:h-[70vh]  md:w-[390px] w-80 p-2 md:p-0   overflow-hidden ">
-              <img
-                src={item.img}
-                alt={`Destination ${item.id}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
+    <Slider className="mt-4 max-w-7xl mx-auto px-6" {...settings}>
+  {destinations.map((item) => (
+    <div key={item.id}>
+      <div className="h-[60vh] md:h-[70vh] md:w-[390px] p-2 md:p-0">
+        {/* Add the group class here */}
+        <div className="group overflow-hidden relative h-full">
+          <img
+            src={item.img}
+            alt={`Destination ${item.id}`}
+            className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
+          />
+          {/* Text overlay */}
+          <h1 className="flex items-center absolute top-12 -left-7  -rotate-90 text-white bg-orange-500 p-2 font-nunito">  New Zealand</h1>
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+          <div className="text-3xl font-nunito font-bold text-white flex flex-col items-center gap-2">
+          
+          
+            <Link className="text-white border p-2 text-lg  font-semibold flex items-center justify-center gap-2">
+              Explore <span><SlArrowRightCircle /></span>
+            </Link>
           </div>
-        ))}
-      </Slider>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
+
+
     </div>
   );
 }
