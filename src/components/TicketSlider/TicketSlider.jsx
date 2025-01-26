@@ -2,30 +2,30 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
-import SectionHeading from "../../SectionHeading/SectionHeading";
+
 import { Link } from "react-router-dom";
-import { MdOutlineLocationOn } from "react-icons/md";
+
 import { SlArrowRightCircle } from "react-icons/sl";
 
-function PopularDestination() {
+function TicketSlider() {
   const settings = {
-    // dots: true,
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 640,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 3,
-          // dots: true
+          dots: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 480,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -55,17 +55,13 @@ function PopularDestination() {
   ];
 
   return (
-    <div className=" overflow-hidden  mt-20  ">
+    <div className=" overflow-hidden   ">
 
-<SectionHeading className=''
-        subHeadingTag={"Choose your dream Destination"}
-        headingFirst={"Most Popular"}
-        heading2nd={"Destination"}
-      ></SectionHeading>
-    <Slider className="mt-4 max-w-7xl mx-auto px-6" {...settings}>
+
+    <Slider className="px-6" {...settings}>
   {destinations.map((item) => (
     <div key={item.id}>
-      <div className="h-[60vh] md:h-[70vh] md:w-[390px] p-2 md:p-0">
+      <div className="h-64 md:h-96 w-[315px] p-4 md:p-0">
         {/* Add the group class here */}
         <div className="group overflow-hidden relative h-full">
           <img
@@ -74,8 +70,8 @@ function PopularDestination() {
             className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
           />
           {/* Text overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
           <h1 className="flex items-center absolute top-12 -left-7  -rotate-90 text-white bg-orange-500 p-2 font-nunito">  New Zealand</h1>
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
           <div className="text-3xl font-nunito font-bold text-white flex flex-col items-center gap-2">
           
           
@@ -97,4 +93,4 @@ function PopularDestination() {
   );
 }
 
-export default PopularDestination;
+export default TicketSlider;

@@ -5,6 +5,7 @@ import WhoAreWe from '../../components/home/WhoAreWe/WhoAreWe';
 import PopularTours from '../../components/home/PopularTours/PopularTours';
 import NextTour from '../../components/home/NextTour/NextTour';
 import PopularDestination from '../../components/home/PopularDestination/PopularDestination';
+import DomesticTicket from '../../components/home/DomesticTicket/DomesticTicket';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <PopularTours/>
       <NextTour/>
       <PopularDestination/>
+      <DomesticTicket/>
      
   </div>
   )
