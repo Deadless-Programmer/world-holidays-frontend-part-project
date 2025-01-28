@@ -18,9 +18,9 @@ const DomesticTicket = () => {
       
         <section className=" mt-10 ">
           
-            <div className="   flex justify-between items-center ">
+            <div className="   md:flex justify-between items-center ">
               {/* Text Section (Left) */}
-              <div className=" space-y-2 w-[35rem]   ">
+              <div className=" space-y-2 md:w-[35rem]   ">
                 <h3 className="text-2xl font-semibold md:text-4xl font-playfair pb-4">
                   Domestic, Ticket
                 </h3>
@@ -33,7 +33,7 @@ const DomesticTicket = () => {
 
                 {/* <div className="bg-black h-[2px]"></div> */}
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 pt-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2  pt-3 md:pt-4">
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
                     <MdOutlineLocationOn className="text-lg" /> Cox-Bazar
                   </Link>
@@ -65,7 +65,7 @@ const DomesticTicket = () => {
               </div>
 
               {/* slider section (right) */}
-              <div className=" w-[45rem] ">
+              <div className=" md:w-[45rem] ">
                 <TicketSlider />
               </div>
           
