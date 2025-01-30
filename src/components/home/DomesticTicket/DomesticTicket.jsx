@@ -11,8 +11,8 @@ const DomesticTicket = () => {
     <div className="mt-20 container max-w-7xl pl-6 mx-auto">
       <SectionHeading2
         subHeadingTag={"Choose Your Ticket "}
-        headingFirst={"Inside,"}
-        heading2nd={"Bangladesh"}
+        headingFirst={"Ultimate,"}
+        heading2nd={"Getaway"}
       ></SectionHeading2>
       
       

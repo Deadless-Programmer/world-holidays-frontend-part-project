@@ -9,16 +9,15 @@ import { Link } from "react-router-dom";
 const DomesticTicket = () => {
   return (
     <div className="mt-20 container max-w-7xl pl-6 mx-auto">
-      <SectionHeading2
-        subHeadingTag={"Choose Your Ticket "}
-        headingFirst={"Outside,"}
-        heading2nd={"Bangladesh"}
-      ></SectionHeading2>
-      
+    
       
         <section className=" mt-10 ">
           
             <div className="   md:flex justify-between gap-3 items-center ">
+                  {/* slider section (right) */}
+              <div className=" md:w-[43rem] mb-10 md:mb-0">
+                <TicketSlider />
+              </div>
               {/* Text Section (Left) */}
               <div className=" space-y-2 md:w-[35rem]   ">
                 <h3 className="text-2xl font-semibold md:text-4xl font-playfair pb-4">
@@ -64,10 +63,7 @@ const DomesticTicket = () => {
                 </div>
               </div>
 
-              {/* slider section (right) */}
-              <div className=" md:w-[43rem] ">
-                <TicketSlider />
-              </div>
+            
           
           </div>
         </section>
