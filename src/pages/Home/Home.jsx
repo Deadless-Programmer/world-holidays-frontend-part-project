@@ -6,6 +6,7 @@ import PopularTours from '../../components/home/PopularTours/PopularTours';
 import NextTour from '../../components/home/NextTour/NextTour';
 import PopularDestination from '../../components/home/PopularDestination/PopularDestination';
 import DomesticTicket from '../../components/home/DomesticTicket/DomesticTicket';
+import OverseasTicket from '../../components/home/OverseasTicket/OverseasTicket';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <NextTour/>
       <PopularDestination/>
       <DomesticTicket/>
+      <OverseasTicket/>
      
   </div>
   )

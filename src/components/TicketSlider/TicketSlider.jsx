@@ -12,6 +12,7 @@ function TicketSlider() {
     dots: true,
     infinite: true,
     speed: 500,
+   
     slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,
@@ -58,10 +59,10 @@ function TicketSlider() {
     <div className=" overflow-hidden   ">
 
 
-    <Slider className="mt-5 md:mt-0" {...settings}>
+    <Slider className="mt-5 md:mt-0 md:pr-6" {...settings}>
   {destinations.map((item) => (
     <div key={item.id}>
-      <div className=" h-[360px] md:h-96 w-full md:w-[315px] p-2 md:p-0">
+      <div className=" h-[390px] md:h-96 w-full md:w-[315px] p-2 md:p-0">
         {/* Add the group class here */}
         <div className="group overflow-hidden relative h-full">
           <img

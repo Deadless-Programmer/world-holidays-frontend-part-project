@@ -65,7 +65,7 @@ function PopularDestination() {
     <Slider className="mt-4 max-w-7xl mx-auto px-6" {...settings}>
   {destinations.map((item) => (
     <div key={item.id}>
-      <div className="h-[60vh] md:h-[70vh] md:w-[390px] p-2 md:p-0">
+      <div className="h-[70vh] md:w-[390px] p-2 md:p-0">
         {/* Add the group class here */}
         <div className="group overflow-hidden relative h-full">
           <img

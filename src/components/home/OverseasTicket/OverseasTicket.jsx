@@ -11,7 +11,7 @@ const DomesticTicket = () => {
     <div className="mt-20 container max-w-7xl pl-6 mx-auto">
       <SectionHeading2
         subHeadingTag={"Choose Your Ticket "}
-        headingFirst={"Inside,"}
+        headingFirst={"Outside,"}
         heading2nd={"Bangladesh"}
       ></SectionHeading2>
       
@@ -22,10 +22,10 @@ const DomesticTicket = () => {
               {/* Text Section (Left) */}
               <div className=" space-y-2 md:w-[35rem]   ">
                 <h3 className="text-2xl font-semibold md:text-4xl font-playfair pb-4">
-                  Domestic, Ticket
+                  Oversieas, Ticket
                 </h3>
                 <p className="font-nunito font-light">
-                  Explore seamless domestic travel with our curated ticketing
+                  Explore seamless oversieas travel with our curated ticketing
                   options. Select your preferred destination from across the
                   country and enjoy hassle-free booking at your convenience. Let
                   us make your journey comfortable and memorable!
@@ -35,31 +35,31 @@ const DomesticTicket = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2  pt-3 md:pt-4">
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Cox-Bazar
+                    <MdOutlineLocationOn className="text-lg" /> America
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Jessor
+                    <MdOutlineLocationOn className="text-lg" /> Canada
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Rajshahi
+                    <MdOutlineLocationOn className="text-lg" /> France
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Chittagong
+                    <MdOutlineLocationOn className="text-lg" /> Italy
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Syedpur
+                    <MdOutlineLocationOn className="text-lg" /> England
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Barishal
+                    <MdOutlineLocationOn className="text-lg" /> Thailand
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Sylhet
+                    <MdOutlineLocationOn className="text-lg" /> Singapore
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Shariatpur
+                    <MdOutlineLocationOn className="text-lg" /> Malaysia
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Chandpur
+                    <MdOutlineLocationOn className="text-lg" /> Maldives
                   </Link>
                 </div>
               </div>
