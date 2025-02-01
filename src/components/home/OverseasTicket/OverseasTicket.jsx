@@ -67,6 +67,8 @@ const DomesticTicket = () => {
           
           </div>
         </section>
+
+
       </div>
     
   );

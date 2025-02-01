@@ -80,117 +80,117 @@ export default App;
 
 import React from "react";
 
-const Gallery = () => {
-  const images = [
-    {
-      src: "https://images.unsplash.com/photo-1431818563807-927945852ab6?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=",
-      author: "Paul Gilmore",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1443397646383-16272048780e?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=",
-      author: "M. O'Neil",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1442965416224-f6a7eca980fa?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
-      author: "N. Mehta",
-    },
-  ];
+// const Gallery = () => {
+//   const images = [
+//     {
+//       src: "https://images.unsplash.com/photo-1431818563807-927945852ab6?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=",
+//       author: "Paul Gilmore",
+//     },
+//     {
+//       src: "https://images.unsplash.com/photo-1443397646383-16272048780e?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=",
+//       author: "M. O'Neil",
+//     },
+//     {
+//       src: "https://images.unsplash.com/photo-1442965416224-f6a7eca980fa?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+//       author: "N. Mehta",
+//     },
+//   ];
 
-  return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 font-sans">
-      <h1 className="text-xl font-semibold text-gray-800 mb-6">
-        Gallery with Hover Effect
-      </h1>
-      <div className="flex flex-wrap justify-center gap-4">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="relative group max-w-xs overflow-hidden rounded-lg shadow-lg"
-          >
-            <img
-              src={image.src}
-              alt={`Image by ${image.author}`}
-              className="w-full h-auto object-cover transform group-hover:scale-110 transition duration-500"
-            />
-            <div className="absolute inset-0 bg-white bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-              <p className="text-gray-800 font-medium text-lg">
-                + {image.author}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 font-sans">
+//       <h1 className="text-xl font-semibold text-gray-800 mb-6">
+//         Gallery with Hover Effect
+//       </h1>
+//       <div className="flex flex-wrap justify-center gap-4">
+//         {images.map((image, index) => (
+//           <div
+//             key={index}
+//             className="relative group max-w-xs overflow-hidden rounded-lg shadow-lg"
+//           >
+//             <img
+//               src={image.src}
+//               alt={`Image by ${image.author}`}
+//               className="w-full h-auto object-cover transform group-hover:scale-110 transition duration-500"
+//             />
+//             <div className="absolute inset-0 bg-white bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+//               <p className="text-gray-800 font-medium text-lg">
+//                 + {image.author}
+//               </p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default Gallery;
+// export default Gallery;
 
 
 
 
 // image gellaery
 
-import React from "react";
+// import React from "react";
 
-const ImageGallery = () => {
-  const images = [
-    {
-      id: 1,
-      src: "https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      text: "Image 1",
-    },
-    {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1566976273017-6e6df9bbdbee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      text: "Image 2",
-    },
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1548957175-84f0f9af659e?q=80&w=1782&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      text: "Image 3",
-    },
-    {
-      id: 4,
-      src: "https://images.unsplash.com/photo-1722526933541-9a9cdfcdb28f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      text: "Image 4",
-    },
-    {
-      id: 5,
-      src: "https://images.unsplash.com/photo-1544750040-4ea9b8a27d38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      text: "Image 5",
-    },
-    {
-      id: 6,
-      src: "https://images.unsplash.com/photo-1732162933719-b618142c1ad3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      text: "Image 6",
-    },
-  ];
+// const ImageGallery = () => {
+//   const images = [
+//     {
+//       id: 1,
+//       src: "https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//       text: "Image 1",
+//     },
+//     {
+//       id: 2,
+//       src: "https://images.unsplash.com/photo-1566976273017-6e6df9bbdbee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//       text: "Image 2",
+//     },
+//     {
+//       id: 3,
+//       src: "https://images.unsplash.com/photo-1548957175-84f0f9af659e?q=80&w=1782&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//       text: "Image 3",
+//     },
+//     {
+//       id: 4,
+//       src: "https://images.unsplash.com/photo-1722526933541-9a9cdfcdb28f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//       text: "Image 4",
+//     },
+//     {
+//       id: 5,
+//       src: "https://images.unsplash.com/photo-1544750040-4ea9b8a27d38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//       text: "Image 5",
+//     },
+//     {
+//       id: 6,
+//       src: "https://images.unsplash.com/photo-1732162933719-b618142c1ad3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//       text: "Image 6",
+//     },
+//   ];
 
-  return (
-    <div className="grid gap-4 lg:gap-6 mt-8">
+//   return (
+//     <div className="grid gap-4 lg:gap-6 mt-8">
      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 ">
-        {images.map((image) => (
-          <div
-            key={image.id}
-            className="relative group overflow-hidden "
-          >
-            <img
-              src={image.src}
-              alt={image.text}
-              className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110 "
-            />
-            <div className="absolute bottom-0 left-0 right-0 h-screen w-screen bg-gradient-to-t from-purple-500/70  to-blue-600/30  text-white text-center p-2 transform translate-y-full scale-90 transition-all duration-300 group-hover:translate-y-0 group-hover:scale-100">
-              {image.text}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+//       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 ">
+//         {images.map((image) => (
+//           <div
+//             key={image.id}
+//             className="relative group overflow-hidden "
+//           >
+//             <img
+//               src={image.src}
+//               alt={image.text}
+//               className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110 "
+//             />
+//             <div className="absolute bottom-0 left-0 right-0 h-screen w-screen bg-gradient-to-t from-purple-500/70  to-blue-600/30  text-white text-center p-2 transform translate-y-full scale-90 transition-all duration-300 group-hover:translate-y-0 group-hover:scale-100">
+//               {image.text}
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default ImageGallery;
+// export default ImageGallery;
 
 
