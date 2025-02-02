@@ -5,7 +5,7 @@ import { BiCalendar } from "react-icons/bi";
 
 const NextTour = () => {
   return (
-    <div className='overflow-x-hidden w-auto mt-24 relative h-[30vh] md:h-[70vh]' >
+    <div className='overflow-x-hidden w-auto mt-24 relative h-[50vh] md:h-[70vh]' >
       
 
 <video

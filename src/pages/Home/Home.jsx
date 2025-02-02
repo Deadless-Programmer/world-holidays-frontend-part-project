@@ -8,6 +8,7 @@ import PopularDestination from '../../components/home/PopularDestination/Popular
 import DomesticTicket from '../../components/home/DomesticTicket/DomesticTicket';
 import OverseasTicket from '../../components/home/OverseasTicket/OverseasTicket';
 import CorporateService from '../../components/home/CorporateService/CorporateService';
+import TravelersReview from '../../components/home/TravelersReview/TravelersReview';
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <DomesticTicket/>
       <OverseasTicket/>
       <CorporateService/>
+      <TravelersReview/>
      
   </div>
   )

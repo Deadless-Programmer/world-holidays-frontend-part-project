@@ -3,14 +3,14 @@ import Marquee from "react-fast-marquee";
 
 function CorporateService() {
   return (
-    <div className="container max-w-7xl my-16 mx-auto px-4">
+    <div className="container max-w-7xl my-20 mx-auto px-4">
       <div className="title mb-8">
         <h1 className="text-3xl font-semibold md:text-4xl font-playfair text-center mt-1 uppercase">
           Our <span className="text-orange-500">Partners</span>
         </h1>
       </div>
 
-      <div>
+      <div className="py-10">
         <Marquee className="overflow-hidden" speed={60} delay={0} gradient={true}>
           {[ 
             "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png",
