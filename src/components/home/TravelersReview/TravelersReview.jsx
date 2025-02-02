@@ -21,7 +21,7 @@ const TravelersReview = () => {
     <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1529970120821-d8cf525bc023?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex items-center justify-center">
       <header className="md:flex  items-center justify-between  max-w-5xl w-full mx-auto space-y-8  md:space-y-0">
         {/* Left Side (Text) */}
-        <div className="z-10 bg-white/80 backdrop-blur-lg p-10 ">
+        <div className="z-10 bg-white/80 backdrop-blur-lg pt-10 pb-10 pr-10 pl-6 ">
           <p className="uppercase font-semibold text-sm text-gray-600 tracking-[0.75rem]">
             Testimonials
           </p>
