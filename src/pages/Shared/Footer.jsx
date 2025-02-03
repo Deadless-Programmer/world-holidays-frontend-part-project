@@ -1,45 +1,43 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-base-200 text-base-content mt-24 pt-10 pb-10 pr-10 pl-6">
-  <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav>
-  <form>
-    <h6 className="footer-title">Newsletter</h6>
-    <fieldset className="form-control w-80">
-      <label className="label">
-        <span className="label-text">Enter your email address</span>
-      </label>
-      <div className="join">
-        <input
-          type="text"
-          placeholder="username@site.com"
-          className="input input-bordered join-item" />
-        <button className="btn btn-primary join-item">Subscribe</button>
+    <footer className="footer bg-indigo-950   mt-24 ">
+      <div className="text-white container max-w-7xl mx-auto pt-10 pb-10 pr-10 pl-6 flex justify-between items-center">
+        <div className="">
+          <img
+            className="h-16"
+            src="https://i.postimg.cc/TwYXZn0T/Logo-World-holidays.png"
+            alt=""
+          />
+          <h2>
+            𝐖𝐨𝐫𝐥𝐝 𝐇𝐨𝐥𝐢𝐝𝐚𝐲𝐬 Antara (Irving Properties) 4th Floor (4A), House 57,
+            Road 04 Block C, Banani, Dhaka-1213, Bangladesh.
+          </h2>
+        </div>
+        <div>
+          <h1>About</h1>
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Cookie Policy</p>
+          <p>Blog</p>
+        </div>
+        <div>
+          <h1>Help</h1>
+          <p>Contact Us</p>
+          <p>Easy EMI</p>
+          <p>Payment Methods</p>
+          <p>FAQS</p>
+        </div>
+        <div>
+          <h1>Have an any Query</h1>
+          <p>+88 0197 0500188-95</p>
+          <p>www.worldholidaysbd.com</p>
+          <p>Dedicated Customer Support : 24/7</p>
+        </div>
       </div>
-    </fieldset>
-  </form>
-</footer>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

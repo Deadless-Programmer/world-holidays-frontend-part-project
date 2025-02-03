@@ -31,7 +31,7 @@ function CorporateService() {
             "https://upload.wikimedia.org/wikipedia/en/8/8b/Logo_of_ICDDR%2CB.png",
             "https://scontent.fdac165-1.fna.fbcdn.net/v/t1.6435-9/176918091_132319052244532_3353834730189092366_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFf_2a5VqqldAJX3YaKrQPHo1q6Vxfh9Z-jWrpXF-H1n-aiwxs-QirGrNAIdhvRE1zYUtERXAoqaoyqJXSrvCBK&_nc_ohc=-Z1VckVdcBEQ7kNvgG12Ovh&_nc_zt=23&_nc_ht=scontent.fdac165-1.fna&_nc_gid=AQYknpEylHl8ZnBRxS2496e&oh=00_AYBlp6Ihyqk-576nJSHmWK3ChfQZPA5WuNs6dyOFKP8o5A&oe=67C6CF9B",
           ].map((src, index) => (
-            <div key={index} className="h-24 w-24 sm:h-28 sm:w-28 mx-4 border p-2 shadow-lg flex items-center ">
+            <div key={index} className="h-28 w-28 sm:h-28 sm:w-28 mx-4 border p-2 shadow-lg flex items-center ">
               <img className="w-full h-full object-contain" src={src} alt="Partner Logo" />
             </div>
           ))}
