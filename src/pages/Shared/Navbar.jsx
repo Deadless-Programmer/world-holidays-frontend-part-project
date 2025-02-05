@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 
 
@@ -40,43 +41,43 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#home" className="hover:text-orange-500 transition-colors font-nunito ">
+            <Link to="/" className="hover:text-orange-500 transition-colors font-nunito ">
               Home
-            </a>
+            </Link >
           </li>
           <li>
-            <a href="#about" className="hover:text-orange-500 transition-colors font-nunito">
-              About
-            </a>
+            <Link  to="/about-us" className="hover:text-orange-500 transition-colors font-nunito">
+              About Us
+            </Link >
           </li>
           <li>
-            <a
-              href="#packages"
+            <Link 
+              to="#packages"
               className="hover:text-orange-500 transition-colors font-nunito"
             >
               Packages
-            </a>
+            </Link >
           </li>
           <li>
-            <a
-              href="#services"
+            <Link 
+              to="#services"
               className="hover:text-orange-500 transition-colors font-nunito"
             >
               Services
-            </a>
+            </Link >
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link 
+              to="#contact"
               className="hover:text-orange-500 transition-colors font-nunito"
             >
               Contact
-            </a>
+            </Link >
           </li>
           <li>
-            <a href="#login" className="hover:text-orange-500 transition-colors font-nunito">
+            <Link  to="#login" className="hover:text-orange-500 transition-colors font-nunito">
               Login
-            </a>
+            </Link >
           </li>
         </ul>
 
@@ -100,54 +101,54 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-center space-y-4 py-4">
           <li>
-            <a href="#home" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
+            <Link  to="#home" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
               Home
-            </a>
+            </Link >
           </li>
           <li>
-            <a
-              href="#about"
+            <Link 
+              to="/about-us"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
-              About
-            </a>
+              About Us
+            </Link >
           </li>
           <li>
-            <a
-              href="#packages"
+            <Link 
+              to="#packages"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Packages
-            </a>
+            </Link >
           </li>
           <li>
-            <a
-              href="#services"
+            <Link 
+              to="#services"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Services
-            </a>
+            </Link >
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link 
+              to="#contact"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Contact
-            </a>
+            </Link >
           </li>
           <li>
-            <a
-              href="#login"
+            <Link 
+              to="#login"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
               Login
-            </a>
+            </Link >
           </li>
         </ul>
       </div>
