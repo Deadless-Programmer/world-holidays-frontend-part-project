@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .contain-er {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .contain-er > div {
+    flex: 1 1 120px;
+    max-width: 120px;
+    /* border-radius: 0.5rem; */
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contain-er > div:nth-of-type(1) {
+    background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      no-repeat 50% / cover;
+  }
+  
+  .contain-er > div:nth-of-type(2) {
+    background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      no-repeat 50% / cover;
+  }
+  
+  .contain-er > div:nth-of-type(3) {
+    background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      no-repeat 50% / cover;
+  }
+  
+  .contain-er > div:nth-of-type(4) {
+    background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      no-repeat 50% / cover;
+  }
+  
+  .contain-er > div .content {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(2, 2, 46);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 2, 46, 0.6755077030812324) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translatey(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+  }
+  
+  .contain-er > div .content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .contain-er > div:hover {
+    flex: 1 1 250px;
+    max-width: 250px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translatey(-30px);
+  }
+  
+  .contain-er > div:hover .content {
+    opacity: 1;
+    transform: translatey(0%);
+    visibility: visible;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contain-er {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contain-er > div {
+      flex: 1 1 80%;
+      max-width: 90%;
+    }
+  
+    .contain-er > div:hover {
+      flex: 1 1 90%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contain-er {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contain-er > div {
+      flex: 1 1 auto;
+      width: 90%;
+      max-width: 100%;
+      height: 150px; /* Ensures a uniform height for all images */
+    }
+  
+    .contain-er > div:hover {
+      transform: none; /* Removes hover translation for smaller screens */
+    }
+  }
+  
