@@ -5,9 +5,10 @@ import { MdOutlineMarkEmailRead, MdOutlinePhone } from 'react-icons/md'
 import { PiPhoneDisconnectLight } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
 
+
 const ContactForm = () => {
   return (
-    <div className='max-w-7xl mx-auto md:px-6 md:grid grid-cols-12 gap-5'>
+    <div className='max-w-7xl mx-auto md:px-6 md:grid grid-cols-12 gap-5 my-16'>
         <div className='col-span-6 flex flex-col bg-slate-50 p-10'><h1 className='font-playfair text-3xl '>Get in touch with us</h1>
         <div className='md:flex justify-between items-center md:w-full gap-5 mt-10'>
         <input className='md:w-64 w-full h-12 p-2 outline-none border ' type="text " placeholder='name'/>
@@ -59,6 +60,7 @@ const ContactForm = () => {
                 </div>
             </div>
         </div>
+      
     </div>
   )
 }

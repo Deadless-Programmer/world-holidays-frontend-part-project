@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
      
       </div>
-      <div className="container max-w-7xl mx-auto  border-t border-b   pt-5 pb-5 pr-10 pl-6">
+      <div className="container max-w-7xl mx-auto   border-t border-b   pt-5 pb-5 pr-10 pl-6">
   <div className=" max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4  place-items-center items-start gap-4 sm:gap-0">
     <div className="flex flex-col justify-center items-center gap-1">
       <h2 className="text-slate-500 font-medium">Accredited Member</h2>
