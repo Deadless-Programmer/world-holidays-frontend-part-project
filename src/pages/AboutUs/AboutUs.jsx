@@ -6,7 +6,7 @@ import OurTeam from "../../components/about/OurTeam/OurTeam";
 
 const AboutUs = () => {
   return <div>
-    <PageHeader/>
+    <  PageHeader heading={'About Us'} paragraph={'Our Story In World Holidays'}/>
 
     <Accordion/>
     <KeyStrategies/>

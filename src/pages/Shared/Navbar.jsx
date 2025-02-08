@@ -68,7 +68,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#contact"
+              to="/contact"
               className="hover:text-orange-500 transition-colors font-nunito"
             >
               Contact
@@ -134,7 +134,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#contact"
+              to="/contact"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
