@@ -41,7 +41,7 @@ const ContactForm = () => {
             <MdOutlineMarkEmailRead className='border p-1 text-3xl' />
               <div>
               <h2 className='font-medium'>Email</h2>
-              <p className='text-xs'>zamanworldholidays@yahoo.com</p>
+              <p className='text-xs'>worldholidaysbd@yahoo.com</p>
               </div>
             </div>
             <div className='flex items-center gap-4 mt-4 md:mt-0'>

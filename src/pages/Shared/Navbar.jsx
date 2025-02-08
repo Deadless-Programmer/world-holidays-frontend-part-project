@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#packages"
+              to="/packages"
               className="hover:text-orange-500 transition-colors font-nunito"
             >
               Packages
@@ -60,7 +60,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#services"
+              to="/services"
               className="hover:text-orange-500 transition-colors font-nunito"
             >
               Services
@@ -116,7 +116,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#packages"
+              to="/packages"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
@@ -125,7 +125,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#services"
+              to="/services"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
@@ -143,7 +143,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="#login"
+              to="/login"
               className="hover:text-orange-500 font-nunito"
               onClick={toggleMenu}
             >
