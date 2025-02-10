@@ -5,6 +5,7 @@ import Contact from "../pages/Contact/Contact";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Packages from "../pages/Packages/Packages";
 import Services from "../pages/Services/Services";
+import PackageDetails from "../components/Packages/PackagesGallery/PackageDetails";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services/>
+      },
+      {
+        path: "/packages/packageDetails",
+        element: <PackageDetails/>
       },
     ],
   },
