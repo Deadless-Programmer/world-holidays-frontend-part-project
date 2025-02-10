@@ -1,8 +1,9 @@
 import React from 'react'
+import { PiCheckCircleLight } from 'react-icons/pi'
 
 const OurServices = () => {
   return (
-    <div><section className=" max-w-7xl mx-auto py-6 sm:py-12 dark:bg-gray-100 dark:text-gray-800">
+    <section className=" max-w-7xl mx-auto py-6 sm:py-12 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container p-6 mx-auto space-y-8">
 		<div className="space-y-2 text-center">
 			<h2 className="text-3xl font-bold font-playfair"> <span className='text-orange-500'>Explore</span> Our Services</h2>
@@ -55,7 +56,31 @@ const OurServices = () => {
 			</article>
 		</div>
 	</div>
-</section></div>
+    <div className="space-y-2 text-center my-16">
+			<h2 className="text-3xl font-bold font-playfair"> What can we do also more</h2>
+			<p className=" text-sm dark:text-gray-600 font-nunito ">Our services include everything there is related to tourism, such as</p>
+		</div>
+    <div className='md:grid grid-cols-12 place-items-center p-5'>
+        
+       <div className='col-span-6'>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl font-nunito'><PiCheckCircleLight /> <span>International airlines reservations & ticketing</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>International boat, bus & railways ticketing</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Worldwide car rental</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Ground handling services</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Tour guides - we speak your language</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>All over the year excursions and itinerariesg</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Conferences & MISC</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Cruises worldwide & locally</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Camping services</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Arrange picnic services</span></p>
+            <p className='flex justify-start items-center gap-3 text-base md:text-xl mt-2 font-nunito'><PiCheckCircleLight /> <span>Meet & assist services</span></p>
+           
+       </div>
+       <div className='col-span-6 mt-8 md:mt-0'>
+        <img src="https://images.unsplash.com/photo-1587089879249-87bf7d2972df?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+       </div>
+    </div>
+</section>
   )
 }
 
