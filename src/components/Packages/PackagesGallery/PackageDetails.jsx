@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
 import { GoCheckCircle } from "react-icons/go";
@@ -23,6 +23,16 @@ import PageHeader from "../../PageHeader/PageHeader";
 import { HiMiniCalendarDateRange } from "react-icons/hi2";
 
 const PackageDetails = () => {
+
+  const [selectedDate, setSelectedDate] = useState("");
+
+  // Get today's date in the format YYYY-MM-DD
+  const today = new Date().toISOString().split("T")[0];
+
+
+
+
+
   return (
     <section>
       <PageHeader
@@ -197,32 +207,36 @@ const PackageDetails = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                class=" p-3 outline-none w-72 mt-8 "
+                className=" p-3 outline-none w-72 mt-8 "
               />
               <input
                 type="text"
                 placeholder="Your phone"
-                class=" p-3 outline-none w-72 mt-4 "
+                className=" p-3 outline-none w-72 mt-4 "
               />
               <input
                 type="email"
                 placeholder="Your email"
-                class=" p-3 outline-none w-72 mt-4 "
+                className=" p-3 outline-none w-72 mt-4 "
               />
               <input
                 type="text"
                 placeholder="Your location"
-                class=" p-3 outline-none w-72 mt-4 "
+                className=" p-3 outline-none w-72 mt-4 "
               />
               <input
                 type="text"
                 placeholder="Guest No. -input adult & child"
-                class=" p-3 outline-none w-72 mt-4 "
+                className=" p-3 outline-none w-72 mt-4 "
               />
               <input
                 type="date"
                 placeholder="date"
-                class=" p-3 outline-none w-72 mt-4 "
+                value={selectedDate}
+                onChange={(e) => setSelectedDate(e.target.value)}
+                min={today}
+                
+                className=" p-3 outline-none w-72 mt-4 "
               />
               
               

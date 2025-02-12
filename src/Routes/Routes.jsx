@@ -7,6 +7,7 @@ import Packages from "../pages/Packages/Packages";
 import Services from "../pages/Services/Services";
 import PackageDetails from "../components/Packages/PackagesGallery/PackageDetails";
 import PopularDestinationDetails from "../components/home/PopularDestination/PopularDestinationDetails";
+import TicketDetails from "../components/TicketDetails/TicketDetails";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "/popular-destination-details",
         element: <PopularDestinationDetails/>
+      },
+      {
+        path: "/ticket-details",
+        element: <TicketDetails/>
       },
     ],
   },

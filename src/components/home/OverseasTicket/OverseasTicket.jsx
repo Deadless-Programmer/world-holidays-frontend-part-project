@@ -58,7 +58,7 @@ const DomesticTicket = () => {
                     <MdOutlineLocationOn className="text-lg" /> Malaysia
                   </Link>
                   <Link className="flex items-center gap-2 font-nunito font-light text-orange-800">
-                    <MdOutlineLocationOn className="text-lg" /> Maldives
+                    <MdOutlineLocationOn className="text-lg" /> All over the world
                   </Link>
                 </div>
               </div>
