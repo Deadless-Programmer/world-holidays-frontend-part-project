@@ -6,9 +6,9 @@ const PopularTours = () => {
   return (
     <div className="mt-16">
       <SectionHeading className=''
-        subHeadingTag={"Choose your dream place"}
+        subHeadingTag={"Choose your dream place "}
         headingFirst={"Popular"}
-        heading2nd={"Tours"}
+        heading2nd={" Packages"}
       ></SectionHeading>
       <section className="container max-w-7xl px-6 mx-auto ">
         <ImageGallery />

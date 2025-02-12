@@ -61,11 +61,11 @@ const PackageDetails = () => {
                 <div className="flex justify-around gap-10 ">
                   <h1 className="flex items-center gap-2  font-nunito mt-2">
                    
-                    <SlCalender /> 4 Day / 3 Night
+                    <SlCalender /> 4 Day + 3 Night
                   </h1>
                   <h1 className="flex items-center gap-2 font-nunito mt-2">
                     
-                    <MdLocationOn className="text-orange-500 " /> Maldives
+                    <MdLocationOn className="text-orange-500 text-xl " /> Maldives
                   </h1>
                 </div>
               </div>
@@ -178,12 +178,12 @@ const PackageDetails = () => {
             </h1>
             <div className="md:flex items-center gap-4 mt-5 ">
               <img
-                className="w-[320px] h-48"
+                className="w-[320px] transition  duration-700 hover:scale-105 h-48"
                 src="https://images.unsplash.com/photo-1648471755440-fb27a86238bb?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
               <img
-                className="w-[320px] h-48 mt-5 md:mt-0"
+                className="w-[320px] h-48 mt-5 transition  duration-700 hover:scale-105 md:mt-0"
                 src="https://images.unsplash.com/photo-1694854573574-9487bc7b6282?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />

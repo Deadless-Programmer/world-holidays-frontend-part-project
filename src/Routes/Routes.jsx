@@ -6,6 +6,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Packages from "../pages/Packages/Packages";
 import Services from "../pages/Services/Services";
 import PackageDetails from "../components/Packages/PackagesGallery/PackageDetails";
+import PopularDestinationDetails from "../components/home/PopularDestination/PopularDestinationDetails";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "/packages/packageDetails",
         element: <PackageDetails/>
+      },
+      {
+        path: "/popular-destination-details",
+        element: <PopularDestinationDetails/>
       },
     ],
   },
