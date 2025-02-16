@@ -194,7 +194,8 @@ const TicketDetails = () => {
     </div>
     {/* search bar */}
     <div className="md:flex items-center gap-2 justify-center mt-6">
-       <input type="text" className="px-3 py-2 md:w-64 w-full outline-none border border-orange-500" name="" placeholder="from" id="" />
+       <input type="text" className="px-3 py-2 md:w-64 w-full outline-none border border-orange-500" name="" placeholder="your name" id="" />
+       <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="from" id="" />
        <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="to" id="" />
         <button className="border px-3 py-2 text-center mt-2 md:mt-0  bg-orange-500  hover:text-white font-nunito  flex justify-between items-center">
                        Book <IoIosArrowRoundForward className="text-2xl" />{" "}
