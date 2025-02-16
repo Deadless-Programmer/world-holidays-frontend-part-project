@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PageHeader from "../PageHeader/PageHeader";
 import { FaChevronDown, FaUsers } from "react-icons/fa";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 
 const TicketDetails = () => {
@@ -46,7 +47,7 @@ const TicketDetails = () => {
         }
       />
      
-    <div className=" max-w-6xl h-36 bg-white mx-auto shadow-2xl p-4 ">
+    <div className=" max-w-6xl md:h-36 bg-white mx-auto shadow-2xl p-4 mt-10">
     
     {/* top content */}
     <div className="md:flex justify-between">
@@ -190,6 +191,14 @@ const TicketDetails = () => {
         )}
       </div>
     </div>
+    </div>
+    {/* search bar */}
+    <div className="md:flex items-center gap-2 justify-center mt-6">
+       <input type="text" className="px-3 py-2 md:w-64 w-full outline-none border border-orange-500" name="" placeholder="from" id="" />
+       <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="to" id="" />
+        <button className="border px-3 py-2 text-center mt-2 md:mt-0  bg-orange-500  hover:text-white font-nunito  flex justify-between items-center">
+                       Book <IoIosArrowRoundForward className="text-2xl" />{" "}
+                     </button>
     </div>
     </div>
     </div>
