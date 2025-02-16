@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../../PageHeader/PageHeader";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaRegStar } from "react-icons/fa6";
@@ -20,11 +20,12 @@ import { GoCheckCircle } from "react-icons/go";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import RelatedDestination from "./RelatedDestination";
 
-const PopularDestinationDetails = () => {
-  const [selectedDate, setSelectedDate] = useState("");
 
-  // Get today's date in the format YYYY-MM-DD
-  const today = new Date().toISOString().split("T")[0];
+import Flatpickr from "react-flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
+
+const PopularDestinationDetails = () => {
+ const [date, setDate] = useState(null);
   return (
     <div>
       <PageHeader
@@ -110,14 +111,20 @@ const PopularDestinationDetails = () => {
                 placeholder="Guest No. -input adult & child"
                 className=" p-3 outline-none w-72 mt-4 "
               />
-              <input
-                type="date"
-                placeholder="date"
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-                min={today}
-                className=" p-3 outline-none w-72 mt-4 "
-              />
+               <div className="">
+                              <Flatpickr
+                                value={date}
+                                onChange={(selectedDates) => setDate(selectedDates)}
+                                options={{
+                                  dateFormat: "Y-m-d",
+              
+                                  enableTime: false, // Change to true if you want time
+                                  minDate: "today", // Restrict past dates
+                                }}
+                                placeholder="Select a date"
+                                className="p-3 outline-none w-72 mt-4"
+                              />
+                            </div>
 
               <button className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center">
                 Book <IoIosArrowRoundForward className="text-2xl" />{" "}

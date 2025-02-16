@@ -1,7 +1,9 @@
-import React, { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
 import { GoCheckCircle } from "react-icons/go";
+import React, { useState } from "react";
+import Flatpickr from "react-flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 import {
   IoIosArrowRoundForward,
   IoIosCloseCircleOutline,
@@ -23,15 +25,12 @@ import PageHeader from "../../PageHeader/PageHeader";
 import { HiMiniCalendarDateRange } from "react-icons/hi2";
 
 const PackageDetails = () => {
+  // const [selectedDate, setSelectedDate] = useState("");
 
-  const [selectedDate, setSelectedDate] = useState("");
+  // // Get today's date in the format YYYY-MM-DD
+  // const today = new Date().toISOString().split("T")[0];
 
-  // Get today's date in the format YYYY-MM-DD
-  const today = new Date().toISOString().split("T")[0];
-
-
-
-
+  const [date, setDate] = useState(null);
 
   return (
     <section>
@@ -60,22 +59,22 @@ const PackageDetails = () => {
           <div className="flex justify-between items-center">
             <div className="mt-5 ">
               <div>
-              
                 <div className="flex items-center gap-10">
-                <h1 className="flex items-center gap-1 ">
-                  
-                  5 <FaRegStar className="text-orange-500 " />
-                </h1>
-                <h1 className="flex items-center gap-1 "> <HiMiniCalendarDateRange />  18 mar - 21 mar</h1>
+                  <h1 className="flex items-center gap-1 ">
+                    5 <FaRegStar className="text-orange-500 " />
+                  </h1>
+                  <h1 className="flex items-center gap-1 ">
+                    {" "}
+                    <HiMiniCalendarDateRange /> 18 mar - 21 mar
+                  </h1>
                 </div>
                 <div className="flex justify-around gap-10 ">
                   <h1 className="flex items-center gap-2  font-nunito mt-2">
-                   
                     <SlCalender /> 4 Day + 3 Night
                   </h1>
                   <h1 className="flex items-center gap-2 font-nunito mt-2">
-                    
-                    <MdLocationOn className="text-orange-500 text-xl " /> Maldives
+                    <MdLocationOn className="text-orange-500 text-xl " />{" "}
+                    Maldives
                   </h1>
                 </div>
               </div>
@@ -90,7 +89,7 @@ const PackageDetails = () => {
               <MdEmojiTransportation /> Transport
             </h1>
             <h1 className="flex md:justify-around items-center gap-1 text-xl font-nunito mt-2 md:mt-0">
-            <LiaHotelSolid /> Hotel
+              <LiaHotelSolid /> Hotel
             </h1>
             <h1 className="flex md:justify-around items-center gap-1 text-xl font-nunito  mt-2 md:mt-0">
               <IoFastFood /> Breakfast
@@ -151,11 +150,8 @@ const PackageDetails = () => {
               </p>
               <p className="flex items-center gap-3 font-nunito">
                 {" "}
-                <GoCheckCircle
-                  className="text-orange-500"
-                 
-                />{" "}
-                Parking and toll fee{" "}
+                <GoCheckCircle className="text-orange-500" /> Parking and toll
+                fee{" "}
               </p>
               <p className="flex items-center gap-3 font-nunito">
                 {" "}
@@ -201,7 +197,9 @@ const PackageDetails = () => {
           </div>
         </div>
         <div className="col-span-4  bg-zinc-50 h-[550px]">
-          <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">Input your info</h1>
+          <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">
+            Input your info
+          </h1>
           <form action="">
             <div class="flex flex-col items-center font-nunito justify-center ">
               <input
@@ -229,22 +227,28 @@ const PackageDetails = () => {
                 placeholder="Guest No. -input adult & child"
                 className=" p-3 outline-none w-72 mt-4 "
               />
-              <input
-                type="date"
-                placeholder="date"
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-                min={today}
-                
-                className=" p-3 outline-none w-72 mt-4 "
-              />
-              
-              
-            <button className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center">
-              Book <IoIosArrowRoundForward className="text-2xl" />{" "}
-            </button>
-            </div>
 
+          
+
+              <div className="">
+                <Flatpickr
+                  value={date}
+                  onChange={(selectedDates) => setDate(selectedDates)}
+                  options={{
+                    dateFormat: "Y-m-d",
+
+                    enableTime: false, // Change to true if you want time
+                    minDate: "today", // Restrict past dates
+                  }}
+                  placeholder="Select a date"
+                  className="p-3 outline-none w-72 mt-4"
+                />
+              </div>
+
+              <button className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center">
+                Book <IoIosArrowRoundForward className="text-2xl" />{" "}
+              </button>
+            </div>
           </form>
         </div>
       </div>
