@@ -1,5 +1,6 @@
 import React from 'react'
 import PageHeader from '../PageHeader/PageHeader'
+import { IoIosArrowRoundForward } from 'react-icons/io'
 
 const BookOnRooutes = () => {
   return (
@@ -7,6 +8,14 @@ const BookOnRooutes = () => {
         <PageHeader heading={'Explore details to updated flight price'} paragraph={'Book On'} bgImage={'https://images.unsplash.com/photo-1619898381495-5416f6c8045c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}/>
         <div className="container max-w-7xl p-2 mx-auto sm:p-4 dark:text-gray-800">
 	{/* <h2 className="mb-4 text-2xl font-semibold leading-tight">Contacts</h2> */}
+    <div className="flex items-center gap-2 justify-center my-6">
+           
+           <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="Destintion" id="" />
+         
+            <button className="border px-3 py-2 text-center mt-2 md:mt-0  bg-orange-500  hover:text-white font-nunito  flex justify-between items-center">
+                           Search <IoIosArrowRoundForward className="text-2xl" />{" "}
+                         </button>
+        </div>
 	<div className="overflow-x-auto">
 		<table className="w-full p-6 text-xs text-left whitespace-nowrap">
 			{/* <colgroup>
