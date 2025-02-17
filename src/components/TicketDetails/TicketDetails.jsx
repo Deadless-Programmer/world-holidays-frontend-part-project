@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PageHeader from "../PageHeader/PageHeader";
 import { FaChevronDown, FaUsers } from "react-icons/fa";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { SlArrowRightCircle } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 
 const TicketDetails = () => {
@@ -38,7 +40,7 @@ const TicketDetails = () => {
     };
 
   return (
-    <div>
+    <div className="relative">
       <PageHeader
         heading={"Discover Cheap Flights and Airline Tickets in Bangladesh!"}
         paragraph={"Where to Fly?"}
@@ -47,8 +49,17 @@ const TicketDetails = () => {
         }
       />
      
+    <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-3xl font-nunito font-bold text-white   w-72   ">
+              
+              
+                <Link className=" -mt-24 md:-mt-0 text-white border p-2 text-lg hover:border-orange-500 hover:text-orange-500 font-semibold flex items-center justify-center gap-2 ">
+                  Explore Domestice Routes <span><SlArrowRightCircle /></span>
+                </Link>
+              </div>
     <div className=" max-w-6xl md:h-36 bg-white mx-auto shadow-2xl p-4 mt-10">
     
+
+
     {/* top content */}
     <div className="md:flex justify-between">
 
@@ -195,8 +206,8 @@ const TicketDetails = () => {
     {/* search bar */}
     <div className="md:flex items-center gap-2 justify-center mt-6">
        <input type="text" className="px-3 py-2 md:w-64 w-full outline-none border border-orange-500" name="" placeholder="your name" id="" />
-       <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="from" id="" />
-       <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="to" id="" />
+       <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="from(place)" id="" />
+       <input type="text" className="px-3 py-2 md:w-64 w-full mt-2 md:mt-0 outline-none border border-orange-500" name="" placeholder="to(place)" id="" />
         <button className="border px-3 py-2 text-center mt-2 md:mt-0  bg-orange-500  hover:text-white font-nunito  flex justify-between items-center">
                        Book <IoIosArrowRoundForward className="text-2xl" />{" "}
                      </button>

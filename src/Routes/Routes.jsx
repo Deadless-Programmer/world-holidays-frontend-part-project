@@ -8,6 +8,7 @@ import Services from "../pages/Services/Services";
 import PackageDetails from "../components/Packages/PackagesGallery/PackageDetails";
 import PopularDestinationDetails from "../components/home/PopularDestination/PopularDestinationDetails";
 import TicketDetails from "../components/TicketDetails/TicketDetails";
+import BookOnRooutes from "../components/TicketDetails/BookOnRooutes";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/ticket-details",
         element: <TicketDetails/>
+      },
+      {
+        path: "/book-on-routes",
+        element: <BookOnRooutes/>
       },
     ],
   },
