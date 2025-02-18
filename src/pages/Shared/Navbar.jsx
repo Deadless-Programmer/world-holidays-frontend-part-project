@@ -75,7 +75,7 @@ const Navbar = () => {
             </Link >
           </li>
           <li>
-            <Link  to="#login" className="hover:text-orange-500 transition-colors font-nunito">
+            <Link  to="/login" className="hover:text-orange-500 transition-colors font-nunito">
               Login
             </Link >
           </li>

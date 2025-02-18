@@ -33,7 +33,7 @@ const BookOnRooutes = () => {
 					<th className="p-3">Destintion</th>
 					<th className="p-3">One Way</th>
 					<th className="p-3">Return</th>
-					<th className="p-3">Departurel</th>
+					<th className="p-3">Departure</th>
 					<th className="p-3">Arrival</th>
 					{/* <th className="p-3">
 						<span className="sr-only">Edit</span>

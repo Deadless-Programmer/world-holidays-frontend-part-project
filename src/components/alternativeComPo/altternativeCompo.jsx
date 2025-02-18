@@ -194,3 +194,37 @@ import React from "react";
 // export default ImageGallery;
 
 
+// login page demo
+
+{/* <div className="flex items-center justify-center min-h-screen bg-[#080710] relative">
+<div className="absolute w-[430px] h-[520px]">
+  <div className="absolute w-[200px] h-[200px] bg-gradient-to-b from-[#1845ad] to-[#23a2f6] rounded-full -top-20 -left-20"></div>
+  <div className="absolute w-[200px] h-[200px] bg-gradient-to-r from-[#ff512f] to-[#f09819] rounded-full -bottom-20 -right-8"></div>
+</div>
+<div className="relative w-[400px] h-[520px] bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-10 shadow-lg rounded-lg p-10">
+  <h3 className="text-2xl font-semibold text-white text-center">Login Here</h3>
+  <label className="block mt-6 text-white font-medium">Username</label>
+  <input
+    type="text"
+    placeholder="Email or Phone"
+    className="w-full mt-2 p-3 bg-white bg-opacity-10 rounded text-white placeholder-gray-300 outline-none"
+  />
+  <label className="block mt-6 text-white font-medium">Password</label>
+  <input
+    type="password"
+    placeholder="Password"
+    className="w-full mt-2 p-3 bg-white bg-opacity-10 rounded text-white placeholder-gray-300 outline-none"
+  />
+  <button className="w-full mt-8 py-3 bg-white text-[#080710] font-semibold rounded hover:bg-gray-200 transition">
+    Log In
+  </button>
+  <div className="flex mt-6 space-x-4">
+    <div className="flex-1 text-center bg-white bg-opacity-30 p-3 rounded text-white cursor-pointer hover:bg-opacity-50 transition">
+      <i className="fab fa-google mr-2"></i>Google
+    </div>
+    <div className="flex-1 text-center bg-white bg-opacity-30 p-3 rounded text-white cursor-pointer hover:bg-opacity-50 transition">
+      <i className="fab fa-facebook mr-2"></i>Facebook
+    </div>
+  </div>
+</div>
+</div> */}
