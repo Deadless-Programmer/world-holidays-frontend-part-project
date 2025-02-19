@@ -8,11 +8,11 @@ export default function AuthForm() {
   const [isSignUp, setIsSignUp] = useState(false);
 
   return (
-    <div className={`md:flex flex-col items-center justify-center min-h-screen bg-gray-100 font-[Nunito]`}>
+    <div className={`md:flex md:flex-col items-center justify-center min-h-screen bg-gray-100 font-[Nunito]`}>
       {/* <h2 className="text-2xl font-[Playfair Display] mb-4">Weekly Coding Challenge #1: Sign in/up Form</h2> */}
-      <div className="relative w-[768px] max-w-full min-h-[480px] bg-white rounded-lg shadow-lg overflow-hidden flex">
+      <div className="relative w-[768px] max-w-full min-h-[480px] h-[820px] md:h-full  bg-white  shadow-lg overflow-hidden flex">
         <div
-          className={`absolute top-0 h-full w-1/2 transition-all duration-600 ease-in-out flex flex-col items-center justify-center p-10 ${isSignUp ? "opacity-0 z-0" : "opacity-100 z-10"}`}
+          className={`absolute top-44 md:top-0 h-full md:w-1/2 w-full transition-all duration-600 ease-in-out flex flex-col items-center justify-center p-10 ${isSignUp ? "opacity-0 z-0" : "opacity-100 z-10"}`}
         >
           <h1 className="text-xl font-bold font-playfair">Sign in</h1>
           <div className="flex space-x-2 my-3">
@@ -27,7 +27,7 @@ export default function AuthForm() {
           <button className="mt-3 bg-orange-500 text-white px-6 py-2 rounded-full" onClick={() => setIsSignUp(false)}>Sign In</button>
         </div>
         <div
-          className={`absolute top-0 left-0 h-full w-1/2 transition-all duration-600 ease-in-out flex flex-col items-center justify-center p-10 ${isSignUp ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+          className={`absolute top-44 md:top-0 md:left-0  h-full w-full md:w-1/2 transition-all duration-600 ease-in-out flex flex-col items-center justify-center p-10 ${isSignUp ? "opacity-100 z-10" : "opacity-0 z-0"}`}
         >
           <h1 className="text-xl font-bold font-playfair">Create Account</h1>
           <div className="flex space-x-2 my-3">
@@ -40,7 +40,7 @@ export default function AuthForm() {
           <input type="password" placeholder="Password" className="mt-2 px-4 py-2 bg-gray-100 outline-none w-full" />
           <button className="mt-3 bg-orange-500 text-white px-6 py-2 rounded-full" onClick={() => setIsSignUp(true)}>Sign Up</button>
         </div>
-        <div className={`absolute   right-0 top-0 h-full w-1/2 bg-gradient-to-r from-orange-500 to-orange-600 text-white flex flex-col items-center justify-center p-10` }>
+        <div className={`absolute  z-10  right-0 top-0 md:h-full min-h-[360px] md:w-1/2 w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white flex flex-col items-center justify-center p-10` }>
           {isSignUp ? (
             <>
               <h1 className="text-2xl font-bold font-playfair">Welcome Back!</h1>
