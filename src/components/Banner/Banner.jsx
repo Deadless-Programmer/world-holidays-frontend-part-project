@@ -17,6 +17,12 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+
+
+
+
+
+
   return (
     <div className="relative w-full h-[500px] md:h-[100vh] overflow-hidden ">
       {/* Images */}
@@ -46,10 +52,10 @@ const Banner = () => {
            <SearchBar/>
           
        </div> */}
-      <div className='hidden md:flex justify-center  z-10 absolute left-0 right-0   md:bottom-24 m-auto   '>
+      {/* <div className='hidden md:flex justify-center  z-50 absolute left-0 right-0   md:bottom-24 m-auto   '>
            <SearchBar/>
           
-       </div>
+       </div> */}
 
        
        

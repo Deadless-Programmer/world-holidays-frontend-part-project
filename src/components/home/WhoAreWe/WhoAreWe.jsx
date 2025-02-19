@@ -4,7 +4,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 
 const WhoAreWe = () => {
   return (
-    <div> <section className="dark:bg-gray-200 dark:text-gray-800  mt-24">
+    <div> <section className="dark:bg-gray-200 dark:text-gray-800  ">
     <div className="container max-w-7xl p-6 mx-auto space-y-6 sm:space-y-12" bis_skin_checked="1">
       <div  className="block max-w-sm gap-3 mx-auto sm:max-w-full  lg:grid lg:grid-cols-12 place-items-center dark:bg-gray-50">
         <img src="https://i.postimg.cc/nV29vpYr/woman-6010055-1920.jpg" alt="" className="object-cover w-full h-64  sm:h-96 lg:col-span-7 dark:bg-gray-500" />

@@ -9,6 +9,8 @@ import DomesticTicket from '../../components/home/DomesticTicket/DomesticTicket'
 import OverseasTicket from '../../components/home/OverseasTicket/OverseasTicket';
 import CorporateService from '../../components/home/CorporateService/CorporateService';
 import TravelersReview from '../../components/home/TravelersReview/TravelersReview';
+import SearchBarSelected from '../../components/SearchBar/SearchBarSelected'
+
 
 const Home = () => {
   return (
@@ -17,8 +19,12 @@ const Home = () => {
       
  <div className='md:hidden flex justify-center py-14 '>
  <SearchBar/>
+ {/* <SearchBarSelected/> */}
  </div>
-      
+ <div className='hidden'>
+
+ <SearchBar/>
+ </div>
       <WhoAreWe/>
       <PopularTours/>
       <NextTour/>
@@ -27,6 +33,8 @@ const Home = () => {
       <OverseasTicket/>
       <CorporateService/>
       <TravelersReview/>
+      
+      {/* <SearchBarSelected/> */}
      
   </div>
   )
