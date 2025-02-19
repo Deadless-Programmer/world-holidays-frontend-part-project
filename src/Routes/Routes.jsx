@@ -12,6 +12,8 @@ import BookOnRooutes from "../components/TicketDetails/BookOnRooutes";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 
+import SignInUpForm from "../components/SignInUpForm"
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -54,13 +56,13 @@ export const router = createBrowserRouter([
         element: <BookOnRooutes/>
       },
       {
-        path: "/login",
-        element: <Login/>
+        path: "/signInUpForm",
+        element: <SignInUpForm/>
       },
-      {
-        path: "/sign-up",
-        element: <SignUp/>
-      },
+      // {
+      //   path: "/sign-up",
+      //   element: <SignUp/>
+      // },
     ],
   },
 ]);

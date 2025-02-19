@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import SignUp from "../pages/SignUp/SignUp";
+import Login from "../pages/Login/Login";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function AuthForm() {
@@ -11,35 +13,8 @@ export default function AuthForm() {
     <div className={`md:flex md:flex-col items-center justify-center min-h-screen bg-gray-100 font-[Nunito]`}>
       {/* <h2 className="text-2xl font-[Playfair Display] mb-4">Weekly Coding Challenge #1: Sign in/up Form</h2> */}
       <div className="relative w-[768px] max-w-full min-h-[480px] h-[820px] md:h-full  bg-white  shadow-lg overflow-hidden flex">
-        <div
-          className={`absolute top-44 md:top-0 h-full md:w-1/2 w-full transition-all duration-600 ease-in-out flex flex-col items-center justify-center p-10 ${isSignUp ? "opacity-0 z-0" : "opacity-100 z-10"}`}
-        >
-          <h1 className="text-xl font-bold font-playfair">Sign in</h1>
-          <div className="flex space-x-2 my-3">
-            <Link href="#" className="p-2 border rounded-full"><FaFacebook /></Link>
-            <Link href="#" className="p-2 border rounded-full"><FcGoogle /></Link>
-            {/* <Link href="#" className="p-2 border rounded-full"><i className="fab fa-linkedin-in"></i></Link> */}
-          </div>
-          <span className="text-sm">or use your account</span>
-          <input type="email" placeholder="Email" className="mt-2 px-4 py-2 bg-gray-100 outline-none  w-full" />
-          <input type="password" placeholder="Password" className="mt-2 px-4 py-2 bg-gray-100 outline-none w-full" />
-          <a href="#" className="text-sm mt-2">Forgot your password?</a>
-          <button className="mt-3 bg-orange-500 text-white px-6 py-2 rounded-full" onClick={() => setIsSignUp(false)}>Sign In</button>
-        </div>
-        <div
-          className={`absolute top-44 md:top-0 md:left-0  h-full w-full md:w-1/2 transition-all duration-600 ease-in-out flex flex-col items-center justify-center p-10 ${isSignUp ? "opacity-100 z-10" : "opacity-0 z-0"}`}
-        >
-          <h1 className="text-xl font-bold font-playfair">Create Account</h1>
-          <div className="flex space-x-2 my-3">
-          <Link href="#" className="p-2 border rounded-full"><FaFacebook /></Link>
-          <Link href="#" className="p-2 border rounded-full"><FcGoogle /></Link>
-          </div>
-          <span className="text-sm">or use your email for registration</span>
-          <input type="text" placeholder="Name" className="mt-2 px-4 py-2 bg-gray-100 outline-none  w-full" />
-          <input type="email" placeholder="Email" className="mt-2 px-4 py-2 bg-gray-100 outline-none  w-full" />
-          <input type="password" placeholder="Password" className="mt-2 px-4 py-2 bg-gray-100 outline-none w-full" />
-          <button className="mt-3 bg-orange-500 text-white px-6 py-2 rounded-full" onClick={() => setIsSignUp(true)}>Sign Up</button>
-        </div>
+      <Login isSignUp ={isSignUp} setIsSignUp={setIsSignUp}/>
+        <SignUp isSignUp ={isSignUp} setIsSignUp={setIsSignUp} />
         <div className={`absolute  z-10  right-0 top-0 md:h-full min-h-[360px] md:w-1/2 w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white flex flex-col items-center justify-center p-10` }>
           {isSignUp ? (
             <>
