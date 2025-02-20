@@ -17,11 +17,11 @@ const Home = () => {
     <div>
       <Banner></Banner>
       
- <div className='md:hidden flex justify-center py-14 '>
+ <div className='md:hidden flex justify-center mt-12 '>
  <SearchBar/>
  {/* <SearchBarSelected/> */}
  </div>
- <div className='hidden'>
+ <div className='hidden md:flex'>
 
  <SearchBar/>
  </div>
