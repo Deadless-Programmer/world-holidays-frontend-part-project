@@ -36,12 +36,24 @@ export const router = createBrowserRouter([
         element: <Packages/>
       },
       {
-        path: "/services",
-        element: <Services/>
+        path: "/packageDetails/:id",
+        element: <PackageDetails />,
+        loader : ()=> fetch('/InternationalPackages.json')
+        
+        // loader: async ({ params }) => {
+        //   try {
+        //     const response = await fetch(`http://localhost:5000/packageDetails/${params.id}`);
+        //     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        //     return response.json();
+        //   } catch (error) {
+        //     throw new Error("Failed to load package: " + error.message);
+        //   }
+        // }
+      
       },
       {
-        path: "/packages/packageDetails",
-        element: <PackageDetails/>
+        path: "/services",
+        element: <Services/>
       },
       {
         path: "/popular-destination-details",
