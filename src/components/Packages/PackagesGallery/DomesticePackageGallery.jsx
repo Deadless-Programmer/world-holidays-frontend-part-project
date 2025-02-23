@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
 
-const PackagesGallery = ({packageHeading1, packageHeading2, packages, loading}) => {
+const DomesticePackageGallery = ({packageHeading1, packageHeading2, packages, loading}) => {
  
 
   if (loading)
@@ -28,7 +28,7 @@ const PackagesGallery = ({packageHeading1, packageHeading2, packages, loading}) 
       <div className="flex flex-wrap justify-center items-center gap-4 mt-5 ">
       {packages && packages.length > 0 ? (
   packages.map((packageData) => (
-    <Link to={`/packageDetails/${packageData._id}`}
+    <Link to={`/domesticePackageDetails/${packageData._id}`}
       key={packageData._id}
       className="relative max-w-[300px] max-h-[200px] overflow-hidden flex justify-center items-center group "
     >
@@ -52,4 +52,4 @@ const PackagesGallery = ({packageHeading1, packageHeading2, packages, loading}) 
   );
 };
 
-export default PackagesGallery;
+export default DomesticePackageGallery;

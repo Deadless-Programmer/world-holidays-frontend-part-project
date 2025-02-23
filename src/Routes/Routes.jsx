@@ -13,6 +13,7 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 
 import SignInUpForm from "../components/SignInUpForm"
+import DomesticPackageDetails from "../components/Packages/PackagesGallery/DomesticPackageDetails";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ export const router = createBrowserRouter([
       {
         path: "/packages",
         element: <Packages/>
+      },
+
+      {path:'/domesticePackageDetails/:id',
+        element:<DomesticPackageDetails/>,
+        loader:()=>fetch('/DomesticePackages.json')
       },
       {
         path: "/packageDetails/:id",

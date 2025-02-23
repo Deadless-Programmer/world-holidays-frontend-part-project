@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import BeatLoader from "react-spinners/BeatLoader";
 
 const InternationalPackages = () => {
-  const [intPackages, setIntPackages] = useState([]);
+  const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
   // const notify = () => toast('Wow so easy !');
@@ -19,7 +19,7 @@ const InternationalPackages = () => {
         return res.json();
       })
       .then((data) => {
-        setIntPackages(data);
+        setPackages(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -40,15 +40,15 @@ const InternationalPackages = () => {
       >
         <BeatLoader  color="#FFA500" loading={true} size={15} />
       </div>
-    ); // Show loading state
-  if (err) return toast({ err }); // Show error message
+    ); 
+  if (err) return toast({ err }); 
 
-  // console.log(intPackages);
+ 
 
   return (
     <div>
       <ToastContainer />
-      <PackagesGallery loading={loading} intPackages={intPackages}
+      <PackagesGallery loading={loading} packages={packages}
         packageHeading1={"International"}
         packageHeading2={"Packages"}
       />

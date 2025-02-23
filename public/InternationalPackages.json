@@ -118,8 +118,121 @@
       "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
       "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1a1e9a1b3c4d5e6f7g811",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 4.7,
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "South Africa",
+      "image": "https://images.unsplash.com/photo-1502224562085-639556652f33?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1wewa1e9a1b3c4d5e6f7g811",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 4.7,
+      "category":"Popular",
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "Maldives",
+      "image": "https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1a1e9a1b3c4d5e6f7g8ww11",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 4.8,
+      "category":"Popular",
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "Nepal",
+      "image": "https://img.freepik.com/free-photo/tourists-taking-photos-beautiful-scenery-skiing-around-deogyusan_335224-426.jpg?t=st=1737725079~exp=1737728679~hmac=35f105a6edf6823ff22212818202f5e9c2e8f2a6aa78715f39d4b802df9a2308&w=996",
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1a1e9aw1b3c4d5e6f7g811",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 4.9,
+      "category":"Popular",
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "Sri-Lanka",
+      "image": "https://images.unsplash.com/photo-1566976273017-6e6df9bbdbee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1a1e9a1bw3c4d5e6wf7g811",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 5,
+      "category":"Popular",
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "Vetnam",
+      "image": "https://images.unsplash.com/photo-1722526933541-9a9cdfcdb28f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1a1e9a1b3c4d5e6fewg811",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 4.8,
+      "category":"Popular",
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "Indonesia",
+      "image": "https://images.unsplash.com/photo-1544750040-4ea9b8a27d38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+    },
+    {
+      "_id": "65d1a1eff9a1b3c4d5fe6f7g811",
+      "destination": "Cape Town",
+      "price": { "amount": 750, "currency": "USD", "per": "adult" },
+      "rating": 4.8,
+      "category":"Popular",
+      "date_range": "15 Jan - 20 Jan",
+      "duration": "6 Day + 5 Night",
+      "location": "China",
+      "image": "https://images.unsplash.com/photo-1732162933719-b618142c1ad3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+      "overview": "Where mountains meet oceans - explore nature's grandeur.",
+      "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+      "excluded": ["Others cost", "Personal cost"],
+      "tour_location_images": ["https://img.freepik.com/free-photo/tourists-taking-photos-beautiful-scenery-skiing-around-deogyusan_335224-426.jpg?t=st=1737725079~exp=1737728679~hmac=35f105a6edf6823ff22212818202f5e9c2e8f2a6aa78715f39d4b802df9a2308&w=996","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
     }
-
    
     ]
     

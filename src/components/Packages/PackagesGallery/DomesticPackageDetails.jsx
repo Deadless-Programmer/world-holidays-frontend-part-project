@@ -32,7 +32,7 @@ const customStyles = {
   activeFillColor: "#FFA500", // Gold color for active stars
   inactiveFillColor: "#D3D3D3", // Light gray for inactive stars
 };
-const PackageDetails = () => {
+const DomesticPackageDetails = () => {
   const [date, setDate] = useState(null);
 
   const { id } = useParams();
@@ -252,4 +252,4 @@ const PackageDetails = () => {
   );
 };
 
-export default PackageDetails;
+export default DomesticPackageDetails;
