@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="  md:p-10     mt-6 ">
-      <div className=" container  max-w-7xl mx-auto  pb-10 pr-10 pl-6 grid grid-cols-1 md:grid-cols-4 gap-9 md:justify-items-center md:items-start">
+    <footer className="  md:p-10   bg-gray-50  mt-6 ">
+      <div className=" container shadow-md  max-w-7xl mx-auto pt-5  pb-10 pr-10 pl-6 grid grid-cols-1 md:grid-cols-4 gap-9 md:justify-items-center md:items-start">
         <div className=" ">
           <img
             className="h-12 "

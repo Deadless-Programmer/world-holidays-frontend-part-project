@@ -10,10 +10,10 @@
       "duration": "6 Day + 5 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["Beach Resort", "Breakfast", "Transport", "Guided Tours"],
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Experience the world's longest natural sandy beach with breathtaking sunrises and marine drives.",
       "included": ["Beachfront accommodation", "Inani Beach tour", "Himchori Waterfall visit", "Seafood dinner experience", "24/7 support"],
-      "excluded": ["Water sports equipment", "Spa services"],
+     "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     },
     {
@@ -25,10 +25,10 @@
       "duration": "4 Day + 3 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["Hotel Stay", "Transport", "Historical Tours", "Meals"],
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Explore the cultural crossroads of Bengal with rich historical heritage and traditional crafts.",
       "included": ["Benapol Land Port visit", "Local pottery workshop", "Traditional jute craft demo", "Historical museum entry"],
-      "excluded": ["Artisan purchases", "Specialty tours"],
+      "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1588600878062-43c2c4ac0eb6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     },
     {
@@ -40,10 +40,10 @@
       "duration": "4 Day + 3 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1593696954577-ab3d39317b97?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["Resort Stay", "Silk Farm Tour", "River Cruise", "Meals"],
+     "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Discover the silk capital of Bangladesh with mango orchards and archaeological sites.",
       "included": ["Silk weaving demonstration", "Padma River cruise", "Barendra Museum visit", "Mango orchard tour"],
-      "excluded": ["Silk product purchases", "Specialty tours"],
+     "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     },
     {
@@ -55,10 +55,10 @@
       "duration": "5 Day + 4 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["Hill Resort", "Port Tour", "Beach Visit", "Transport"],
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Where mountains meet the sea - explore vibrant port life and hill tracts.",
       "included": ["Patenga Beach visit", "Karnaphuli River cruise", "Ethnic museum tour", "Foy's Lake activities"],
-      "excluded": ["Hill trekking gear", "Boat rentals"],
+     "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     },
     {
@@ -70,10 +70,10 @@
       "duration": "4 Day + 3 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["Hotel Stay", "Railway Museum", "Transport", "Guided Tours"],
+     "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Northern hub of railway history and agricultural landscapes.",
       "included": ["Railway Museum visit", "Local market tour", "Historical site visits", "Traditional cuisine tasting"],
-      "excluded": ["Specialty transport", "Handicraft purchases"],
+      "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     },
     {
@@ -85,10 +85,10 @@
       "duration": "4 Day + 3 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["River Resort", "Boat Cruise", "Guided Tours", "Meals"],
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Venice of Bengal - navigate through lush green river routes and floating markets.",
       "included": ["Sundarbans gateway tour", "Traditional boat making demo", "Floating market visit", "Local fish cuisine experience"],
-      "excluded": ["Fishing equipment", "Specialty cruises"],
+      "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     },
     {
@@ -100,10 +100,10 @@
       "duration": "6 Day + 5 Night",
       "location": "Bangladesh",
       "image": "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "included_services": ["Tea Garden Resort", "Adventure Tours", "Transport", "Meals"],
+      "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
       "overview": "Land of rolling tea estates and mystical waterfalls in northeastern Bangladesh.",
       "included": ["Tea plantation tour", "Ratargul Swamp Forest boat ride", "Jaflong stone quarry visit", "Traditional Manipuri dance show"],
-      "excluded": ["Adventure gear rental", "Specialty tea purchases"],
+      "excluded": ["Others cost", "Personal cost"],
       "tour_location_images": ["https://images.unsplash.com/photo-1581337204873-ef36aa186caa?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
     }
   ]

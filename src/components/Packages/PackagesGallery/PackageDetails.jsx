@@ -24,38 +24,38 @@ import { SlCalender } from "react-icons/sl";
 import PageHeader from "../../PageHeader/PageHeader";
 import { HiMiniCalendarDateRange } from "react-icons/hi2";
 import { useLoaderData, useParams } from "react-router-dom";
-import { Rating, Star } from '@smastrom/react-rating'
+import { Rating, Star } from "@smastrom/react-rating";
 
-
-import '@smastrom/react-rating/style.css'
+import "@smastrom/react-rating/style.css";
 const customStyles = {
   itemShapes: Star,
   activeFillColor: "#FFA500", // Gold color for active stars
   inactiveFillColor: "#D3D3D3", // Light gray for inactive stars
-  
 };
 const PackageDetails = () => {
- 
-
   const [date, setDate] = useState(null);
 
   const { id } = useParams();
   const packageData = useLoaderData();
 
-
-  const package_Data = packageData.find(package_data=> package_data._id===id)
+  const package_Data = packageData.find(
+    (package_data) => package_data._id === id
+  );
   console.log("Loaded data:", id, package_Data);
-  const {destination,date_range,duration,
-    price,location,included_services,included,image,excluded,rating,tour_location_images
-
-
-
-
-
-
-
-
-  }=package_Data;
+  const {
+    destination,
+    date_range,
+    duration,
+    price,
+    location,
+    included_services,
+    included,
+    image,
+    excluded,
+    rating,
+    tour_location_images,
+    overview,
+  } = package_Data;
   return (
     <section>
       <PageHeader
@@ -69,31 +69,28 @@ const PackageDetails = () => {
       <div className="container max-w-7xl mx-auto md:grid grid-cols-12 gap-16 mt-8 p-6">
         {/* left side */}
         <div className="col-span-8">
-          <img
-            src="https://images.unsplash.com/photo-1628438273202-a26e785d044f?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
+          <img src={image} alt="" />
           <div className="flex justify-between mt-5">
             <h1 className="font-playfair text-3xl font-semibold items-end">
-             {destination
-             }
+              {destination}
             </h1>
             <h3 className="font-semibold font-nunito">
-              From <span className="font-semibold text-2xl">${price.amount}</span> per
-              
+              From{" "}
+              <span className="font-semibold text-2xl">${price.amount}</span>{" "}
+              per adult
             </h3>
           </div>
           <div className="flex justify-between items-center">
             <div className="mt-5 ">
               <div>
                 <div className="md:flex  items-center gap-10">
-                <Rating 
-        value={rating} 
-        readOnly 
-        halfFillMode="svg"
-        style={{ maxWidth: 150 }} 
-        itemStyles={customStyles} 
-      />
+                  <Rating
+                    value={rating}
+                    readOnly
+                    halfFillMode="svg"
+                    style={{ maxWidth: 150 }}
+                    itemStyles={customStyles}
+                  />
                   <h1 className="flex items-center gap-1  mt-2 md:mt-0">
                     {" "}
                     <HiMiniCalendarDateRange /> {date_range}
@@ -101,7 +98,7 @@ const PackageDetails = () => {
                 </div>
                 <div className="md:flex justify-around gap-10 ">
                   <h1 className="flex items-center gap-2  font-nunito mt-2">
-                    <SlCalender /> 4 Day + 3 Night
+                    <SlCalender /> {duration}
                   </h1>
                   <h1 className="flex items-center gap-2 font-nunito mt-2">
                     <MdLocationOn className="text-orange-500 text-xl " />{" "}
@@ -135,77 +132,44 @@ const PackageDetails = () => {
               {" "}
               <MdOutlineLibraryBooks /> Overview
             </h1>
-            <p className="mt-2 font-nunito">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              exercitationem blanditiis dignissimos quas qui hic recusandae,
-              magnam cupiditate ullam maxime, reprehenderit consectetur eos
-              aperiam praesentium deserunt veritatis. Numquam, officiis iure?
-            </p>
+            <p className="mt-2 font-nunito">{overview}</p>
           </div>
 
           <div>
             <h1 className="flex items-center gap-2 font-playfair text-2xl mt-16">
               {" "}
-              <LiaThumbtackSolid /> Included - Excluded
+              <LiaThumbtackSolid /> Included
             </h1>
             <div className="mt-5 md:grid grid-cols-2 ">
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Return ticket{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Airport pick and
-                drop{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Wellcome drinks{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Breakfast{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Sharing room{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> 3 star
-                accomodation{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> A/C Car{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Parking and toll
-                fee{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> English-hindi
-                spoken driver{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> 24/7 Support{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <GoCheckCircle className="text-orange-500" /> Tourit visa
-                proccesing{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <AiOutlineCloseCircle className="text-red-500" /> Personal cost{" "}
-              </p>
-              <p className="flex items-center gap-3 font-nunito">
-                {" "}
-                <AiOutlineCloseCircle className="text-red-500" /> Others cost{" "}
-              </p>
+              {included.map((data, indx) => (
+                <p
+                  key={data.indx}
+                  da
+                  className="flex items-center gap-3 font-nunito"
+                >
+                  {" "}
+                  <GoCheckCircle className="text-orange-500" /> {data}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h1 className="flex items-center gap-2 font-playfair text-2xl mt-16">
+              {" "}
+              <LiaThumbtackSolid />
+              Excluded
+            </h1>
+            <div className="mt-5 md:grid grid-cols-2 ">
+              {excluded.map((data, indx) => (
+                <p
+                  key={data.indx}
+                  da
+                  className="flex items-center gap-3 font-nunito"
+                >
+                  {" "}
+                  <AiOutlineCloseCircle className="text-orange-500" /> {data}
+                </p>
+              ))}
             </div>
           </div>
           <div>
@@ -213,17 +177,15 @@ const PackageDetails = () => {
               {" "}
               <MdAddLocationAlt /> Tour Location
             </h1>
-            <div className="md:flex items-center gap-4 mt-5 ">
-              <img
-                className="w-[320px] transition  duration-700 hover:scale-105 h-48"
-                src="https://images.unsplash.com/photo-1648471755440-fb27a86238bb?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
-              <img
-                className="w-[320px] h-48 mt-5 transition  duration-700 hover:scale-105 md:mt-0"
-                src="https://images.unsplash.com/photo-1694854573574-9487bc7b6282?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-5 flex-wrap">
+              {tour_location_images.map((image, idx) => (
+                <img
+                  key={idx} // Corrected `key`
+                  className="w-[320px] transition duration-700 hover:scale-105 h-48"
+                  src={image}
+                  alt=""
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -261,8 +223,6 @@ const PackageDetails = () => {
                 className=" p-3 outline-none w-72 mt-4 "
               />
 
-          
-
               <div className="">
                 <Flatpickr
                   value={date}
@@ -278,7 +238,10 @@ const PackageDetails = () => {
                 />
               </div>
 
-              <button type="submit" className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center">
+              <button
+                type="submit"
+                className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center"
+              >
                 Book <IoIosArrowRoundForward className="text-2xl" />{" "}
               </button>
             </div>
