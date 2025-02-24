@@ -14,6 +14,7 @@ import SignUp from "../pages/SignUp/SignUp";
 
 import SignInUpForm from "../components/SignInUpForm"
 import DomesticPackageDetails from "../components/Packages/PackagesGallery/DomesticPackageDetails";
+import NextTourDetails from "../components/home/NextTour/NextTourDetails";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
         element: <Packages/>
       },
 
+      {path:'/next_tour_details/:id',
+        element:<NextTourDetails/>,
+        loader:()=>fetch('/NextTour.json')
+      },
       {path:'/domesticePackageDetails/:id',
         element:<DomesticPackageDetails/>,
         loader:()=>fetch('/DomesticePackages.json')

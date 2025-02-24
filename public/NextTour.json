@@ -1,0 +1,21 @@
+[
+    
+    
+    {
+        "_id": "65d1wewa1e9a1b3c4d5ed6f7g811s",
+        "destination": "Alimathaa",
+        "price": { "amount": 750, "currency": "USD", "per": "adult" },
+        "rating": 4.7,
+        "category":"Popular",
+        "date_range": "15 Jan - 20 Jan",
+        "duration": "6 Day + 5 Night",
+        "location": "Maldives",
+        "image": "https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "video":"https://duruthemes.com/demo/html/travol/travel-video.mp4",
+        "included_services": ["Transport", "Hotel", "Breakfast", "Sightseeing"],
+        "overview": "Where mountains meet oceans - explore nature's grandeur.",
+        "included": ["Return ticket", "Airport transfer", "3-star accommodation", "Wellcome drinks", "Breakfast", "Sharing room", "A/C Car", "24/7 support", "Free Wi-Fi", "Parking and toll fee","English-hindi spoken driver", "Tourit visa proccesing"],
+        "excluded": ["Others cost", "Personal cost"],
+        "tour_location_images": ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop=","https://images.unsplash.com/photo-1504384308090-c894fdcc538d?dpr=1&auto=format&fit=crop&w=1199&h=899&q=80&cs=tinysrgb&crop="]
+      }
+  ]

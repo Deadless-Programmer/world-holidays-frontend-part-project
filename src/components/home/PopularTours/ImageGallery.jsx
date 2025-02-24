@@ -78,7 +78,7 @@ const ImageGallery = () => {
 
 
     const popularPackages = packages.filter(popularpackage=> popularpackage.category ==="Popular")
-    console.log(popularPackages)
+    // console.log(popularPackages)
 
   return (
     <div className="grid gap-4 lg:gap-6 mt-4">
