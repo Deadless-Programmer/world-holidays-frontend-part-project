@@ -2,7 +2,8 @@ import React from 'react';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { PiClockCountdownFill } from "react-icons/pi";
 import { BiCalendar } from "react-icons/bi";
-
+import { motion } from "motion/react"
+import { easeInOut } from 'motion';
 const NextTour = () => {
   return (
     <div className='overflow-x-hidden w-auto mt-24 relative h-[50vh] md:h-[70vh]' >
@@ -34,9 +35,9 @@ const NextTour = () => {
 
       {/* text section */}
       <div className="absolute  top-0 left-0 w-full h-full  flex flex-col items-center justify-center">
-        <h1 className="text-white text-2xl md:text-4xl z-10 font-playfair font-bold">
+        <motion.h1 animate={{x:10}} transition={{ duration:2, delay:1,ease:easeInOut,repeat:Infinity }} className="text-white text-2xl md:text-4xl z-10 font-playfair font-bold">
           Our Next Tour Is Maldives
-        </h1>
+        </motion.h1>
         <div className='flex items-center justify-center gap-4 mt-3'>
 
         <p className='flex text-white font-nunito items-center gap-1'> <span className='text-xl'><MdOutlineLocationOn/></span> <span>Maldives</span>  </p>

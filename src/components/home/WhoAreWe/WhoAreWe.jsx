@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCircleCheck } from "react-icons/fa6";
-
+import { motion } from "motion/react"
 
 const WhoAreWe = () => {
   return (
@@ -10,7 +10,7 @@ const WhoAreWe = () => {
         <img src="https://i.postimg.cc/nV29vpYr/woman-6010055-1920.jpg" alt="" className="object-cover w-full h-64  sm:h-96 lg:col-span-7 dark:bg-gray-500" />
         <div className="md:p-6 pt-9 space-y-2 lg:col-span-5" bis_skin_checked="1">
             
-          <h3 className="text-3xl font-semibold md:text-4xl font-playfair pb-4 ">Find Your <span className='text-orange-500 '>Best Travel</span> Details With Us</h3>
+          <h3 className="text-3xl font-semibold md:text-4xl font-playfair pb-4 ">Find Your <motion.span   animate={{color:['#FFA500', '#fbff03','#66ff03']}} transition={{duration:1.5, repeat:Infinity}}  >Best Travel</motion.span> Details With Us</h3>
           {/* <span className="text-xs dark:text-gray-600">February 19, 2021</span> */}
           <p className='font-nunito font-light'>As a trusted IATA-certified agent, we offer reliable and seamless travel solutions. From flight bookings to custom itineraries, our expert team ensures every detail of your journey is perfectly planned.</p>
 
