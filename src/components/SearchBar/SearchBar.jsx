@@ -32,9 +32,9 @@ const SearchBar = () => {
     const [isOpen2, setIsOpen2] = useState(false);
 
   return (
-    <div className=' bg-slate-100  h-[280px] md:my-10  md:h-24 md:pl-4 md:pr-4  bg-opacity-40   md:w-fit mx-auto  flex justify-center items-center '>
+    <div className=' bg-slate-100   md:my-10  md:h-24 md:pl-4 md:pr-4  bg-opacity-40   md:w-fit mx-auto  flex justify-center items-center '>
         <div className='flex flex-col    md:flex-row  justify-center items-center '>
-           <input type="text" className='outline-none p-[20.5px] w-[360px]  md:w-64 md:mr-[1px] font-nunito text-base'  placeholder='Where to ?'/>
+           <input type="text" className='outline-none border p-[20.5px] w-[360px]  md:w-64 md:mr-[1px] font-nunito text-base'  placeholder='Where to ?'/>
            <div className="relative w-[360px]  md:w-64    mx-auto ">
                  <div
                    className="flex justify-between z-50 items-center w-[360px]  md:w-64 p-5 bg-white border  cursor-pointer"
