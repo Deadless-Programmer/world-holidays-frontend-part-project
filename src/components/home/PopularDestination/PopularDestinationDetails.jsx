@@ -23,14 +23,20 @@ import RelatedDestination from "./RelatedDestination";
 
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const PopularDestinationDetails = () => {
  const [date, setDate] = useState(null);
 
+const {id}=useParams();
+const popularDesData = useLoaderData();
+// console.log(popularDesData)
 
+const popularDes = popularDesData.find(item=>item._id===id)
+// console.log(relatedDes)
 
+const {image, country, name,overview,_id}=popularDes;
 
- 
   return (
     <div>
       <PageHeader
@@ -41,52 +47,36 @@ const PopularDestinationDetails = () => {
         }
       />
       <div className="container max-w-7xl mx-auto md:grid grid-cols-12 gap-16 mt-8 p-6">
-        {/* left side */}
         <div className="col-span-8">
           <img
-            src="https://images.unsplash.com/photo-1628438273202-a26e785d044f?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={image}
             alt=""
           />
           <div className="flex justify-between mt-5">
             <h1 className="font-playfair text-3xl font-semibold items-end">
-              Fulhadoo
+              {name}
             </h1>
           </div>
 
           <div>
             <h1 className="flex items-center gap-2 font-playfair text-2xl mt-16">
               {" "}
-              <MdOutlineLibraryBooks /> Overview
+              <MdOutlineLibraryBooks /> {overview.title}
             </h1>
             <p className="mt-2 font-nunito">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              exercitationem blanditiis dignissimos quas qui hic recusandae,
-              magnam cupiditate ullam maxime, reprehenderit consectetur eos
-              aperiam praesentium deserunt veritatis. Numquam, officiis iure?
+              {overview.description}
             </p>
-            <p className="mt-2 font-nunito">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              exercitationem blanditiis dignissimos quas qui hic recusandae,
-              magnam cupiditate ullam maxime, reprehenderit consectetur eos
-              aperiam praesentium deserunt veritatis. Numquam, officiis iure?
-            </p>
-            <p className="mt-2 font-nunito">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              exercitationem blanditiis dignissimos quas qui hic recusandae,
-              magnam cupiditate ullam maxime, reprehenderit consectetur eos
-              aperiam praesentium deserunt veritatis. Numquam, officiis iure?
-            </p>
+          
           </div>
 
           <div>
             <h1 className="flex items-center gap-2 font-playfair text-2xl mt-16">
               {" "}
-              <IoReloadCircleOutline /> Realated Destination
+              <IoReloadCircleOutline  /> Realated Destination
             </h1>
-            <RelatedDestination />
+            <RelatedDestination id={_id} />
           </div>
         </div>
-        {/* right side  */}
         <div className="col-span-4  bg-zinc-50 h-[550px]">
           <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">
             Tour Booking

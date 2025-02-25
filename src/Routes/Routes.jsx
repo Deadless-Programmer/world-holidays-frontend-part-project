@@ -69,7 +69,7 @@ export const router = createBrowserRouter([
       {
         path: "/popular-destination-details/:id",
         element: <PopularDestinationDetails/>,
-        loader: ()=>fetch('popularDestination.json')
+        loader: ()=>fetch('/popularDestination.json')
       },
       {
         path: "/ticket-details",

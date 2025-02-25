@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
@@ -11,8 +11,55 @@ import { toast } from "react-toastify";
 
 function RelatedDestination({id}) {
 
+  const [destination, setDestination] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState(null);
+  // const notify = () => toast('Wow so easy !');
 
-  
+  useEffect(() => {
+    fetch("/popularDestination.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new toast("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setDestination(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setErr(error.message);
+        setLoading(false);
+      });
+  }, []);
+
+
+  if (loading)
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "50vh",
+        }}
+      >
+        <BeatLoader  color="#FFA500" loading={true} size={15} />
+      </div>
+    ); 
+  if (err) return toast({ err }); 
+
+
+
+console.log(destination)
+  const relatedDes = destination.filter(item=>item._id!==id)
+
+
+
+console.log(relatedDes)
+
+
 
 
 
@@ -69,24 +116,23 @@ function RelatedDestination({id}) {
 
 
     <Slider className="mt-4 " {...settings}>
-  {destinations.map((item) => (
-    <div key={item.id}>
+  {relatedDes.map((item) => (
+    <div key={item._id}>
       <div className="h-[70vh]  p-2 ">
         {/* Add the group class here */}
         <div className="group overflow-hidden relative h-full">
           <img
-            src={item.img}
-            alt={`Destination ${item.id}`}
+            src={item.image}
+            alt={`Destination ${item.name}`}
             className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
           />
-          
           {/* Text overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <h1 className="absolute top-5 left-5  z-10 text-white bg-orange-500 p-2 font-nunito transform  origin-top-left">  New Zealand</h1>
+          <h1 className="absolute  top-3 left-3 z-10  text-white bg-orange-500 p-2 font-nunito">  {item.country}</h1>
           <div className="text-3xl font-nunito font-bold text-white flex flex-col items-center gap-2">
           
           
-            <Link className="text-white border p-2 text-lg  font-semibold flex items-center justify-center gap-2">
+            <Link to={`/popular-destination-details/${item._id}`} className="text-white border p-2 text-lg  font-semibold flex items-center justify-center gap-2">
               Explore <span><SlArrowRightCircle /></span>
             </Link>
           </div>

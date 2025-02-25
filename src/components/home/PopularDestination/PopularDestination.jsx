@@ -17,7 +17,7 @@ const [destination, setDestination] = useState([]);
   // const notify = () => toast('Wow so easy !');
 
   useEffect(() => {
-    fetch("popularDestination.json")
+    fetch("/popularDestination.json")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");
