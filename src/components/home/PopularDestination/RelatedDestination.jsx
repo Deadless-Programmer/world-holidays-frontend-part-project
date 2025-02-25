@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
@@ -6,8 +6,18 @@ import SectionHeading from "../../SectionHeading/SectionHeading";
 import { Link } from "react-router-dom";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { SlArrowRightCircle } from "react-icons/sl";
+import { BeatLoader } from "react-spinners";
+import { toast } from "react-toastify";
 
-function RelatedDestination() {
+function RelatedDestination({id}) {
+
+
+  
+
+
+
+
+
   const settings = {
     // dots: true,
     infinite: true,
@@ -69,9 +79,10 @@ function RelatedDestination() {
             alt={`Destination ${item.id}`}
             className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-110"
           />
+          
           {/* Text overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <h1 className="flex items-center absolute top-12 -left-7  -rotate-90 text-white bg-orange-500 p-2 font-nunito">  New Zealand</h1>
+          <h1 className="absolute top-5 left-5  z-10 text-white bg-orange-500 p-2 font-nunito transform  origin-top-left">  New Zealand</h1>
           <div className="text-3xl font-nunito font-bold text-white flex flex-col items-center gap-2">
           
           

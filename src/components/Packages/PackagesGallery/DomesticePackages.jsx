@@ -27,7 +27,7 @@ const DomesticePackages = () => {
             setLoading(false);
           });
       }, []);
-      console.log(packages)
+      // console.log(packages)
 
       if (loading)
         return (

@@ -26,6 +26,11 @@ import "flatpickr/dist/flatpickr.min.css";
 
 const PopularDestinationDetails = () => {
  const [date, setDate] = useState(null);
+
+
+
+
+ 
   return (
     <div>
       <PageHeader
@@ -36,6 +41,7 @@ const PopularDestinationDetails = () => {
         }
       />
       <div className="container max-w-7xl mx-auto md:grid grid-cols-12 gap-16 mt-8 p-6">
+        {/* left side */}
         <div className="col-span-8">
           <img
             src="https://images.unsplash.com/photo-1628438273202-a26e785d044f?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -80,6 +86,7 @@ const PopularDestinationDetails = () => {
             <RelatedDestination />
           </div>
         </div>
+        {/* right side  */}
         <div className="col-span-4  bg-zinc-50 h-[550px]">
           <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">
             Tour Booking
