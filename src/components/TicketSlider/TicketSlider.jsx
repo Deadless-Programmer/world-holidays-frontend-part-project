@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { SlArrowRightCircle } from "react-icons/sl";
 
-function TicketSlider({ ticketData = [] }) { // ✅ Default empty array
-  console.log("Received domestice:", ticketData);
+function TicketSlider({ ticketData }) { // ✅ Default empty array
+  // console.log("Received domestice:", ticketData);
 
   const settings = {
     dots: true,
@@ -61,7 +61,7 @@ function TicketSlider({ ticketData = [] }) { // ✅ Default empty array
                   </h1>
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     <div className="text-3xl font-nunito font-bold text-white flex flex-col items-center gap-2">
-                      <Link className="text-white border p-2 text-lg font-semibold flex items-center justify-center gap-2">
+                      <Link to={`/ticket-details/${ticketData[0]?._id}`} className="text-white border p-2 text-lg font-semibold flex items-center justify-center gap-2">
                         Explore <span><SlArrowRightCircle /></span>
                       </Link>
                     </div>

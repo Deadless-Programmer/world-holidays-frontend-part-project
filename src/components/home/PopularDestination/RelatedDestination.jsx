@@ -99,17 +99,17 @@ console.log(relatedDes)
     ]
   };
 
-  const destinations = [
-    { id: 1, img: 'https://images.pexels.com/photos/12538151/pexels-photo-12538151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 2, img: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 3, img: 'https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 4, img: 'https://images.pexels.com/photos/2928012/pexels-photo-2928012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 5, img: 'https://images.pexels.com/photos/29237522/pexels-photo-29237522/free-photo-of-stunning-aerial-view-of-faraglioni-rocks-in-capri.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 6, img: 'https://images.pexels.com/photos/16620071/pexels-photo-16620071/free-photo-of-boats-and-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 7, img: 'https://images.pexels.com/photos/27199637/pexels-photo-27199637/free-photo-of-capri-e-il-suo-mare.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 8, img: 'https://images.pexels.com/photos/12671154/pexels-photo-12671154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-    { id: 9, img: 'https://images.pexels.com/photos/17599722/pexels-photo-17599722/free-photo-of-view-of-the-sea-and-the-natural-arch-on-capri-island.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
-  ];
+  // const destinations = [
+  //   { id: 1, img: 'https://images.pexels.com/photos/12538151/pexels-photo-12538151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 2, img: 'https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 3, img: 'https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 4, img: 'https://images.pexels.com/photos/2928012/pexels-photo-2928012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 5, img: 'https://images.pexels.com/photos/29237522/pexels-photo-29237522/free-photo-of-stunning-aerial-view-of-faraglioni-rocks-in-capri.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 6, img: 'https://images.pexels.com/photos/16620071/pexels-photo-16620071/free-photo-of-boats-and-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 7, img: 'https://images.pexels.com/photos/27199637/pexels-photo-27199637/free-photo-of-capri-e-il-suo-mare.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 8, img: 'https://images.pexels.com/photos/12671154/pexels-photo-12671154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+  //   { id: 9, img: 'https://images.pexels.com/photos/17599722/pexels-photo-17599722/free-photo-of-view-of-the-sea-and-the-natural-arch-on-capri-island.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+  // ];
 
   return (
     <div className=" overflow-hidden  mt-10  ">
