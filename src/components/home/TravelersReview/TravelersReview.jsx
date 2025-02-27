@@ -45,7 +45,7 @@ const TravelersReview = () => {
   const reviewTexts = reviews.map((review) => review.p_description);
 
   return (
-    <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1529970120821-d8cf525bc023?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex items-center justify-center">
+    <div className="min-h-screen mb-24 bg-[url('https://images.unsplash.com/photo-1529970120821-d8cf525bc023?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex items-center justify-center">
       <header className="md:flex items-center justify-between max-w-5xl w-full mx-auto space-y-8 md:space-y-0">
         
         {/* Left Side (Text) */}
