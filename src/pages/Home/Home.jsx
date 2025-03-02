@@ -10,11 +10,14 @@ import OverseasTicket from '../../components/home/OverseasTicket/OverseasTicket'
 import CorporateService from '../../components/home/CorporateService/CorporateService';
 import TravelersReview from '../../components/home/TravelersReview/TravelersReview';
 import SearchBarSelected from '../../components/SearchBar/SearchBarSelected'
-
+import { Helmet} from 'react-helmet-async';
 
 const Home = () => {
   return (
     <div>
+     <Helmet>
+     <title>W-holidays | Home</title>
+     </Helmet>
       <Banner></Banner>
       
  <div className='md:hidden flex justify-center mt-12 '>

@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import SignUp from "../pages/SignUp/SignUp";
 import Login from "../pages/Login/Login";
+import { Helmet } from "react-helmet-async";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function AuthForm() {
@@ -11,6 +12,9 @@ export default function AuthForm() {
 
   return (
     <div className={`md:flex md:flex-col items-center justify-center min-h-screen bg-gray-100 font-[Nunito]`}>
+       <Helmet>
+           <title>W-holidays | Authentication</title>
+           </Helmet>
       {/* <h2 className="text-2xl font-[Playfair Display] mb-4">Weekly Coding Challenge #1: Sign in/up Form</h2> */}
       <div className="relative w-[768px] max-w-full min-h-[480px] h-[820px] md:h-full  bg-white  shadow-lg overflow-hidden flex">
       <Login isSignUp ={isSignUp} setIsSignUp={setIsSignUp}/>
