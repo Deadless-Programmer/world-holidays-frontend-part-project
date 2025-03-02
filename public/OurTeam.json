@@ -1,0 +1,79 @@
+[
+    {
+        "_id":1,
+        "Neme":"SYED MEHEDI MAHMUD",
+    "Designation":"Head of marketing",
+    "img":"https://i.postimg.cc/4nkdVzRK/MEHEDI-Passport-size-Pic.jpg"
+    },
+
+    {
+        "_id":2,
+        "Neme":"MONIRA BEGUM",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":3,
+        "Neme":"Mr. KARTICK CHANDRA",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":4,
+        "Neme":"Mr. md karuzzaman",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":5,
+        "Neme":"Mr. MD SAKIL",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":6,
+        "Neme":"Mr. MD SHAKIL",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":7,
+        "Neme":"Mr. MD SHORIF",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":8,
+        "Neme":"Mr. MD TONMOY HOSSAIN",
+    "Designation":"Head of marketing",
+    "img":"https://i.postimg.cc/3J8J5JJQ/My-Photo-main.jpg"
+    },
+
+    {
+        "_id":9,
+        "Neme":"Mr. RIAZ UDDIN",
+    "Designation":"Head of marketing",
+    "img":""
+    },
+
+    {
+        "_id":11,
+        "Neme":"Mr. SHANTO SUTRA",
+    "Designation":"Head of marketing",
+    "img":"https://i.postimg.cc/7hDPLq37/Whats-App-Image-2025-02-08-at-12-51-12-7f25b2ad.jpg"
+    },
+
+    {
+        "_id":12,
+        "Neme":"Jahin S M Tuhin",
+    "Designation":"Software Developer",
+    "img":""
+    }
+
+]

@@ -1,15 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" className="W-16" href="https://i.postimg.cc/X7g6WFKM/3.png" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      className="W-16"
+      href="https://i.postimg.cc/X7g6WFKM/3.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-T/jSY6k4O0kCav34KwP1M8m4FYPBq4FKl+jRZb2ilBkwtX5pIkFjQ7dS3kdBBl3A" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha384-T/jSY6k4O0kCav34KwP1M8m4FYPBq4FKl+jRZb2ilBkwtX5pIkFjQ7dS3kdBBl3A"
+      crossorigin="anonymous"
+    />
     <title>w-holidays</title>
   </head>
   <body>
     <div id="root"></div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "jiJ4bWfSWdDm_zsZf",
+        });
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

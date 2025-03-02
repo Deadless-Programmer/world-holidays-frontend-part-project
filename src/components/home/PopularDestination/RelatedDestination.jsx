@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { SlArrowRightCircle } from "react-icons/sl";
 import { BeatLoader } from "react-spinners";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 function RelatedDestination({id}) {
 
@@ -113,7 +113,7 @@ console.log(relatedDes)
 
   return (
     <div className=" overflow-hidden  mt-10  ">
-
+      <ToastContainer/>
 
     <Slider className="mt-4 " {...settings}>
   {relatedDes.map((item) => (
