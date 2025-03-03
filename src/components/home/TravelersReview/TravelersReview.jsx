@@ -46,18 +46,18 @@ const TravelersReview = () => {
 
   return (
 
-    <Parallax
+    <Parallax className="mb-20 bg-cover bg-center"
         blur={{ min: -15, max: 15 }}
         bgImage={'https://images.unsplash.com/photo-1529970120821-d8cf525bc023?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
         bgImageAlt="the dog"
         strength={-200}
     >
       
-    <div className="mb-24  bg-cover bg-center flex items-center justify-center">
-      <header className="md:flex items-center justify-between max-w-5xl w-full mx-auto space-y-8 md:space-y-0">
+    <div className="   mb-14 md:mb-0  h-screen flex items-center justify-center w-full">
+    <header className="md:flex  items-center min-h-[500px] justify-between  max-w-5xl w-full mx-auto space-y-8 md:space-y-0">
         
         {/* Left Side (Text) */}
-        <div className="z-10 w-full bg-white/80 backdrop-blur-lg p-6 md:p-10">
+        <div className="z-10 w-full bg-white/80 backdrop-blur-lg   p-6 md:p-10">
           <p className="uppercase font-semibold text-sm text-gray-600 tracking-[0.75rem]">
             Testimonials
           </p>
