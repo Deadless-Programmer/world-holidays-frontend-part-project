@@ -19,7 +19,7 @@ const [packages, setPackages] = useState([]);
   // const notify = () => toast('Wow so easy !');
 
   useEffect(() => {
-    fetch("NextTour.json")
+    fetch("http://localhost:5000/next_tour")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");

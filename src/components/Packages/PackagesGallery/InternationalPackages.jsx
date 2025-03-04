@@ -11,7 +11,7 @@ const InternationalPackages = () => {
   // const notify = () => toast('Wow so easy !');
 
   useEffect(() => {
-    fetch("InternationalPackages.json")
+    fetch("http://localhost:5000/interNational_packages")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");

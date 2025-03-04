@@ -35,13 +35,13 @@ const customStyles = {
 const NextTourDetails = () => {
   const [date, setDate] = useState(null);
 
-  const { id } = useParams();
+  // const { id } = useParams();
   const tourData = useLoaderData();
 
-  const _Data = tourData.find(
-    (next_data) => next_data._id === id
-  );
-  console.log("Loaded data:", id, _Data);
+  // const _Data = tourData.find(
+  //   (next_data) => next_data._id === id
+  // );
+  // console.log("Loaded data:", id, _Data);
   const {
     destination,
     date_range,
@@ -55,7 +55,7 @@ const NextTourDetails = () => {
     rating,
     tour_location_images,
     overview,
-  } = _Data;
+  } = tourData;
   return (
     <section>
       <PageHeader

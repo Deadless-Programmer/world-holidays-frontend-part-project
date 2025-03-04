@@ -11,7 +11,7 @@ const DomesticePackages = () => {
     const [err, setErr] = useState(null);
 
       useEffect(() => {
-        fetch("DomesticePackages.json")
+        fetch("http://localhost:5000/domestic_packages")
           .then((res) => {
             if (!res.ok) {
               throw new toast("Network response was not ok");

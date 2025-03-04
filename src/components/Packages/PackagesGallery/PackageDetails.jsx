@@ -35,13 +35,13 @@ const customStyles = {
 const PackageDetails = () => {
   const [date, setDate] = useState(null);
 
-  const { id } = useParams();
+  // const { id } = useParams();
   const packageData = useLoaderData();
 
-  const package_Data = packageData.find(
-    (package_data) => package_data._id === id
-  );
-  console.log("Loaded data:", id, package_Data);
+  // const package_Data = packageData.find(
+  //   (package_data) => package_data._id === id
+  // );
+  console.log("Loaded data:", packageData);
   const {
     destination,
     date_range,
@@ -55,7 +55,7 @@ const PackageDetails = () => {
     rating,
     tour_location_images,
     overview,
-  } = package_Data;
+  } = packageData;
   return (
     <section>
       <PageHeader

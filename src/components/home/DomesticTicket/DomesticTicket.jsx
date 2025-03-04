@@ -14,7 +14,7 @@ const DomesticTicket = () => {
   const [err, setErr] = useState(null);
 
   useEffect(() => {
-    fetch("/DomesticeTicket.json")
+    fetch("http://localhost:5000/domestice_ticket")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");
@@ -68,7 +68,7 @@ const DomesticTicket = () => {
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-2  pt-3 md:pt-4">
                 {ticket.locations.map((location, indx) => (
-                  <Link
+                  <Link to={`/ticket-details/${ticketData[0]?._id}`}
                     key={indx}
                     className="flex items-center gap-2 font-nunito font-light text-orange-800"
                   >

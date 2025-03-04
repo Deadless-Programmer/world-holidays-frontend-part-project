@@ -40,26 +40,29 @@ export const router = createBrowserRouter([
 
       {path:'/next_tour_details/:id',
         element:<NextTourDetails/>,
-        loader:()=>fetch('/NextTour.json')
+        // loader:()=>fetch('/NextTour.json')
+        loader : ({params})=>fetch(`http://localhost:5000/next_tour/${params.id}`)
       },
       {path:'/domesticePackageDetails/:id',
         element:<DomesticPackageDetails/>,
-        loader:()=>fetch('/DomesticePackages.json')
+        // loader:()=>fetch('/DomesticePackages.json')
+
+        loader : ({params})=>fetch(`http://localhost:5000/domestic_packages/${params.id}`)
       },
       {
         path: "/packageDetails/:id",
         element: <PackageDetails />,
-        loader : ()=> fetch('/InternationalPackages.json')
+        // loader : ({params})=> fetch(`http://localhost:5000/interNational_packages${params.id}`)
         
-        // loader: async ({ params }) => {
-        //   try {
-        //     const response = await fetch(`http://localhost:5000/packageDetails/${params.id}`);
-        //     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        //     return response.json();
-        //   } catch (error) {
-        //     throw new Error("Failed to load package: " + error.message);
-        //   }
-        // }
+        loader: async ({ params }) => {
+          try {
+            const response = await fetch(`http://localhost:5000/interNational_packages/${params.id}`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.json();
+          } catch (error) {
+            throw new Error("Failed to load package: " + error.message);
+          }
+         }
       
       },
       {
@@ -69,7 +72,7 @@ export const router = createBrowserRouter([
       {
         path: "/popular-destination-details/:id",
         element: <PopularDestinationDetails/>,
-        loader: ()=>fetch('/popularDestination.json')
+        loader: ({params})=>fetch(`http://localhost:5000/popular_destination/${params.id}`)
       },
       {
         path: "/ticket-details/:id",

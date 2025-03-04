@@ -28,14 +28,14 @@ import { useLoaderData, useParams } from "react-router-dom";
 const PopularDestinationDetails = () => {
  const [date, setDate] = useState(null);
 
-const {id}=useParams();
+// const {id}=useParams();
 const popularDesData = useLoaderData();
 // console.log(popularDesData)
 
-const popularDes = popularDesData.find(item=>item._id===id)
+// const popularDes = popularDesData.find(item=>item._id===id)
 // console.log(relatedDes)
 
-const {image, country, name,overview,_id}=popularDes;
+const {image, country, name,overview,_id}=popularDesData;
 
   return (
     <div>

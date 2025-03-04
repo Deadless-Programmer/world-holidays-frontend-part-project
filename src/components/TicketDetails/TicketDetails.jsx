@@ -42,18 +42,18 @@ const TicketDetails = () => {
   return (
     <div className="relative">
       <PageHeader
-        heading={"Discover Cheap Flights and Airline Tickets in Bangladesh!"}
+        heading={"Discover Cheap Flights and Airline Tickets!"}
         paragraph={"Where to Fly?"}
         bgImage={
           "https://images.pexels.com/photos/316794/pexels-photo-316794.jpeg"
         }
       />
      
-    <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-3xl font-nunito font-bold text-white   w-72   ">
+    <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-3xl font-nunito font-bold text-white   w-60   ">
               
               
                 <Link className=" -mt-24 md:-mt-0 text-white border p-2 text-lg hover:border-orange-500 hover:text-orange-500 font-semibold flex items-center justify-center gap-2 ">
-                  Explore Domestice Routes <span><SlArrowRightCircle /></span>
+                  Explore Routes <span><SlArrowRightCircle /></span>
                 </Link>
               </div>
     <div className=" max-w-6xl md:h-36 bg-white mx-auto shadow-2xl p-4 mt-10">
