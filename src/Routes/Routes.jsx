@@ -15,6 +15,7 @@ import SignUp from "../pages/SignUp/SignUp";
 import SignInUpForm from "../components/SignInUpForm"
 import DomesticPackageDetails from "../components/Packages/PackagesGallery/DomesticPackageDetails";
 import NextTourDetails from "../components/home/NextTour/NextTourDetails";
+import PrivetRoute from "./PrivetRoute";
 
 export const router = createBrowserRouter([
   {
@@ -67,7 +68,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services/>
+        element: <PrivetRoute><Services/></PrivetRoute>
       },
       {
         path: "/popular-destination-details/:id",

@@ -1,19 +1,38 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { FaFacebook } from 'react-icons/fa6'
 import { FcGoogle } from 'react-icons/fc'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../providers/AuthProviders'
+import Swal from 'sweetalert2'
 
 const SignUp = ( {isSignUp,setIsSignUp}) => {
+  const {createUser}=useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
+
+  const from = location.state?.from?.pathname ||'/';
   const {
     register,
     formState: { errors },
-    handleSubmit,
+    handleSubmit,reset
   } = useForm();
 
   const onSubmit = (data) => {
+
     console.log(data)
+    createUser(data.email, data.password).then(result=>{
+      console.log(result)
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "User has created successfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      navigate(from,{replace:true});
+    })
   }
   return (
     <div><form onSubmit={handleSubmit(onSubmit)}
@@ -39,7 +58,7 @@ const SignUp = ( {isSignUp,setIsSignUp}) => {
         <p className='mt-2 text-red-500' role="alert">Please input your valid password</p>
       )}
     {errors.password?.type === "minLength" && (
-        <p className='mt-2 text-red-500' role="alert">Password should be atleast 6 digits</p>
+        <p className='mt-2 text-red-500' role="alert">Password should be atleast 8 digits</p>
       )}
     {errors.password?.type === "maxLength" && (
         <p className='mt-2 text-red-500' role="alert">Password should be below 20 digits</p>

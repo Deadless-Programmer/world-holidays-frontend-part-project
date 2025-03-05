@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function AuthForm() {
   const [isSignUp, setIsSignUp] = useState(false);
-
+   
   return (
     <div className={`md:flex md:flex-col items-center justify-center min-h-screen bg-gray-100 font-[Nunito]`}>
        <Helmet>

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
 
 
 
@@ -8,7 +9,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+ const {user, logOut}=useContext(AuthContext);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -21,6 +22,12 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  const handleLogOut =()=>{
+    logOut().then({}).catch(err=>{
+      console.log(err)
+    })
+  }
 
   return (
     <nav
@@ -75,9 +82,13 @@ const Navbar = () => {
             </Link >
           </li>
           <li>
-            <Link  to="/signInUpForm" className="hover:text-orange-500 transition-colors font-nunito">
+           {
+            user ?  <Link onClick={handleLogOut}  to="/signInUpForm" className="hover:text-orange-500 transition-colors font-nunito">
+            Logout
+          </Link > :  <Link  to="/signInUpForm" className="hover:text-orange-500 transition-colors font-nunito">
               Login
             </Link >
+           }
           </li>
         </ul>
 

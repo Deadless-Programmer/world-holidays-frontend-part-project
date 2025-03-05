@@ -1,22 +1,47 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SignInUpForm from '../../components/SignInUpForm'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaFacebook } from 'react-icons/fa6'
 import { FcGoogle } from 'react-icons/fc'
 import { useForm } from 'react-hook-form'
+import { AuthContext } from '../../providers/AuthProviders'
+import Swal from 'sweetalert2'
 
 const Login = ({isSignUp,setIsSignUp}) => {
-
-
+const{sighIn, signInWithGoogle}=useContext(AuthContext);
+const navigate = useNavigate();
+const location = useLocation();
+const from = location.state?.from?.pathname ||'/';
 
   const {
       register,
       formState: { errors },
-      handleSubmit,
+      handleSubmit,reset
     } = useForm();
   
     const onSubmit = (data) => {
       console.log(data)
+      sighIn(data.email, data.password).then(result=>{
+        console.log(result);
+           Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "User has Logged successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        navigate(from,{replace:true});
+      })
+    }
+
+
+    const handleGoogleLogin =()=>{
+      signInWithGoogle().then(result=>{
+        console.log(result)
+       
+      }).catch(err=>{
+        console.log(err)
+      })
     }
   return (
    <>
@@ -25,8 +50,8 @@ const Login = ({isSignUp,setIsSignUp}) => {
         >
           <h1 className="text-xl font-bold font-playfair">Sign in</h1>
           <div className="flex space-x-2 my-3">
-            <Link href="#" className="p-2 border rounded-full"><FaFacebook /></Link>
-            <Link href="#" className="p-2 border rounded-full"><FcGoogle /></Link>
+            <Link  className="p-2 border rounded-full"><FaFacebook /></Link>
+            <Link onClick={handleGoogleLogin}  className="p-2 border rounded-full"><FcGoogle /></Link>
             {/* <Link href="#" className="p-2 border rounded-full"><i className="fab fa-linkedin-in"></i></Link> */}
           </div>
           <span className="text-sm">or use your account</span>
