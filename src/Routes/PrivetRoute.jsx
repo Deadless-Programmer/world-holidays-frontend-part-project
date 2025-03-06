@@ -6,7 +6,7 @@ import { BeatLoader } from 'react-spinners';
 const PrivetRoute = ({children}) => {
 
     const {user,loading}=useContext(AuthContext);
-    const location =useLocation();
+    const location_path =useLocation();
 
     if (loading)
         return (
@@ -27,7 +27,7 @@ const PrivetRoute = ({children}) => {
 
   
 
-  return <Navigate to="/signInUpForm"  state={{from:location}} replace></Navigate>
+  return <Navigate to="/signInUpForm"  state={{from:location_path}} replace></Navigate>
 }
 
 export default PrivetRoute

@@ -2,7 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
-
+import { FaCartPlus } from "react-icons/fa";
+import { motion } from "motion/react"
 
 
 
@@ -81,6 +82,14 @@ const Navbar = () => {
               Contact
             </Link >
           </li>
+          <motion.li animate={{color:['#FFA500', '#fbff03','#66ff03']}} transition={{duration:1.5, repeat:Infinity}} >
+            <Link 
+              to="/contact"
+              className="hover:text-orange-500 transition-colors font-nunito flex items-center gap-2 mt-2"
+            >
+              <span  ><FaCartPlus /></span  > <div className="badge badge-sm ">+0</div>
+            </Link >
+          </motion.li>
           <li>
            {
             user ?  <Link onClick={handleLogOut}  to="/signInUpForm" className="hover:text-orange-500 transition-colors font-nunito">
@@ -152,6 +161,14 @@ const Navbar = () => {
               Contact
             </Link >
           </li>
+          <motion.li animate={{color:['#FFA500', '#fbff03','#66ff03']}} transition={{duration:1.5, repeat:Infinity}} >
+            <Link 
+              to="/contact"
+              className="hover:text-orange-500 transition-colors font-nunito flex items-center gap-2 mt-2"
+            >
+              <span  ><FaCartPlus /></span  > <div className="badge badge-sm ">+0</div>
+            </Link >
+          </motion.li>
           <li>
             <Link 
               to="/signInUpForm"
