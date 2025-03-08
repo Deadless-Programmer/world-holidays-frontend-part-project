@@ -18,6 +18,13 @@ import NextTourDetails from "../components/home/NextTour/NextTourDetails";
 import PrivetRoute from "./PrivetRoute";
 import Dashboard from "../pages/dashboard_pages/Dashboard/Dashboard";
 import MyCart from "../pages/dashboard_pages/MyCart/MyCart";
+import MyIntPackges from "../pages/dashboard_pages/Dashboard/DashboardPages/MyIntPackges";
+import MyDomPackages from "../pages/dashboard_pages/Dashboard/DashboardPages/MyDomPackages";
+import MyNextTour from "../pages/dashboard_pages/Dashboard/DashboardPages/MyNextTour";
+import MyPopularDestination from "../pages/dashboard_pages/Dashboard/DashboardPages/MyPopularDestination";
+import MyDomTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyDomTicket";
+import MyIntTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyIntTicket";
+import MyOtherServices from "../pages/dashboard_pages/Dashboard/DashboardPages/MyOtherServices";
 
 export const router = createBrowserRouter([
   {
@@ -102,6 +109,34 @@ export const router = createBrowserRouter([
       {
         path: "my-cart",
         element: <MyCart/>,
+      },
+      {
+        path: "int-packages",
+        element: <MyIntPackges/>
+      },
+      {
+        path: "dom-packages",
+        element: <MyDomPackages/>
+      },
+      {
+        path: "next-tour",
+        element: <MyNextTour/>
+      },
+      {
+        path: "popular-destination",
+        element: <MyPopularDestination/>
+      },
+      {
+        path: "dom-ticket",
+        element: <MyDomTicket/>
+      },
+      {
+        path: "int-ticket",
+        element: <MyIntTicket/>
+      },
+      {
+        path: "others-service",
+        element: <MyOtherServices/>
       },
       
     
