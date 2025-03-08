@@ -37,6 +37,7 @@ import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
 import axios from "axios";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useIntPackageCart from "../../../hooks/useIntPackageCart";
 const customStyles = {
   itemShapes: Star,
   activeFillColor: "#FFA500", // Gold color for active stars
@@ -46,6 +47,7 @@ const PackageDetails = () => {
   const [date, setDate] = useState(null);
   const { user } = useAuth();
   const axiosSecure =useAxiosSecure();
+  const [,refetch]=useIntPackageCart();
   // const { id } = useParams();
   const navigate = useNavigate();
   const location_path = useLocation();
@@ -105,6 +107,8 @@ const PackageDetails = () => {
           timer: 1500
         });
       }
+
+      refetch();
      })
     }
 

@@ -16,6 +16,8 @@ import SignInUpForm from "../components/SignInUpForm"
 import DomesticPackageDetails from "../components/Packages/PackagesGallery/DomesticPackageDetails";
 import NextTourDetails from "../components/home/NextTour/NextTourDetails";
 import PrivetRoute from "./PrivetRoute";
+import Dashboard from "../pages/dashboard_pages/Dashboard/Dashboard";
+import MyCart from "../pages/dashboard_pages/MyCart/MyCart";
 
 export const router = createBrowserRouter([
   {
@@ -91,6 +93,18 @@ export const router = createBrowserRouter([
       //   path: "/sign-up",
       //   element: <SignUp/>
       // },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
+    children: [
+      {
+        path: "my-cart",
+        element: <MyCart/>,
+      },
+      
+    
     ],
   },
 ]);
