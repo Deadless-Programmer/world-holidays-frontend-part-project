@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FaCartPlus } from "react-icons/fa";
 import { motion } from "motion/react"
+import useIntPackageCart from "../../hooks/useIntPackageCart";
 
 
 
@@ -11,6 +12,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
  const {user, logOut}=useContext(AuthContext);
+
+ const [intCart] = useIntPackageCart();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -87,7 +90,7 @@ const Navbar = () => {
               to="/contact"
               className="hover:text-orange-500 transition-colors font-nunito flex items-center gap-2 mt-2"
             >
-              <span  ><FaCartPlus /></span  > <div className="badge badge-sm ">+0</div>
+              <span  ><FaCartPlus /></span  > <div className="badge badge-sm ">+{intCart.length}</div>
             </Link >
           </motion.li>
           <li>
@@ -166,7 +169,7 @@ const Navbar = () => {
               to="/contact"
               className="hover:text-orange-500 transition-colors font-nunito flex items-center gap-2 mt-2"
             >
-              <span  ><FaCartPlus /></span  > <div className="badge badge-sm ">+0</div>
+              <span  ><FaCartPlus /></span  > <div className="badge badge-sm ">+{intCart.length}</div>
             </Link >
           </motion.li>
           <li>
