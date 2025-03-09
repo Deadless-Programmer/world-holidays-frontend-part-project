@@ -25,6 +25,7 @@ import MyPopularDestination from "../pages/dashboard_pages/Dashboard/DashboardPa
 import MyDomTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyDomTicket";
 import MyIntTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyIntTicket";
 import MyOtherServices from "../pages/dashboard_pages/Dashboard/DashboardPages/MyOtherServices";
+import MyTicketCart from "../pages/dashboard_pages/Dashboard/DashboardPages/MyTicketCart";
 
 export const router = createBrowserRouter([
   {
@@ -127,13 +128,10 @@ export const router = createBrowserRouter([
         element: <MyPopularDestination/>
       },
       {
-        path: "dom-ticket",
-        element: <MyDomTicket/>
+        path: "my-ticket-cart",
+        element: <MyTicketCart/>
       },
-      {
-        path: "int-ticket",
-        element: <MyIntTicket/>
-      },
+     
       {
         path: "others-service",
         element: <MyOtherServices/>

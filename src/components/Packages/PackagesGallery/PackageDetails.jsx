@@ -102,7 +102,7 @@ const PackageDetails = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Package been Added",
+          title: "Package has been Added",
           showConfirmButton: false,
           timer: 1500
         });

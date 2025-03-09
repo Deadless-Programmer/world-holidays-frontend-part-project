@@ -23,12 +23,21 @@ import RelatedDestination from "./RelatedDestination";
 
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate, useParams } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useDomPackageCart from "../../../hooks/useDomPackageCart";
+import Swal from "sweetalert2";
 
 const PopularDestinationDetails = () => {
  const [date, setDate] = useState(null);
 
-// const {id}=useParams();
+ const { user } = useAuth();
+ const axiosSecure =useAxiosSecure();
+ const [,refetch]=useDomPackageCart();
+ // const { id } = useParams();
+ const navigate = useNavigate();
+ const location_path = useLocation();
 const popularDesData = useLoaderData();
 // console.log(popularDesData)
 
@@ -36,6 +45,62 @@ const popularDesData = useLoaderData();
 // console.log(relatedDes)
 
 const {image, country, name,overview,_id}=popularDesData;
+
+
+const handleAddToCart = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const contact = form?.contact?.value;
+    const userLocation = form?.userLocation?.value;
+    const totalGuest = form?.noOFGuest?.value;
+    const selectedDate = date;
+
+   
+
+    if (user && user.email) {
+      const cartItem = {
+        packagesId :_id,
+        contact,
+        userLocation,
+        totalGuest,
+        email: user.email,
+        name: user?.displayName,
+        date: selectedDate,
+        popularDesData,
+
+       
+      }; 
+      console.log(cartItem);
+      axiosSecure.post('/popular_des_cart',cartItem ).then(res=>{
+      if(res.data.insertedId){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your destination has been Added",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+
+      refetch();
+     })
+    }
+
+    else {
+      Swal.fire({
+        title: "You are not logged in",
+        text: "Please login to book the package",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Login",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/signInUpForm", { state: { from: location_path } });
+        }
+      });
+    }
+  };
 
   return (
     <div>
@@ -81,53 +146,63 @@ const {image, country, name,overview,_id}=popularDesData;
           <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">
             Tour Booking
           </h1>
-          <form action="">
-            <div class="flex flex-col items-center font-nunito justify-center ">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className=" p-3 outline-none w-72 mt-8 "
-              />
-              <input
-                type="text"
-                placeholder="Your phone"
-                className=" p-3 outline-none w-72 mt-4 "
-              />
-              <input
-                type="email"
-                placeholder="Your email"
-                className=" p-3 outline-none w-72 mt-4 "
-              />
-              <input
-                type="text"
-                placeholder="Your location"
-                className=" p-3 outline-none w-72 mt-4 "
-              />
-              <input
-                type="text"
-                placeholder="Guest No. -input adult & child"
-                className=" p-3 outline-none w-72 mt-4 "
-              />
-               <div className="">
-                              <Flatpickr
-                                value={date}
-                                onChange={(selectedDates) => setDate(selectedDates)}
-                                options={{
-                                  dateFormat: "Y-m-d",
-              
-                                  enableTime: false, // Change to true if you want time
-                                  minDate: "today", // Restrict past dates
-                                }}
-                                placeholder="Select a date"
-                                className="p-3 outline-none w-72 mt-4"
-                              />
-                            </div>
-
-              <button className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center">
-                Book <IoIosArrowRoundForward className="text-2xl" />{" "}
-              </button>
-            </div>
-          </form>
+        <form onSubmit={ handleAddToCart} action="">
+                    <div class="flex flex-col items-center font-nunito justify-center ">
+                                  <input
+                                    defaultValue={user?.displayName}
+                                    type="text"
+                                    placeholder="Your Name"
+                                    className=" p-3 outline-none w-72 mt-8 "
+                                  />
+                                  <input
+                                    type="text"
+                                    name="contact"
+                                    placeholder="Your phone"
+                                    className=" p-3 outline-none w-72 mt-4 "
+                                  />
+                                  <input
+                                    type="email"
+                                    defaultValue={user?.email}
+                                    placeholder="Your email"
+                                    className=" p-3 outline-none w-72 mt-4 "
+                                  />
+                                  <input
+                                    type="text"
+                                    name="userLocation"
+                                    placeholder="Your location"
+                                    className=" p-3 outline-none w-72 mt-4 "
+                                  />
+                                  <input
+                                    type="text"
+                                    name="noOFGuest"
+                                    placeholder="Guest No. -input adult & child"
+                                    className=" p-3 outline-none w-72 mt-4 "
+                                  />
+                    
+                                  <div className="">
+                                    <Flatpickr
+                                     
+                                      value={date}
+                                      onChange={(selectedDates) => setDate(selectedDates[0])}
+                                      options={{
+                                        dateFormat: "Y-m-d",
+                    
+                                        enableTime: false, // Change to true if you want time
+                                        minDate: "today", // Restrict past dates
+                                      }}
+                                      placeholder="Select a date"
+                                      className="p-3 outline-none w-72 mt-4"
+                                    />
+                                  </div>
+                    
+                                  <button
+                                   type="submit"
+                                    className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center"
+                                  >
+                                    Book <IoIosArrowRoundForward className="text-2xl" />{" "}
+                                  </button>
+                                </div>
+                  </form>
         </div>
       </div>
     </div>
