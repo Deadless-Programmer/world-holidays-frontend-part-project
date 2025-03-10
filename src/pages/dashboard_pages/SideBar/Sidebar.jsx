@@ -28,7 +28,7 @@ const Sidebar = () => {
         })
       }
   return (
-    <div>
+    <div className=''>
 
 
 <NavLink to={"int-packages"} className='flex items-center gap-2 font-nunito text-sm font-semibold p-2'><MdOutlineShoppingCart className='text-lg'  /> My International packages <motion.span animate={{color:['#FFA500', '#fbff03','#66ff03']}} transition={{duration:1.5, repeat:Infinity}} >{intCart?.length}</motion.span> </NavLink>

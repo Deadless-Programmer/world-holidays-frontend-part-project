@@ -4,11 +4,11 @@ import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
-    <div className='grid grid-cols-12 gap-5 max-w-7xl mx-auto'>
-        <div className='col-span-3 bg-orange-100'>
+    <div className='md:grid grid-cols-12 gap-5 max-w-7xl mx-auto'>
+        <div className='col-span-3 bg-orange-100 overflow-x-auto'>
             <Sidebar/>
         </div>
-        <div className='col-span-9 bg-orange-300'>
+        <div className='col-span-9 bg-orange-50'>
             <Outlet/>
         </div>
     </div>

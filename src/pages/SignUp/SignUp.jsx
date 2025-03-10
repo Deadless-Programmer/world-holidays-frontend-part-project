@@ -5,12 +5,13 @@ import { FcGoogle } from 'react-icons/fc'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../providers/AuthProviders'
 import Swal from 'sweetalert2'
+import useAxiosPublic from '../../hooks/useAxiosPublic'
 
 const SignUp = ( {isSignUp,setIsSignUp}) => {
   const {createUser, signInWithGoogle, updateUserProfile}=useContext(AuthContext);
   const navigate = useNavigate();
   const location_path = useLocation();
-
+   const axiosPublic = useAxiosPublic();
 
   const from = location_path.state?.from?.pathname ||'/';
   const {
@@ -24,16 +25,26 @@ const SignUp = ( {isSignUp,setIsSignUp}) => {
     console.log(data)
     createUser(data.email, data.password).then(result=>{
       updateUserProfile(data.firstName, data?.photoURL ? data.photoURL:null).then(result=>{
-        console.log(result)
-      reset();
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "User has created successfully",
-        showConfirmButton: false,
-        timer: 1500
-      });
-      navigate(from,{replace:true});
+
+        const userInfo = {
+          name: data.firstName,
+          email:data.email
+        }
+        axiosPublic.post('/users', userInfo).then(res=>{
+          if(res.data.insertedId){
+            console.log('user added to the database')
+            reset();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "User has created successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
+            navigate(from,{replace:true});
+          }
+        })
+     
       }).catch(err=>console.log(err))
       
     })
