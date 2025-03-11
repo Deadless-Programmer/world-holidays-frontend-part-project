@@ -52,14 +52,24 @@ const SignUp = ( {isSignUp,setIsSignUp}) => {
    const handleGoogleLogin =()=>{
         signInWithGoogle().then(result=>{
           console.log(result)
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "User has Logged successfully",
-            showConfirmButton: false,
-            timer: 1500
-          });
-    navigate(from,{replace:true});
+
+          const userInfo ={
+             name : result.user.displayName,
+             email: result.user.email
+          };
+
+          axiosPublic.post('/users', userInfo).then(res=> {
+            console.log(res.data)
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "User has Logged successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
+      navigate(from,{replace:true});
+          })
+       
          
         }).catch(err=>{
           console.log(err)

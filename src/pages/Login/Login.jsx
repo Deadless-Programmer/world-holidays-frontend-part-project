@@ -6,11 +6,13 @@ import { FcGoogle } from 'react-icons/fc'
 import { useForm } from 'react-hook-form'
 import { AuthContext } from '../../providers/AuthProviders'
 import Swal from 'sweetalert2'
+import useAxiosPublic from '../../hooks/useAxiosPublic'
 
 const Login = ({isSignUp,setIsSignUp}) => {
 const{sighIn, signInWithGoogle}=useContext(AuthContext);
 const navigate = useNavigate();
 const location_path = useLocation();
+const axiosPublic = useAxiosPublic();
 const from = location_path.state?.from?.pathname ||'/';
 
   const {
@@ -38,15 +40,22 @@ const from = location_path.state?.from?.pathname ||'/';
 
     const handleGoogleLogin =()=>{
       signInWithGoogle().then(result=>{
-        console.log(result)
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "User has Logged successfully",
-          showConfirmButton: false,
-          timer: 1500
-        });
-  navigate(from,{replace:true});
+       const userInfo ={
+                    name : result.user.displayName,
+                    email: result.user.email
+                 };
+       
+                 axiosPublic.post('/users', userInfo).then(res=> {
+                   console.log(res.data)
+                   Swal.fire({
+                     position: "top-end",
+                     icon: "success",
+                     title: "User has Logged successfully",
+                     showConfirmButton: false,
+                     timer: 1500
+                   });
+             navigate(from,{replace:true});
+                 })
        
       }).catch(err=>{
         console.log(err)

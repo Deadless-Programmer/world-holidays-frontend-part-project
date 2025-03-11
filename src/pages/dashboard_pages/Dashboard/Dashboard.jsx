@@ -8,7 +8,7 @@ const Dashboard = () => {
         <div className='col-span-3 bg-orange-100 overflow-x-auto'>
             <Sidebar/>
         </div>
-        <div className='col-span-9 bg-orange-50'>
+        <div className='col-span-9 '>
             <Outlet/>
         </div>
     </div>

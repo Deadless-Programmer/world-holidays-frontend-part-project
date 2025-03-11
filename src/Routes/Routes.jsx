@@ -26,6 +26,7 @@ import MyDomTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyDom
 import MyIntTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyIntTicket";
 import MyOtherServices from "../pages/dashboard_pages/Dashboard/DashboardPages/MyOtherServices";
 import MyTicketCart from "../pages/dashboard_pages/Dashboard/DashboardPages/MyTicketCart";
+import AllUsers from "../pages/dashboard_pages/Dashboard/DashboardPages/AllUsers";
 
 export const router = createBrowserRouter([
   {
@@ -107,6 +108,11 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     element: <PrivetRoute><Dashboard/></PrivetRoute>,
     children: [
+
+      {
+     path:"all-users",
+     element:<AllUsers/>
+      },
       {
         path: "my-cart",
         element: <MyCart/>,
