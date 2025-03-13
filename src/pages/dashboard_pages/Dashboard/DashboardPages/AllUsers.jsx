@@ -90,8 +90,22 @@ return <tr key={indx}>
         <th>{indx + 1 }</th>
         <td>{user.name}</td>
         <td>{user.email}</td>
-        
-        <td> {user.role ==='admin' ? "Admin" : <h1 onClick={()=>handleMakeAdmin(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FaUsersCog /> </h1>}  </td>
+        <td>
+        <select
+        id="role"
+        className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+      >
+        {user.role === "admin" ? (
+          <option  value="admin">Admin</option>
+        ) : (
+          <>
+            <option onClick={()=>handleMakeAdmin(user)} value="make-admin">Make Admin</option>
+            <option onClick={()=>handleMakeModerator(user)} value="make-moderator">Make Moderator</option>
+          </>
+        )}
+      </select>
+        </td>
+        {/* <td> {user.role ==='admin' ? "Admin" : <h1 onClick={()=>handleMakeAdmin(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FaUsersCog /> </h1>}  </td> */}
        <td> <h1 onClick={()=>handleDelete(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FiTrash2 /></h1></td>
       </tr>
         })
