@@ -27,6 +27,7 @@ import MyIntTicket from "../pages/dashboard_pages/Dashboard/DashboardPages/MyInt
 import MyOtherServices from "../pages/dashboard_pages/Dashboard/DashboardPages/MyOtherServices";
 import MyTicketCart from "../pages/dashboard_pages/Dashboard/DashboardPages/MyTicketCart";
 import AllUsers from "../pages/dashboard_pages/Dashboard/DashboardPages/AllUsers";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
   {
@@ -111,7 +112,7 @@ export const router = createBrowserRouter([
 
       {
      path:"all-users",
-     element:<AllUsers/>
+     element:<AdminRoute> <AllUsers/></AdminRoute>
       },
       {
         path: "my-cart",

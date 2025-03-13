@@ -1,10 +1,10 @@
 import React from 'react'
 import useAdmin from '../hooks/useAdmin';
 import useAuth from '../hooks/useAuth';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { BeatLoader } from 'react-spinners';
 
-const AdminRoute = () => {
+const AdminRoute = ({children}) => {
     const {user,loading}=useAuth();
     const location_path =useLocation();
     const [isAdmin, isAdminLoading] =useAdmin();

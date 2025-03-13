@@ -28,7 +28,13 @@ const Sidebar = () => {
        const[popularDesCart]=usePopularDestination();
        const[ticketCart]=useTicketCart();
 
-       const [isAdmin] = useAdmin();
+      
+       const [isAdmin, isAdminLoading] = useAdmin();
+     
+       // Show loading state
+       if (isAdminLoading) {
+         return <div>Loading...</div>;
+       }
      const handleLogOut =()=>{
         logOut().then({}).catch(err=>{
           console.log(err)
