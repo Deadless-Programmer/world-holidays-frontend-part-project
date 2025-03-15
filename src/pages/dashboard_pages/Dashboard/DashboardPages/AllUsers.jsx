@@ -35,6 +35,20 @@ const AllUsers = () => {
             }
          })
    }
+   const handleMakeModerator =(user)=>{
+         axiosSecure.patch(`/users/moderator/${user._id}`).then(res=>{
+            if(res.data.modifiedCount > 0 ){
+                refetch();
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${user.name} is moderator now`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+         })
+   }
 
    const handleDelete =(user)=>{
          Swal.fire({
@@ -91,20 +105,28 @@ return <tr key={indx}>
         <td>{user.name}</td>
         <td>{user.email}</td>
         <td>
-        <select
-        id="role"
-        className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-      >
-        {user.role === "admin" ? (
-          <option  value="admin">Admin</option>
-        ) : (
-          <>
-            <option onClick={()=>handleMakeAdmin(user)} value="make-admin">Make Admin</option>
-            <option onClick={()=>handleMakeModerator(user)} value="make-moderator">Make Moderator</option>
-          </>
-        )}
-      </select>
-        </td>
+  <select
+    id="role"
+    className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+    value={user.role}
+    onChange={(e) => {
+      const selectedValue = e.target.value;
+      if (selectedValue === "make-admin") handleMakeAdmin(user);
+      if (selectedValue === "make-moderator") handleMakeModerator(user);
+    }}
+  >
+    <option value="">Select Role</option>
+    {user.role === "admin" && <option value="admin">Admin</option>}
+    {user.role === "moderator" && <option value="moderator">Moderator</option>}
+    {(user.role !== "admin" && user.role !== "moderator") && (
+      <>
+        <option value="make-admin">Make Admin</option>
+        <option value="make-moderator">Make Moderator</option>
+      </>
+    )}
+  </select>
+</td>
+
         {/* <td> {user.role ==='admin' ? "Admin" : <h1 onClick={()=>handleMakeAdmin(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FaUsersCog /> </h1>}  </td> */}
        <td> <h1 onClick={()=>handleDelete(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FiTrash2 /></h1></td>
       </tr>

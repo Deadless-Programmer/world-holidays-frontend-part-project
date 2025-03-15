@@ -27,13 +27,11 @@ const useAxiosSecure = () => {
      const url = error.config?.url;
  
      // Skip logout for admin-check endpoint
-     if (
-       (status === 401 || status === 403) &&
-       !url.includes("/users/admin/") // Add this condition
-     ) {
-       await logOut();
-       navigate("/signInUpForm");
-     }
+     useEffect(() => {
+      if (error?.response?.status === 401 || 403) {
+        navigate(' /signInUpForm');
+      }
+    }, [error]);
  
      return Promise.reject(error);
    }
