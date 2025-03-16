@@ -28,6 +28,10 @@ import MyOtherServices from "../pages/dashboard_pages/Dashboard/DashboardPages/M
 import MyTicketCart from "../pages/dashboard_pages/Dashboard/DashboardPages/MyTicketCart";
 import AllUsers from "../pages/dashboard_pages/Dashboard/DashboardPages/AllUsers";
 import AdminRoute from "./AdminRoute";
+import AddDomPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/AddDomPackage";
+import AddIntPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/AddIntPackage";
+import AddNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/AddNextTour";
+import AddMosPopDes from "../pages/dashboard_pages/Dashboard/AddAllApi/AddMosPopDes";
 
 export const router = createBrowserRouter([
   {
@@ -113,6 +117,26 @@ export const router = createBrowserRouter([
       {
      path:"all-users",
      element:<AdminRoute> <AllUsers/></AdminRoute>
+      },
+      {
+        path:"add-dom-packages",
+        element:<AddDomPackage/>
+
+      },
+      {
+        path:"add-int-packages",
+        element:<AddIntPackage/>
+
+      },
+      {
+        path:"add-next-tour",
+        element:<AddNextTour/>
+
+      },
+      {
+        path:"add-most-popular-destination",
+        element:<AddMosPopDes/>
+
       },
       {
         path: "my-cart",
