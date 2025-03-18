@@ -32,6 +32,8 @@ import AddDomPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/AddDomPa
 import AddIntPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/AddIntPackage";
 import AddNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/AddNextTour";
 import AddMosPopDes from "../pages/dashboard_pages/Dashboard/AddAllApi/AddMosPopDes";
+import ShowDomPackages from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowDomPackages";
+import UpdateDomPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateDomPackage";
 
 export const router = createBrowserRouter([
   {
@@ -121,6 +123,17 @@ export const router = createBrowserRouter([
       {
         path:"add-dom-packages",
         element:<AddDomPackage/>
+
+      },
+      {
+        path:"/dashboard/update-dom-packages/:id",
+        element:<UpdateDomPackage/>,
+        // loader :({params})=> fetch(`http://localhost:5000/show-all-domestic-packages/${params.id}`)
+
+      },
+      {
+        path:"show-all-dom-packages",
+        element:<ShowDomPackages/>
 
       },
       {

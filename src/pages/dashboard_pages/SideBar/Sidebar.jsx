@@ -52,6 +52,9 @@ const Sidebar = () => {
           <NavLink to={"add-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <TbSettingsSpark className="text-lg" /> Add Domestice Packages
           </NavLink>
+          <NavLink to={"show-all-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbSettingsSpark className="text-lg" /> Show All Domestice Packages
+          </NavLink>
           <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <RiAlignItemBottomLine className="text-lg" /> Add International Packages
           </NavLink>
