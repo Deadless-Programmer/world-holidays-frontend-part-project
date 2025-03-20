@@ -59,12 +59,17 @@ const [packages, setPackages] = useState([]);
     <>
     {
       packages.map((packagedata,indx)=> <div key={indx} className="overflow-x-hidden w-auto mt-24 relative h-[50vh] md:h-[70vh]">
-        <video
+        {/* <video
           src={packagedata.video}
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
           loop
           muted
+        /> */}
+        <img
+          src={packagedata.CoverImage}
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          
         />
         {/* <iframe
   src="https://www.youtube.com/embed/GWNrPJyRTcA?autoplay=1&mute=1&loop=1&playlist=GWNrPJyRTcA"

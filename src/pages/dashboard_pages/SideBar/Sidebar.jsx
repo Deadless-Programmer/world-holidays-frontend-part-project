@@ -58,7 +58,9 @@ const Sidebar = () => {
           <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <RiAlignItemBottomLine className="text-lg" /> Add International Packages
           </NavLink>
-         
+          <NavLink to={"show-all-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbSettingsSpark className="text-lg" /> Show All International Packages
+          </NavLink>
           <NavLink to={"add-next-tour"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <TbLayoutGridAdd className="text-lg" /> Add Next Tour
           </NavLink>

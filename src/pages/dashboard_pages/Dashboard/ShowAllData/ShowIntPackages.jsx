@@ -7,15 +7,15 @@ import { RxUpdate } from 'react-icons/rx';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-const ShowDomPackages = () => {
+const ShowIntPackages = () => {
 
 
     const axiosSecure = useAxiosSecure();
     // const {user}=useAuth();
-       const {  data: domPackages=[], refetch } = useQuery({
-           queryKey: [' domPackages'],
+       const {  data: intPackages=[], refetch } = useQuery({
+           queryKey: [' intPackages'],
            queryFn: async() =>{
-            const res = await axiosSecure.get('/show-all-domestic-packages')
+            const res = await axiosSecure.get('/show-all-international-packages')
             return res.data}
            
          })
@@ -37,7 +37,7 @@ const ShowDomPackages = () => {
              }).then((result) => {
                if (result.isConfirmed) {
        
-                   axiosSecure.delete(`/show-all-domestic-packages/${pacId._id}`).then(res=>{
+                   axiosSecure.delete(`/show-all-international-packages/${pacId._id}`).then(res=>{
                        if(res.data.deletedCount >0){
                            refetch();
                            Swal.fire({
@@ -58,11 +58,12 @@ const ShowDomPackages = () => {
 
 
 
+
          
   return (
     <div>
         <div>
-            <h2 className='text-2xl font-medium font-playfair'> All Domestice Packages : {domPackages.length}  </h2>
+            <h2 className='text-2xl font-medium font-playfair'> All International Packages : {intPackages.length}  </h2>
         </div>
 
         <div className="overflow-x-auto  border border-base-content/5 bg-base-100 mt-10">
@@ -83,19 +84,19 @@ const ShowDomPackages = () => {
       {/* row 1 */}
 
       {
-         domPackages.slice().reverse().map(( domPackage, indx)=>{
+         intPackages.slice().reverse().map(( intPackage, indx)=>{
 return <tr key={indx}>
         <th>{indx + 1 }</th>
-        <td>{domPackage.destination}</td>
-        <td>{domPackage.date_range}</td>
-        <td>{domPackage.duration}</td>
+        <td>{intPackage.destination}</td>
+        <td>{intPackage.date_range}</td>
+        <td>{intPackage.duration}</td>
         <td>
-        {domPackage.price.amount} BDT
+        {intPackage.price?.amount} BDT
 </td>
 
         {/* <td> {user.role ==='admin' ? "Admin" : <h1 onClick={()=>handleMakeAdmin(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FaUsersCog /> </h1>}  </td> */}
-       <td> <h1 onClick={()=>handleDelete(domPackage)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FiTrash2 /></h1></td>
-       <td> <Link to={`/dashboard/update-dom-packages/${domPackage._id}`}><h1  className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <RxUpdate /></h1></Link> </td>
+       <td> <h1 onClick={()=>handleDelete(intPackage)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FiTrash2 /></h1></td>
+       <td> <Link to={`/dashboard/update-int-packages/${intPackage._id}`}><h1  className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <RxUpdate /></h1></Link> </td>
       </tr>
         })
       }
@@ -108,4 +109,4 @@ return <tr key={indx}>
   )
 }
 
-export default ShowDomPackages;
+export default ShowIntPackages;

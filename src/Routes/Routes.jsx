@@ -34,6 +34,8 @@ import AddNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/AddNextTou
 import AddMosPopDes from "../pages/dashboard_pages/Dashboard/AddAllApi/AddMosPopDes";
 import ShowDomPackages from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowDomPackages";
 import UpdateDomPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateDomPackage";
+import ShowIntPackages from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowIntPackages";
+import UpdateIntPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateIntPackage";
 
 export const router = createBrowserRouter([
   {
@@ -139,6 +141,17 @@ export const router = createBrowserRouter([
       {
         path:"add-int-packages",
         element:<AddIntPackage/>
+
+      },
+      {
+        path:"/dashboard/update-int-packages/:id",
+        element:<UpdateIntPackage/>
+        // loader :({params})=> fetch(`http://localhost:5000/show-all-domestic-packages/${params.id}`)
+
+      },
+      {
+        path:"show-all-int-packages",
+        element:<ShowIntPackages/>
 
       },
       {
