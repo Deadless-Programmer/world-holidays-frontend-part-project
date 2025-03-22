@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { AiOutlineBlock, AiOutlineLogout } from 'react-icons/ai';
 import { FaUsers } from 'react-icons/fa6';
-import { TbSettingsSpark, TbLayoutGridAdd } from 'react-icons/tb';
+import { TbSettingsSpark, TbLayoutGridAdd, TbChartBarPopular } from 'react-icons/tb';
 import { MdOutlineShoppingCart, MdOutlineLocalLaundryService } from 'react-icons/md';
 import { PiPackageThin, PiPackageLight } from 'react-icons/pi';
 import { CiLocationArrow1, CiLocationOn } from 'react-icons/ci';
@@ -70,6 +70,9 @@ const Sidebar = () => {
           </NavLink>
           <NavLink to={"add-most-popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <LiaSitemapSolid className="text-lg" /> Add Most Popular Destination
+          </NavLink>
+          <NavLink to={"show-most-popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbChartBarPopular className="text-lg" /> Show Most Popular Destination
           </NavLink>
           <NavLink to={"all-users"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <FaUsers className="text-lg" /> All Users

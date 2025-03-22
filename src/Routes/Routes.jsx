@@ -38,6 +38,7 @@ import ShowIntPackages from "../pages/dashboard_pages/Dashboard/ShowAllData/Show
 import UpdateIntPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateIntPackage";
 import ShowNextTour from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowNextTour";
 import UpdateNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateNextTour";
+import ShowMostPopularDes from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowMostPopularDes";
 
 export const router = createBrowserRouter([
   {
@@ -175,6 +176,11 @@ export const router = createBrowserRouter([
       {
         path:"add-most-popular-destination",
         element:<AddMosPopDes/>
+
+      },
+      {
+        path:"show-most-popular-destination",
+        element:<ShowMostPopularDes/>
 
       },
       {
