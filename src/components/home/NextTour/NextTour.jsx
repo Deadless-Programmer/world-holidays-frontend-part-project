@@ -95,7 +95,8 @@ const [packages, setPackages] = useState([]);
             }}
             className="text-white text-2xl md:text-4xl z-10 font-playfair font-bold"
           >
-            Our Next Tour Is Maldives
+            Our Next Tour Is  {packagedata.destination
+            }
           </motion.h1>
           <div className="flex items-center justify-center gap-4 mt-3">
             <p className="flex text-white font-nunito items-center gap-1">

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import { useParams } from 'react-router-dom';
 
-const AddNextTour = () => {
+const UpdateNextTour = () => {
   const axiosSecure = useAxiosSecure();
-  const { control, handleSubmit,  } = useForm({
+  const { id } = useParams();
+  const { control,setValue, handleSubmit,  } = useForm({
     defaultValues: {
       destination: '',
       price: { amount: '', currency: 'USD', per: 'adult' },
@@ -24,33 +26,84 @@ const AddNextTour = () => {
     }
   });
 
-  const onSubmit = async(data) => {
-    const formattedData = {
-      ...data,
-      rating: parseFloat(data.rating),
-      included_services: data.included_services.split(',').map(item => item.trim()),
-      included: data.included.split(',').map(item => item.trim()),
-      excluded: data.excluded.split(',').map(item => item.trim()),
-      tour_location_images: data.tour_location_images.split(',').map(item => item.trim())
-    };
-    console.log(formattedData);
 
-
-    const reult = await axiosSecure.post("/next_tour" ,formattedData ).catch((error) => {
-              console.log("Error details:", error.response?.data); 
-            });
-               if(reult.data.insertedId){
-                Swal.fire({
-                  position: "top-end",
-                  icon: "success",
-                  title: "Next Tour has been saved to database",
-                  showConfirmButton: false,
-                  timer: 1500
-                });
-      
-                reset();
+  const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+  
+      useEffect(() => {
+          const fetchData = async () => {
+              try {
+                  const response = await fetch(`http://localhost:5000/show-all-next_tour/${id}`);
+                  if (!response.ok) throw new Error('Failed to fetch data');
+                  
+                  const result = await response.json();
+                  
+                  // Populate the form fields with the fetched data
+                  Object.keys(result).forEach(key => setValue(key, result[key]));
+                  
+                  if (result.price) {
+                      setValue('amount', result.price.amount);
+                      setValue('currency', result.price.currency);
+                      setValue('per', result.price.per);
+                  }
+                  
+                  setLoading(false);
+              } catch (err) {
+                  setError(err.message);
+                  setLoading(false);
               }
-  };
+          };
+          
+          fetchData();
+      }, [id, setValue]);
+
+      const onSubmit = async(data) => {
+        const formattedData = {
+          ...data,
+          rating: parseFloat(data.rating),
+          included_services: Array.isArray(data.included_services) 
+                             ? data.included_services 
+                             : data.included_services.split(',').map(item => item.trim()),
+          included: Array.isArray(data.included) 
+                    ? data.included 
+                    : data.included.split(',').map(item => item.trim()),
+          excluded: Array.isArray(data.excluded) 
+                    ? data.excluded 
+                    : data.excluded.split(',').map(item => item.trim()),
+          tour_location_images: Array.isArray(data.tour_location_images) 
+                                ? data.tour_location_images 
+                                : data.tour_location_images.split(',').map(item => item.trim())
+        };
+        console.log(formattedData);
+    
+        try {
+            const result = await axiosSecure.patch(`/show-all-next_tour/${id}`, formattedData);
+            
+            if (result.data.modifiedCount > 0) {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${data.destination} has been Updated`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+        
+                reset();
+            }
+        } catch (error) {
+            console.log("Error details:", error.response?.data);
+        }
+    };
+    
+
+
+
+  if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+
+
+
+
 
   const inputStyle = {
     padding: '10px',
@@ -66,7 +119,7 @@ const AddNextTour = () => {
 
   return (
     <>
-    <h1 className='text-3xl font-playfair md:pl-20 py-4 pl-4'>Add Your Next Tour Data</h1>
+    <h1 className='text-3xl font-playfair md:pl-20 py-4 pl-4'>Update Your Next Tour Data</h1>
     <form onSubmit={handleSubmit(onSubmit)} style={{ maxWidth: '800px', margin: 'auto', padding: '20px', border: '1px solid #ddd' }}>
       {/* Two-Line Flex Group */}
       <div style={{ display: 'flex', gap: '20px', marginBottom: '16px' }}>
@@ -163,11 +216,11 @@ const AddNextTour = () => {
       </div>
 
       <div>
-        <button type="submit" className='bg-orange-400 hover:bg-orange-600' style={{ padding: '10px 20px', border: 'none', color: '#fff', cursor: 'pointer' }}>Create Next Tour</button>
+        <button type="submit" className='bg-orange-400 hover:bg-orange-600' style={{ padding: '10px 20px', border: 'none', color: '#fff', cursor: 'pointer' }}>Update Next Tour</button>
       </div>
     </form>
     </>
   );
 };
 
-export default AddNextTour;
+export default UpdateNextTour;

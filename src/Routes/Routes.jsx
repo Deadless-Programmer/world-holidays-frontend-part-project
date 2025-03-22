@@ -36,6 +36,8 @@ import ShowDomPackages from "../pages/dashboard_pages/Dashboard/ShowAllData/Show
 import UpdateDomPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateDomPackage";
 import ShowIntPackages from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowIntPackages";
 import UpdateIntPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateIntPackage";
+import ShowNextTour from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowNextTour";
+import UpdateNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateNextTour";
 
 export const router = createBrowserRouter([
   {
@@ -157,6 +159,17 @@ export const router = createBrowserRouter([
       {
         path:"add-next-tour",
         element:<AddNextTour/>
+
+      },
+      {
+        path:"/dashboard/update-next-tour/:id",
+        element:<UpdateNextTour/>
+        // loader :({params})=> fetch(`http://localhost:5000/show-all-domestic-packages/${params.id}`)
+
+      },
+      {
+        path:"show-next-tour",
+        element:<ShowNextTour/>
 
       },
       {
