@@ -74,7 +74,7 @@ const ShowMostPopularDes = () => {
         <th>Image</th>
         <th>Place</th>
         
-        <th>Duration</th>
+        <th>Country</th>
         
         <th>Remove</th>
         <th>Update</th>
@@ -96,7 +96,7 @@ return <tr key={indx}>
 
         {/* <td> {user.role ==='admin' ? "Admin" : <h1 onClick={()=>handleMakeAdmin(user)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FaUsersCog /> </h1>}  </td> */}
        <td> <h1 onClick={()=>handleDelete(mostPop)} className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <FiTrash2 /></h1></td>
-       <td> <Link to={`/dashboard/update-next-tour/${mostPop._id}`}><h1  className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <RxUpdate /></h1></Link> </td>
+       <td> <Link to={`/dashboard/show-most-popular-destination/${mostPop._id}`}><h1  className='  p-2 hover:text-red-500  cursor-pointer font-nunito text-2xl'> <RxUpdate /></h1></Link> </td>
       </tr>
         })
       }

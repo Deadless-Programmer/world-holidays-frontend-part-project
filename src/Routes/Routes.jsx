@@ -39,6 +39,7 @@ import UpdateIntPackage from "../pages/dashboard_pages/Dashboard/AddAllApi/Updat
 import ShowNextTour from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowNextTour";
 import UpdateNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateNextTour";
 import ShowMostPopularDes from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowMostPopularDes";
+import UpdateMostPopDes from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateMostPopDes";
 
 export const router = createBrowserRouter([
   {
@@ -149,7 +150,7 @@ export const router = createBrowserRouter([
       {
         path:"/dashboard/update-int-packages/:id",
         element:<UpdateIntPackage/>
-        // loader :({params})=> fetch(`http://localhost:5000/show-all-domestic-packages/${params.id}`)
+    
 
       },
       {
@@ -165,7 +166,7 @@ export const router = createBrowserRouter([
       {
         path:"/dashboard/update-next-tour/:id",
         element:<UpdateNextTour/>
-        // loader :({params})=> fetch(`http://localhost:5000/show-all-domestic-packages/${params.id}`)
+      
 
       },
       {
@@ -181,6 +182,13 @@ export const router = createBrowserRouter([
       {
         path:"show-most-popular-destination",
         element:<ShowMostPopularDes/>
+
+      },
+
+      {
+        path:"/dashboard/show-most-popular-destination/:id",
+        element:<UpdateMostPopDes/>
+      
 
       },
       {
