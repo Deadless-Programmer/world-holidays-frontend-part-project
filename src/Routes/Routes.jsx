@@ -45,6 +45,7 @@ import ShowDomPacCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/Show
 import ShowNextTourCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowNextTourCart";
 import ShowPopularDesCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowPopularDesCart";
 import ShowTicketCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowTicketCart";
+import VisaProcessing from "../components/VisaProcessing/VisaProcessing";
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
       {
         path: "/packages",
         element: <Packages/>
+      },
+      {
+        path: "/services/visa-processing",
+        element: <VisaProcessing/>
       },
 
       {path:'/next_tour_details/:id',
