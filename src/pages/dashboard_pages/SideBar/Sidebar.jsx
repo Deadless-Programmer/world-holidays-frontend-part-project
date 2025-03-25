@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AiOutlineBlock, AiOutlineLogout, AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaCartArrowDown, FaUsers } from 'react-icons/fa6';
 import { TbSettingsSpark, TbLayoutGridAdd, TbChartBarPopular } from 'react-icons/tb';
-import { MdOutlineShoppingCart, MdOutlineLocalLaundryService, MdOutlineShoppingCartCheckout } from 'react-icons/md';
+import { MdOutlineShoppingCart, MdOutlineLocalLaundryService, MdOutlineShoppingCartCheckout, MdOutlineAirplaneTicket } from 'react-icons/md';
 import { PiPackageThin, PiPackageLight, PiShoppingCartSimpleLight } from 'react-icons/pi';
 import { CiLocationArrow1, CiLocationOn } from 'react-icons/ci';
 import { IoCartOutline, IoHomeOutline, IoTicketOutline } from 'react-icons/io5';
@@ -77,7 +77,7 @@ const Sidebar = () => {
           </NavLink>
 
 
-          
+
           <div className="divider"></div>
           <NavLink to={"int-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <FaCartArrowDown className="text-lg" /> International Package Cart
@@ -129,6 +129,12 @@ const Sidebar = () => {
           </NavLink>
           <NavLink to={"popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <CiLocationOn className="text-lg" /> My Popular Destination
+            <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              {popularDesCart?.length}
+            </motion.span>
+          </NavLink>
+          <NavLink to={"my-ticket-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <MdOutlineAirplaneTicket className="text-lg" /> My Ticket
             <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
               {popularDesCart?.length}
             </motion.span>

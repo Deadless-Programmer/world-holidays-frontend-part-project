@@ -29,7 +29,7 @@ const ShowNextTourCart = () => {
          
   return (
     <div>
-        <div>
+        <div className='mt-5 ml-3 md:ml-0'>
             <h2 className='text-2xl font-medium font-playfair'> All Next Tour Order : {nextCarts.length}  </h2>
         </div>
 

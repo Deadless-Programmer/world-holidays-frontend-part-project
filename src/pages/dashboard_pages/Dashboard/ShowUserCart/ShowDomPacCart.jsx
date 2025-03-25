@@ -29,7 +29,7 @@ const ShowDomPacCart = () => {
          
   return (
     <div>
-        <div>
+        <div className='mt-5 ml-3 md:ml-0'>
             <h2 className='text-2xl font-medium font-playfair'> All Domsetice Packages Order : {domPackageCarts.length}  </h2>
         </div>
 

@@ -29,7 +29,7 @@ const ShowIntCart = () => {
          
   return (
     <div>
-        <div>
+        <div className='mt-5 ml-3 md:ml-0'>
             <h2 className='text-2xl font-medium font-playfair'> All International Packages Order : {intPackageCarts.length}  </h2>
         </div>
 
