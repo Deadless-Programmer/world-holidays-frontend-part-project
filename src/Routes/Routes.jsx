@@ -40,6 +40,11 @@ import ShowNextTour from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowNex
 import UpdateNextTour from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateNextTour";
 import ShowMostPopularDes from "../pages/dashboard_pages/Dashboard/ShowAllData/ShowMostPopularDes";
 import UpdateMostPopDes from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateMostPopDes";
+import ShowIntCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowIntCart";
+import ShowDomPacCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowDomPacCart";
+import ShowNextTourCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowNextTourCart";
+import ShowPopularDesCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowPopularDesCart";
+import ShowTicketCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowTicketCart";
 
 export const router = createBrowserRouter([
   {
@@ -191,6 +196,38 @@ export const router = createBrowserRouter([
       
 
       },
+
+
+
+      // show all order cart for admin
+
+      {
+        path: "int-package-order-cart",
+        element: <ShowIntCart></ShowIntCart>
+      },
+      {
+        path: "domestice-package-order-cart",
+        element: <ShowDomPacCart></ShowDomPacCart>
+      },
+      {
+        path: "next-tour-order-cart",
+        element: <ShowNextTourCart></ShowNextTourCart>
+      },
+      {
+        path: "popular-destination-order-cart",
+        element: <ShowPopularDesCart></ShowPopularDesCart>
+      },
+      {
+        path: "ticket-order-cart",
+        element: <ShowTicketCart></ShowTicketCart>
+      },
+
+
+
+
+
+
+
       {
         path: "my-cart",
         element: <MyCart/>,

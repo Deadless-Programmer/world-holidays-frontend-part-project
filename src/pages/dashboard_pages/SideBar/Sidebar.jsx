@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { AiOutlineBlock, AiOutlineLogout } from 'react-icons/ai';
-import { FaUsers } from 'react-icons/fa6';
+import { AiOutlineBlock, AiOutlineLogout, AiOutlineShoppingCart } from 'react-icons/ai';
+import { FaCartArrowDown, FaUsers } from 'react-icons/fa6';
 import { TbSettingsSpark, TbLayoutGridAdd, TbChartBarPopular } from 'react-icons/tb';
-import { MdOutlineShoppingCart, MdOutlineLocalLaundryService } from 'react-icons/md';
-import { PiPackageThin, PiPackageLight } from 'react-icons/pi';
+import { MdOutlineShoppingCart, MdOutlineLocalLaundryService, MdOutlineShoppingCartCheckout } from 'react-icons/md';
+import { PiPackageThin, PiPackageLight, PiShoppingCartSimpleLight } from 'react-icons/pi';
 import { CiLocationArrow1, CiLocationOn } from 'react-icons/ci';
-import { IoHomeOutline, IoTicketOutline } from 'react-icons/io5';
+import { IoCartOutline, IoHomeOutline, IoTicketOutline } from 'react-icons/io5';
 import { GrServices } from 'react-icons/gr';
 import { CgProfile } from 'react-icons/cg';
 import { motion } from "motion/react";
@@ -22,6 +22,7 @@ import useTicketCart from '../../../hooks/useTicketCart';
 import { RiAlignItemBottomLine, RiAlignItemLeftLine } from 'react-icons/ri';
 import { LiaShoppingCartSolid, LiaSitemapSolid } from 'react-icons/lia';
 import { SiTourbox } from "react-icons/si";
+import { BsCartCheckFill } from "react-icons/bs";
 
 const Sidebar = () => {
   const { user, logOut } = useAuth();
@@ -73,6 +74,25 @@ const Sidebar = () => {
           </NavLink>
           <NavLink to={"show-most-popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <TbChartBarPopular className="text-lg" /> Show Most Popular Destination
+          </NavLink>
+
+
+          
+          <div className="divider"></div>
+          <NavLink to={"int-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <FaCartArrowDown className="text-lg" /> International Package Cart
+          </NavLink>
+          <NavLink to={"domestice-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <AiOutlineShoppingCart className="text-lg" /> Domestice Package Cart
+          </NavLink>
+          <NavLink to={"next-tour-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <MdOutlineShoppingCartCheckout className="text-lg" /> Next Tour Cart
+          </NavLink>
+          <NavLink to={"popular-destination-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <BsCartCheckFill className="text-lg" /> Popular Destination Cart
+          </NavLink>
+          <NavLink to={"ticket-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <IoTicketOutline className="text-lg" /> Ticket Cart
           </NavLink>
           <NavLink to={"all-users"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <FaUsers className="text-lg" /> All Users
