@@ -30,9 +30,9 @@ const VisaProcessing = () => {
                 <img
                   src={photo.src}
                   alt={photo.name}
-                  className="w-[90%] transform translate-x-[30%] transition-transform duration-700 ease-in-out hover:-translate-x-[30%] group-hover:scale-110"
+                  className="w-[90%] transform translate-x-[5%] transition-transform duration-700 ease-in-out hover:-translate-x-[5%] group-hover:scale-110"
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/50 transition-opacity duration-500">
+                <div className="absolute inset-1 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/50 transition-opacity duration-500">
                   <p className="text-white text-lg font-bold">Visa Fee: {photo.visaFee} TK</p>
                 </div>
               </div>

@@ -2,7 +2,8 @@ import React from 'react'
 import { PiCheckCircleLight } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
 
-const OurServices = () => {
+const OurServices = ({ticketData}) => {
+	const _id='random-id'
   return (
     <section className=" max-w-7xl mx-auto py-6 sm:py-12 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container p-6 mx-auto space-y-8">
@@ -12,7 +13,7 @@ const OurServices = () => {
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
 			<article className="flex flex-col dark:bg-gray-50">
-				<Link to='/' rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+				<Link to={`/ticket-details/${_id}`} rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
 					<img alt="" className="object-cover w-full h-52 hover:scale-105 transition-all duration-1000 dark:bg-gray-500" src="https://images.unsplash.com/photo-1518206075495-4e901709d372?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 				</Link>
 				<div className="flex flex-col flex-1 pt-6">

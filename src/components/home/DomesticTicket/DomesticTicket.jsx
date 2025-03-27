@@ -31,6 +31,8 @@ const DomesticTicket = () => {
       });
   }, []);
 
+ 
+
   if (loading)
     return (
       <div
@@ -82,6 +84,9 @@ const DomesticTicket = () => {
           {/* slider section (right) */}
           <div className=" md:w-[43rem] ">
             {ticketData.length > 0 && <TicketSlider ticketData={ticketData} />}
+
+          
+
           </div>
         </div>
       </section>

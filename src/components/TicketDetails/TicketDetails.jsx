@@ -70,7 +70,7 @@ const TicketDetails = () => {
    
           
          }; 
-         console.log(cartItem);
+        //  console.log(cartItem);
          axiosSecure.post('/ticket_cart',cartItem ).then(res=>{
          if(res.data.insertedId){
            Swal.fire({
