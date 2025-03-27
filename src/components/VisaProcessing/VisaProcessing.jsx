@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import PageHeader from "../PageHeader/PageHeader";
 
 const photos = [
   { src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/gg-kyoto.jpeg", name: "Kyoto", visaFee: 2500 },
@@ -21,6 +23,16 @@ const photos = [
 
 const VisaProcessing = () => {
   return (
+    <>
+ <Helmet>
+           <title>W-holidays | Visa Processing</title>
+           </Helmet>
+        
+      <PageHeader bgImage={'https://images.unsplash.com/photo-1728310346752-fedef818f24e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}/>
+    <div className="mt-20 mb-10 flex flex-col md:flex-row justify-center items-center gap-1">
+              <input className="p-3 md:w-[420px] w-80 border" type="text"  name="" id=""  placeholder="Input country name"/>
+              <button className="bg-orange-500 p-3 text-white rounded-sm" >Search Here</button>
+    </div>
     <div className="flex flex-wrap max-w-[1300px] mx-auto overflow-hidden">
       {photos.map((photo, index) => (
         <div key={index} className="w-full md:w-1/2 lg:w-1/4 bg-gray-900 border-r-2 border-gray-800 p-2 relative group">
@@ -44,6 +56,7 @@ const VisaProcessing = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 
