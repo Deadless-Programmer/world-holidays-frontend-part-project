@@ -46,6 +46,8 @@ import ShowNextTourCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/Sh
 import ShowPopularDesCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowPopularDesCart";
 import ShowTicketCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowTicketCart";
 import VisaProcessing from "../components/VisaProcessing/VisaProcessing";
+import VisaProcessingDetails from "../components/VisaProcessing/VisaProcessingDetails";
+import MyVisa from "../pages/dashboard_pages/Dashboard/DashboardPages/MyVisa";
 
 export const router = createBrowserRouter([
   {
@@ -72,12 +74,13 @@ export const router = createBrowserRouter([
         path: "/services/visa-processing",
         element: <VisaProcessing/>
       },
-
-      {path:'/next_tour_details/:id',
-        element:<NextTourDetails/>,
-        // loader:()=>fetch('/NextTour.json')
-        loader : ({params})=>fetch(`http://localhost:5000/next_tour/${params.id}`)
+      {
+        path: "/services/visa-processing/:id",
+        element: <VisaProcessingDetails/>,
+        loader : ({params})=>fetch(`http://localhost:5000/visa-processing-fee/${params.id}`)
       },
+
+      
       {path:'/domesticePackageDetails/:id',
         element:<DomesticPackageDetails/>,
         // loader:()=>fetch('/DomesticePackages.json')
@@ -103,6 +106,11 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <PrivetRoute><Services/></PrivetRoute>
+      },
+      {
+        path: "/popular-destination-details/:id",
+        element: <PopularDestinationDetails/>,
+        loader: ({params})=>fetch(`http://localhost:5000/popular_destination/${params.id}`)
       },
       {
         path: "/popular-destination-details/:id",
@@ -256,6 +264,10 @@ export const router = createBrowserRouter([
       {
         path: "my-ticket-cart",
         element: <MyTicketCart/>
+      },
+      {
+        path: "my-visa-cart",
+        element: <MyVisa/>
       },
      
       {

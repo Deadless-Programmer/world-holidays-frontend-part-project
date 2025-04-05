@@ -20,7 +20,7 @@ import useNextTour from '../../../hooks/useNextTour';
 import usePopularDestination from '../../../hooks/usePopularDestination';
 import useTicketCart from '../../../hooks/useTicketCart';
 import { RiAlignItemBottomLine, RiAlignItemLeftLine } from 'react-icons/ri';
-import { LiaShoppingCartSolid, LiaSitemapSolid } from 'react-icons/lia';
+import { LiaCcVisa, LiaShoppingCartSolid, LiaSitemapSolid } from 'react-icons/lia';
 import { SiTourbox } from "react-icons/si";
 import { BsCartCheckFill } from "react-icons/bs";
 
@@ -135,6 +135,12 @@ const Sidebar = () => {
           </NavLink>
           <NavLink to={"my-ticket-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <MdOutlineAirplaneTicket className="text-lg" /> My Ticket
+            <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
+              {popularDesCart?.length}
+            </motion.span>
+          </NavLink>
+          <NavLink to={"my-visa-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <LiaCcVisa className="text-lg" /> My Visa
             <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
               {popularDesCart?.length}
             </motion.span>
