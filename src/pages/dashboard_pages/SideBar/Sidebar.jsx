@@ -23,6 +23,7 @@ import { RiAlignItemBottomLine, RiAlignItemLeftLine } from 'react-icons/ri';
 import { LiaCcVisa, LiaShoppingCartSolid, LiaSitemapSolid } from 'react-icons/lia';
 import { SiTourbox } from "react-icons/si";
 import { BsCartCheckFill } from "react-icons/bs";
+import useVisaprocessingCart from '../../../hooks/useVisaprocessingCart';
 
 const Sidebar = () => {
   const { user, logOut } = useAuth();
@@ -31,6 +32,7 @@ const Sidebar = () => {
   const [nextTourCart] = useNextTour();
   const [popularDesCart] = usePopularDestination();
   const [ticketCart] = useTicketCart();
+  const [visaCart]=useVisaprocessingCart();
 
   const [isAdmin, isAdminLoading] = useAdmin();
   const [isModerator, isModeratorLoading] = useModerator();
@@ -136,13 +138,13 @@ const Sidebar = () => {
           <NavLink to={"my-ticket-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <MdOutlineAirplaneTicket className="text-lg" /> My Ticket
             <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
-              {popularDesCart?.length}
+              {ticketCart?.length}
             </motion.span>
           </NavLink>
           <NavLink to={"my-visa-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <LiaCcVisa className="text-lg" /> My Visa
             <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
-              {popularDesCart?.length}
+              {visaCart?.length}
             </motion.span>
           </NavLink>
         </>

@@ -84,4 +84,4 @@ const MyIntPackges = () => {
   )
 }
 
-export default MyIntPackges
+export default MyIntPackges ;
