@@ -1,79 +1,87 @@
 [
+
+
     {
-        "_id":1,
-        "Neme":"SYED MEHEDI MAHMUD",
-    "Designation":"Head of marketing",
+       
+        "name":"Mr. Md karuzzaman",
+    "designation":"Propietor",
+    "img":"https://i.postimg.cc/bYK4ygfP/Whats-App-Image-2025-04-07-at-16-55-38-b778caf7.jpg"
+    },
+
+    {
+        
+        "name":"Mr. RIAZ UDDIN",
+    "designation":"Manager",
+    "img":"https://i.postimg.cc/0NDb4cvN/470890682-3704120503067377-2464172581989890247-n.jpg"
+    },
+    {
+      
+    "name":"SYED MEHEDI MAHMUD",
+    "designation":"Head of marketing",
     "img":"https://i.postimg.cc/4nkdVzRK/MEHEDI-Passport-size-Pic.jpg"
     },
 
     {
-        "_id":2,
-        "Neme":"MONIRA BEGUM",
-    "Designation":"Head of marketing",
-    "img":""
+       
+        "name":"Mr. MD SHORIF",
+    "designation":"Sr. Executive",
+    "img":"https://i.postimg.cc/66gVF1Jr/453217831-3755567528093631-7646139695438760959-n.jpg"
     },
 
     {
-        "_id":3,
-        "Neme":"Mr. KARTICK CHANDRA",
-    "Designation":"Head of marketing",
-    "img":""
+       
+        "name":"MONIRA BEGUM",
+    "designation":"Sr. Hr Admin",
+    "img":"https://images.unsplash.com/photo-1520763185298-1b434c919102?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 
     {
-        "_id":4,
-        "Neme":"Mr. md karuzzaman",
-    "Designation":"Head of marketing",
-    "img":""
+        
+        "name":"Mr. KARTICK CHANDRA",
+    "designation":"Reservation(Ticketing/Visa)",
+    "img":"https://i.postimg.cc/MGvYjk1F/IMG-1017-JPEG.jpg"
     },
-
     {
-        "_id":5,
-        "Neme":"Mr. MD SAKIL",
-    "Designation":"Head of marketing",
-    "img":""
-    },
-
-    {
-        "_id":6,
-        "Neme":"Mr. MD SHAKIL",
-    "Designation":"Executive-(accounts)",
+       
+        "name":"Mr. MD SHAKIL",
+    "designation":"Executive-(accounts)",
     "img":"https://i.postimg.cc/9FxvzMc4/Whats-App-Image-2025-03-05-at-12-45-12-97f18131.jpg"
     },
 
     {
-        "_id":7,
-        "Neme":"Mr. MD SHORIF",
-    "Designation":"Head of marketing",
-    "img":""
-    },
-
-    {
-        "_id":8,
-        "Neme":"Mr. MD TONMOY HOSSAIN",
-    "Designation":"Head of marketing",
+        "name":"Mr. MD TONMOY HOSSAIN",
+    "designation":"Jr. Executive (visa)",
     "img":"https://i.postimg.cc/3J8J5JJQ/My-Photo-main.jpg"
     },
 
-    {
-        "_id":9,
-        "Neme":"Mr. RIAZ UDDIN",
-    "Designation":"Head of marketing",
-    "img":""
-    },
+  
 
     {
-        "_id":11,
-        "Neme":"Mr. SHANTO SUTRA",
-    "Designation":"Head of marketing",
+        
+        "name":"Mr. SHANTO SUTRA",
+    "designation":"Jr. Executive (visa)",
     "img":"https://i.postimg.cc/7hDPLq37/Whats-App-Image-2025-02-08-at-12-51-12-7f25b2ad.jpg"
     },
 
+   
+
     {
-        "_id":12,
-        "Neme":"Jahin S M Tuhin",
-    "Designation":"Software Developer",
-    "img":""
+       
+        "name":"Mr. MD SAKIL",
+    "designation":"Jr. Executive (visa)",
+    "img":"https://i.postimg.cc/8PSwX0V7/480708554-122102903246771265-8201064546351413415-n.jpg"
+    },
+
+   
+
+
+    
+
+    {
+        
+        "name":"Jahin S M Tuhin",
+    "designation":"Software Developer",
+    "img":"https://i.postimg.cc/kgt4VfBy/470209992-3918247058443394-358559914561535546-n.jpg"
     }
 
 ]

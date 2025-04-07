@@ -27,7 +27,7 @@ const MyTicketCart = () => {
       }).then((result) => {
         if (result.isConfirmed) {
 
-            axiosSecure.delete(`/popular_des_cart/${id}`).then(res=>{
+            axiosSecure.delete(`/ticket_cart/${id}`).then(res=>{
                 if(res.data.deletedCount >0){
                     refetch();
                     Swal.fire({
