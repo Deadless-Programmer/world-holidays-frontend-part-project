@@ -48,6 +48,10 @@ import ShowTicketCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/Show
 import VisaProcessing from "../components/VisaProcessing/VisaProcessing";
 import VisaProcessingDetails from "../components/VisaProcessing/VisaProcessingDetails";
 import MyVisa from "../pages/dashboard_pages/Dashboard/DashboardPages/MyVisa";
+import ShowVisaCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowVisaCart";
+import AddVisaRate from "../pages/dashboard_pages/Dashboard/AddAllApi/AddVisaRate";
+import ShowVisaRate from "../pages/dashboard_pages/Dashboard/AddAllApi/ShowVisaRate";
+import UpdateVisaRate from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateVisaRate";
 
 export const router = createBrowserRouter([
   {
@@ -210,6 +214,24 @@ export const router = createBrowserRouter([
 
       },
 
+      {
+        path:"add-visa-rate",
+        element:<AddVisaRate/>
+
+      },
+      {
+        path:"show-visa-rate",
+        element:<ShowVisaRate/>
+
+      },
+
+      {
+        path:"/dashboard/show-visa-rate/:id",
+        element:<UpdateVisaRate/>
+      
+
+      },
+
 
 
       // show all order cart for admin
@@ -233,6 +255,10 @@ export const router = createBrowserRouter([
       {
         path: "ticket-order-cart",
         element: <ShowTicketCart></ShowTicketCart>
+      },
+      {
+        path: "visa-order-cart",
+        element: <ShowVisaCart/>
       },
 
 

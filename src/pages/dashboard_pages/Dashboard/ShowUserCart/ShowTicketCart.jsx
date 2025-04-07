@@ -57,10 +57,10 @@ const ShowTicketCart = () => {
                   <tr key={indx}>
                     <th>{indx + 1}</th>
                     <td>{ticketCart.name || "N/A"}</td>
-                    <td>{ticketCart.flightInfo.selected || "N/A"}</td>
+                    <td>{ticketCart.flightInfo?.selected || "N/A"}</td>
                     
-                    <td>{ticketCart.flightInfo.economy || "N/A"}</td>
-                    <td>{ticketCart.flightInfo.formData?.to || "N/A"}</td>
+                    <td>{ticketCart.flightInfo?.economy || "N/A"}</td>
+                    <td>{ticketCart.flightInfo?.formData?.to || "N/A"}</td>
                     
                    
                   </tr>

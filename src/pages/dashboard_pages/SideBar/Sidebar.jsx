@@ -19,7 +19,7 @@ import useDomPackageCart from '../../../hooks/useDomPackageCart';
 import useNextTour from '../../../hooks/useNextTour';
 import usePopularDestination from '../../../hooks/usePopularDestination';
 import useTicketCart from '../../../hooks/useTicketCart';
-import { RiAlignItemBottomLine, RiAlignItemLeftLine } from 'react-icons/ri';
+import { RiAlignItemBottomLine, RiAlignItemLeftLine, RiVisaFill, RiVisaLine } from 'react-icons/ri';
 import { LiaCcVisa, LiaShoppingCartSolid, LiaSitemapSolid } from 'react-icons/lia';
 import { SiTourbox } from "react-icons/si";
 import { BsCartCheckFill } from "react-icons/bs";
@@ -77,6 +77,12 @@ const Sidebar = () => {
           <NavLink to={"show-most-popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <TbChartBarPopular className="text-lg" /> Show Most Popular Destination
           </NavLink>
+          <NavLink to={"add-visa-rate"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <RiVisaLine className="text-lg" /> Add Visa Rate
+          </NavLink>
+          <NavLink to={"show-visa-rate"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <LiaCcVisa className="text-lg" /> Show Visa Rate
+          </NavLink>
 
 
 
@@ -95,6 +101,9 @@ const Sidebar = () => {
           </NavLink>
           <NavLink to={"ticket-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <IoTicketOutline className="text-lg" /> Ticket Cart
+          </NavLink>
+          <NavLink to={"visa-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <RiVisaFill className="text-lg" /> Visa Cart
           </NavLink>
           <NavLink to={"all-users"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <FaUsers className="text-lg" /> All Users

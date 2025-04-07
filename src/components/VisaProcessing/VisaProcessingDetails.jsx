@@ -41,6 +41,7 @@ import useAuth from "../../hooks/useAuth";
 
 import useVisaprocessingCart from "../../hooks/useVisaprocessingCart";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import { TbCoinTaka } from "react-icons/tb";
 
 const customStyles = {
   itemShapes: Star,
@@ -141,14 +142,15 @@ const VisaProcessingDetails = () => {
         {/* left side */}
         <div className="col-span-8">
           <img className="w-full" src={src} alt="" />
-          <div className="flex justify-between mt-5">
+          <div className="flex flex-col md:flex-row justify-between mt-5">
             <h1 className="font-playfair text-3xl font-semibold items-end">
               {name}
             </h1>
-            <h3 className="font-semibold font-nunito">
+            <h3 className="font-semibold font-nunito flex items-center gap-3 mt-4 md:mt-0">
               From{" "}
-              <span className="font-semibold text-2xl">${visaFee}</span>{" "}
-              per Head
+              <span className="font-semibold text-2xl flex items-center gap-1"> <TbCoinTaka />
+              {visaFee} </span>{" "}
+              per head
             </h3>
           </div>
         
