@@ -17,6 +17,7 @@
     "firebase": "^11.4.0",
     "flatpickr": "^4.6.13",
     "localforage": "^1.10.0",
+    "lottie-react": "^2.4.1",
     "match-sorter": "^8.0.0",
     "motion": "^12.4.7",
     "react": "^18.3.1",

@@ -4,42 +4,45 @@ import { BeatLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import { useWindowSize } from "react-use";
 import { Parallax, Background } from 'react-parallax';
+import useTravelersReview from "../../../hooks/useTravelersReview";
 const TravelersReview = () => {
   const { width } = useWindowSize();
   const sliderWidth = width > 768 ? 375 : width * 0.9;
   const sliderHeight = width > 768 ? 520 : sliderWidth * 1.2;
   
-  const [reviews, setReviews] = useState([]);
+  // const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    fetch("/TravelersReview.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setReviews(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setErr(error.message);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("")
+  //     .then((res) => {
+  //       if (!res.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       setReviews(data);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       setErr(error.message);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
-  if (loading)
-    return (
-      <div className="flex justify-center items-center h-[50vh]">
-        <BeatLoader color="#FFA500" loading={true} size={15} />
-      </div>
-    );
+  const [reviews, refetch]=useTravelersReview();
 
-  if (err) return toast.error(err);
+  // if (loading)
+  //   return (
+  //     <div className="flex justify-center items-center h-[50vh]">
+  //       <BeatLoader color="#FFA500" loading={true} size={15} />
+  //     </div>
+  //   );
+
+  // if (err) return toast.error(err);
 
   const images = reviews.map((review) => ({ url: review.image }));
   const reviewTexts = reviews.map((review) => review.p_description);

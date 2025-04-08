@@ -52,6 +52,11 @@ import ShowVisaCart from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowVi
 import AddVisaRate from "../pages/dashboard_pages/Dashboard/AddAllApi/AddVisaRate";
 import ShowVisaRate from "../pages/dashboard_pages/Dashboard/AddAllApi/ShowVisaRate";
 import UpdateVisaRate from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateVisaRate";
+import AddTeamMembers from "../pages/dashboard_pages/Dashboard/AddAllApi/AddTeamMembers";
+import ShowTeamMembers from "../pages/dashboard_pages/Dashboard/ShowUserCart/ShowTeamMembers";
+import UpdateteamMembers from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateteamMembers";
+import Review from "../pages/dashboard_pages/Dashboard/Review/Review";
+import ShowReview from "../pages/dashboard_pages/Dashboard/Review/ShowReview";
 
 export const router = createBrowserRouter([
   {
@@ -231,6 +236,24 @@ export const router = createBrowserRouter([
       
 
       },
+      
+      {
+        path:"add-team-member",
+        element:<AddTeamMembers/>
+        
+      },
+      
+      {
+        path:"show-team-member",
+        element:<ShowTeamMembers/>
+        
+      },
+      {
+        path:"/dashboard/update-team-members/:id",
+        element:<UpdateteamMembers/>
+      
+
+      },
 
 
 
@@ -294,6 +317,14 @@ export const router = createBrowserRouter([
       {
         path: "my-visa-cart",
         element: <MyVisa/>
+      },
+      {
+        path: "my-review",
+        element: <Review/>
+      },
+      {
+        path: "show-review",
+        element: <ShowReview/>
       },
      
       {

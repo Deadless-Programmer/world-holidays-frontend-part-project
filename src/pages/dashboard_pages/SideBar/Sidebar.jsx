@@ -4,7 +4,7 @@ import { AiOutlineBlock, AiOutlineLogout, AiOutlineShoppingCart } from 'react-ic
 import { FaCartArrowDown, FaUsers } from 'react-icons/fa6';
 import { TbSettingsSpark, TbLayoutGridAdd, TbChartBarPopular } from 'react-icons/tb';
 import { MdOutlineShoppingCart, MdOutlineLocalLaundryService, MdOutlineShoppingCartCheckout, MdOutlineAirplaneTicket } from 'react-icons/md';
-import { PiPackageThin, PiPackageLight, PiShoppingCartSimpleLight } from 'react-icons/pi';
+import { PiPackageThin, PiPackageLight, PiShoppingCartSimpleLight, PiUsersThree } from 'react-icons/pi';
 import { CiLocationArrow1, CiLocationOn } from 'react-icons/ci';
 import { IoCartOutline, IoHomeOutline, IoTicketOutline } from 'react-icons/io5';
 import { GrServices } from 'react-icons/gr';
@@ -24,6 +24,7 @@ import { LiaCcVisa, LiaShoppingCartSolid, LiaSitemapSolid } from 'react-icons/li
 import { SiTourbox } from "react-icons/si";
 import { BsCartCheckFill } from "react-icons/bs";
 import useVisaprocessingCart from '../../../hooks/useVisaprocessingCart';
+import { VscPreview } from 'react-icons/vsc';
 
 const Sidebar = () => {
   const { user, logOut } = useAuth();
@@ -108,6 +109,15 @@ const Sidebar = () => {
           <NavLink to={"all-users"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <FaUsers className="text-lg" /> All Users
           </NavLink>
+          <NavLink to={"add-team-member"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <CgProfile className="text-lg" /> Add team Member
+          </NavLink>
+          <NavLink to={"show-team-member"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <PiUsersThree className="text-lg" /> Show team Member
+          </NavLink>
+          <NavLink to={"show-review"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <VscPreview className="text-lg" /> Show Review
+          </NavLink>
         </>
       ) : isModerator ? (
         <>
@@ -155,6 +165,10 @@ const Sidebar = () => {
             <motion.span animate={{ color: ['#FFA500', '#fbff03', '#66ff03'] }} transition={{ duration: 1.5, repeat: Infinity }}>
               {visaCart?.length}
             </motion.span>
+          </NavLink>
+          <NavLink to={"my-review"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <VscPreview className="text-lg" /> Review
+          
           </NavLink>
         </>
       )}

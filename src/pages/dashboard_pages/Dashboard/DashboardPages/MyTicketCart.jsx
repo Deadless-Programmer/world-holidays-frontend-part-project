@@ -32,7 +32,7 @@ const MyTicketCart = () => {
                     refetch();
                     Swal.fire({
                         title: "Deleted!",
-                        text: "Your package has been deleted.",
+                        text: "Your ticket has been deleted.",
                         icon: "success"
                       });
                 }
