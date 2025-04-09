@@ -12,7 +12,13 @@ const useTravelersReview = () => {
         queryKey: ['reviews' ],
         queryFn: async() =>{
          const res = await axiosSecure.get('/travelersReview')
-         return res.data}
+         const allReviews = res.data;
+      const approvedReviews = allReviews.filter(review => review.status === 'approved');
+      return approvedReviews;
+      
+      
+      
+      }
         
       })
 
