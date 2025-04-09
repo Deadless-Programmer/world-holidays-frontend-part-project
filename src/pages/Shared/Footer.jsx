@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,24 +11,24 @@ const Footer = () => {
             src="https://i.postimg.cc/TwYXZn0T/Logo-World-holidays.png"
             alt=""
           />
-          <h2 className="mt-4 text-sm font-extralight text-orange-500  leading-relaxed">
+          <h2 className="mt-4 text-sm font-extralight  leading-relaxed">
            World Holidays Antara (Irving Properties) 4th Floor (4A), House 57,
             Road 04 Block C, Banani, Dhaka-1213,Bangladesh.
           </h2>
         </div>
-        <div className="space-y-1">
-          <h1 className="text-xl ">About</h1>
-          <p>Terms and Conditions</p>
-          <p>Privacy Policy</p>
-          <p>Cookie Policy</p>
-          <p>Blog</p>
+        <div className="space-y-1 flex flex-col">
+          <Link to="/about-us" className="text-xl ">About</Link>
+          <Link to="/term-&-condition">Terms and Conditions</Link>
+          <Link to='/privacy-policy'>Privacy Policy</Link>
+          <Link to='/cookie-policy'>Cookie Policy</Link>
+          <Link to='/blog'>Blog</Link>
         </div>
-        <div className=" space-y-1">
-          <h1 className="text-xl">Help</h1>
-          <p>Contact Us</p>
-          <p>Easy EMI</p>
-          <p>Payment Methods</p>
-          <p>FAQS</p>
+        <div className=" space-y-1 flex flex-col">
+          <Link to="/contact" className="text-xl">Help</Link>
+          <Link to="/contact">Contact Us</Link>
+          <Link to="/easy-emi">Easy EMI</Link>
+          <Link to="/payment-method">Payment Methods</Link>
+          <Link to="/faqs-World-Holidays">FAQS</Link>
         </div>
         <div className=" space-y-1">
           <h1 className="text-xl">Have an any Query ?</h1>

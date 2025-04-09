@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FaCartPlus } from "react-icons/fa";
 import { motion } from "motion/react"
@@ -33,12 +33,22 @@ const Navbar = () => {
     })
   }
 
+  const location = useLocation();
+  // const isTermsPage = location.pathname ==="/term-&-condition" || '/privacy-policy' || '/cookie-policy' || '/blog'
+  const isTermsPage = location.pathname ==="/term-&-condition" 
+  const isPrivacyPolicyPage = location.pathname ==='/privacy-policy' 
+  const isCookiePolicyPage = location.pathname ==='/cookie-policy' 
+  const isBlogPage = location.pathname ==='/blog' 
+  const isEasyEmiPage = location.pathname ==='/easy-emi' 
+  const ispaymentMethod = location.pathname ==='/payment-method' 
+  const isFaqsPage = location.pathname ==='/faqs-World-Holidays' 
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out transform ${
         isScrolled
-          ? "bg-white text-black shadow-lg opacity-100 translate-y-0"
-          : "bg-transparent text-white opacity-90 pt-4 -translate-y-3"
+          ?  "bg-white text-black shadow-lg opacity-100 translate-y-0"
+          : `  ${isTermsPage || isPrivacyPolicyPage || isCookiePolicyPage || isBlogPage || isEasyEmiPage || ispaymentMethod ||isFaqsPage ? "bg-white shadow-lg " : "bg-transparent text-white "} opacity-90 pt-4 -translate-y-3`
       }`}
     >
       <div className="container max-w-7xl mx-auto  flex justify-between items-center px-4 py-6 lg:px-6">
@@ -125,7 +135,7 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-center space-y-4 py-4">
           <li>
-            <Link  to="#home" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
+            <Link  to="/" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
               Home
             </Link >
           </li>

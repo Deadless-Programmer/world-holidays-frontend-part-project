@@ -57,6 +57,13 @@ import ShowTeamMembers from "../pages/dashboard_pages/Dashboard/ShowUserCart/Sho
 import UpdateteamMembers from "../pages/dashboard_pages/Dashboard/AddAllApi/UpdateteamMembers";
 import Review from "../pages/dashboard_pages/Dashboard/Review/Review";
 import ShowReview from "../pages/dashboard_pages/Dashboard/Review/ShowReview";
+import TermsAndConditions from "../components/footerPages/TermsAndConditions";
+import PrivacyPolicy from "../components/footerPages/privacyPolicy";
+import CookiePolicy from "../components/footerPages/cookiePolicy";
+import Blog from "../components/footerPages/Blog";
+import EasyEMI from "../components/footerPages/easyEMI";
+import PaymentMethods from "../components/footerPages/paymentMethods";
+import FaqsWorldHolidays from "../components/footerPages/FaqsWorldHolidays";
 
 export const router = createBrowserRouter([
   {
@@ -138,6 +145,46 @@ export const router = createBrowserRouter([
         path: "/signInUpForm",
         element: <SignInUpForm/>
       },
+
+
+
+      // footer section routes
+
+
+
+      {
+        path: '/term-&-condition',
+        element: <TermsAndConditions/>
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy/>
+      },
+      
+      {
+        path: '/cookie-policy',
+        element:<CookiePolicy/>
+      }
+      ,
+      
+      {
+        path: '/blog',
+        element:<Blog/>
+      },
+      {
+        path: '/easy-emi',
+        element:<EasyEMI/>
+      }
+      ,
+      {
+        path: '/payment-method',
+        element:<PaymentMethods/>
+      }
+      ,
+      {
+        path: '/faqs-World-Holidays',
+        element:<FaqsWorldHolidays/>
+      }
       // {
       //   path: "/sign-up",
       //   element: <SignUp/>

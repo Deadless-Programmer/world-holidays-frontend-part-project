@@ -20,14 +20,14 @@ const Home = () => {
      </Helmet>
       <Banner></Banner>
       
- <div className='md:hidden flex justify-center mt-12 '>
+ {/* <div className='md:hidden flex justify-center mt-12 '>
  <SearchBar/>
- {/* <SearchBarSelected/> */}
- </div>
- <div className='hidden md:flex'>
+ 
+ </div> */}
+ {/* <div className='hidden md:flex'>
 
  <SearchBar/>
- </div>
+ </div> */}
       <WhoAreWe/>
       <PopularTours/>
       <NextTour/>
