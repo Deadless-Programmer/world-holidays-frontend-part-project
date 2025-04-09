@@ -44,8 +44,8 @@ const Navbar = () => {
       <div className="container max-w-7xl mx-auto  flex justify-between items-center px-4 py-6 lg:px-6">
         {/* Logo */}
         <div className="text-lg font-bold">
-        {isScrolled ? <img className="w-22 h-10" src='https://i.postimg.cc/w3K0SWMK/artboard-loog-01.png' alt="" />
-        : <img className="w-22 h-10" src='https://i.postimg.cc/d0mPnyWt/artboard-loog.png' alt="" /> }
+        {isScrolled ? <img className="w-22 h-10" src='https://i.postimg.cc/Y2RkGbTK/Logo-World-holidays.png' alt="" />
+        : <img className="w-22 h-10" src='https://i.postimg.cc/Y2RkGbTK/Logo-World-holidays.png' alt="" /> }
         
         </div>
 
