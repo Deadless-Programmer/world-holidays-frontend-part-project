@@ -121,13 +121,70 @@ const Sidebar = () => {
         </>
       ) : isModerator ? (
         <>
-          <NavLink to={"moderate-content"} className="flex items-center gap-2 text-sm font-semibold p-2">
-            <TbSettingsSpark className="text-lg" /> Moderate Content
+        <NavLink to={"add-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbSettingsSpark className="text-lg" /> Add Domestice Packages
           </NavLink>
-          <NavLink to={"review-users"} className="flex items-center gap-2 text-sm font-semibold p-2">
-            <FaUsers className="text-lg" /> Review Users
+          <NavLink to={"show-all-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <AiOutlineBlock className="text-lg" /> Show All Domestice Packages
+          </NavLink>
+          <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <RiAlignItemBottomLine className="text-lg" /> Add International Packages
+          </NavLink>
+          <NavLink to={"show-all-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <LiaShoppingCartSolid className="text-lg" /> Show All International Packages
+          </NavLink>
+          <NavLink to={"add-next-tour"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbLayoutGridAdd className="text-lg" /> Add Next Tour
+          </NavLink>
+          <NavLink to={"show-next-tour"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <SiTourbox className="text-lg" /> Show Next Tour
+          </NavLink>
+          <NavLink to={"add-most-popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <LiaSitemapSolid className="text-lg" /> Add Most Popular Destination
+          </NavLink>
+          <NavLink to={"show-most-popular-destination"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbChartBarPopular className="text-lg" /> Show Most Popular Destination
+          </NavLink>
+          <NavLink to={"add-visa-rate"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <RiVisaLine className="text-lg" /> Add Visa Rate
+          </NavLink>
+          <NavLink to={"show-visa-rate"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <LiaCcVisa className="text-lg" /> Show Visa Rate
+          </NavLink>
+
+
+
+          <div className="divider"></div>
+          <NavLink to={"int-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <FaCartArrowDown className="text-lg" /> International Package Cart
+          </NavLink>
+          <NavLink to={"domestice-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <AiOutlineShoppingCart className="text-lg" /> Domestice Package Cart
+          </NavLink>
+          <NavLink to={"next-tour-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <MdOutlineShoppingCartCheckout className="text-lg" /> Next Tour Cart
+          </NavLink>
+          <NavLink to={"popular-destination-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <BsCartCheckFill className="text-lg" /> Popular Destination Cart
+          </NavLink>
+          <NavLink to={"ticket-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <IoTicketOutline className="text-lg" /> Ticket Cart
+          </NavLink>
+          <NavLink to={"visa-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <RiVisaFill className="text-lg" /> Visa Cart
+          </NavLink>
+         
+          <NavLink to={"add-team-member"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <CgProfile className="text-lg" /> Add team Member
+          </NavLink>
+          <NavLink to={"show-team-member"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <PiUsersThree className="text-lg" /> Show team Member
+          </NavLink>
+          <NavLink to={"show-review"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <VscPreview className="text-lg" /> Show Review
           </NavLink>
         </>
+     
       ) : (
         <>
           <NavLink to={"int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">

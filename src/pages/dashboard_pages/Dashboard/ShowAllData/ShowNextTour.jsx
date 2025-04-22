@@ -62,7 +62,7 @@ const ShowNextTour = () => {
   return (
     <div>
         <div>
-            <h2 className='text-2xl font-medium font-playfair'> All Domestice Packages : {nextTours.length}  </h2>
+            <h2 className='text-2xl font-medium font-playfair'> Show All Next Tour : {nextTours.length}  </h2>
         </div>
 
         <div className="overflow-x-auto  border border-base-content/5 bg-base-100 mt-10">

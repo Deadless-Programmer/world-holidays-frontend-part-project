@@ -64,11 +64,13 @@ import Blog from "../components/footerPages/Blog";
 import EasyEMI from "../components/footerPages/easyEMI";
 import PaymentMethods from "../components/footerPages/paymentMethods";
 import FaqsWorldHolidays from "../components/footerPages/FaqsWorldHolidays";
+import DashboardErr from "../components/errPage/DashboardErr";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<DashboardErr/>,
     children: [
       {
         path: "/",
@@ -194,6 +196,7 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <PrivetRoute><Dashboard/></PrivetRoute>,
+  
     children: [
 
       {
