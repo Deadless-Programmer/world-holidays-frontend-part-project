@@ -3,7 +3,8 @@ import axios from "axios";
 
 
 export const axiosPublic = axios.create({
-     baseURL : 'http://localhost:5000'
+     baseURL : 'https://world-holidays-backend-part-two.vercel.app'
+    //  baseURL : 'https://world-holidays-backend-part-two.vercel.app'
 });
 
 const useAxiosPublic = () => {

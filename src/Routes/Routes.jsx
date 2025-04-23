@@ -95,7 +95,7 @@ export const router = createBrowserRouter([
       {
         path: "/services/visa-processing/:id",
         element: <VisaProcessingDetails/>,
-        loader : ({params})=>fetch(`http://localhost:5000/visa-processing-fee/${params.id}`)
+        loader : ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/visa-processing-fee/${params.id}`)
       },
 
       
@@ -103,16 +103,16 @@ export const router = createBrowserRouter([
         element:<DomesticPackageDetails/>,
         // loader:()=>fetch('/DomesticePackages.json')
 
-        loader : ({params})=>fetch(`http://localhost:5000/domestic_packages/${params.id}`)
+        loader : ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/domestic_packages/${params.id}`)
       },
       {
         path: "/packageDetails/:id",
         element: <PackageDetails />,
-        // loader : ({params})=> fetch(`http://localhost:5000/interNational_packages${params.id}`)
+        // loader : ({params})=> fetch(`https://world-holidays-backend-part-two.vercel.app/interNational_packages${params.id}`)
         
         loader: async ({ params }) => {
           try {
-            const response = await fetch(`http://localhost:5000/interNational_packages/${params.id}`);
+            const response = await fetch(`https://world-holidays-backend-part-two.vercel.app/interNational_packages/${params.id}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
           } catch (error) {
@@ -128,12 +128,12 @@ export const router = createBrowserRouter([
       {
         path: "/popular-destination-details/:id",
         element: <PopularDestinationDetails/>,
-        loader: ({params})=>fetch(`http://localhost:5000/popular_destination/${params.id}`)
+        loader: ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/popular_destination/${params.id}`)
       },
       {
         path: "/popular-destination-details/:id",
         element: <PopularDestinationDetails/>,
-        loader: ({params})=>fetch(`http://localhost:5000/popular_destination/${params.id}`)
+        loader: ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/popular_destination/${params.id}`)
       },
       {
         path: "/ticket-details/:id",
@@ -211,7 +211,7 @@ export const router = createBrowserRouter([
       {
         path:"/dashboard/update-dom-packages/:id",
         element:<UpdateDomPackage/>,
-        // loader :({params})=> fetch(`http://localhost:5000/show-all-domestic-packages/${params.id}`)
+        // loader :({params})=> fetch(`https://world-holidays-backend-part-two.vercel.app/show-all-domestic-packages/${params.id}`)
 
       },
       {

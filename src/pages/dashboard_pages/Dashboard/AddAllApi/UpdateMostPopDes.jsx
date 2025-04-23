@@ -27,7 +27,7 @@ const UpdateMostPopDes = () => {
       useEffect(() => {
           const fetchData = async () => {
               try {
-                  const response = await fetch(`http://localhost:5000/show-popular_destination/${id}`);
+                  const response = await fetch(`https://world-holidays-backend-part-two.vercel.app/show-popular_destination/${id}`);
                   if (!response.ok) throw new Error('Failed to fetch data');
                   
                   const result = await response.json();
