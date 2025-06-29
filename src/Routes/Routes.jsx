@@ -65,6 +65,7 @@ import EasyEMI from "../components/footerPages/easyEMI";
 import PaymentMethods from "../components/footerPages/paymentMethods";
 import FaqsWorldHolidays from "../components/footerPages/FaqsWorldHolidays";
 import DashboardErr from "../components/errPage/DashboardErr";
+import NextTour from "../components/home/NextTour/NextTour";
 
 export const router = createBrowserRouter([
   {
@@ -126,9 +127,9 @@ export const router = createBrowserRouter([
         element: <PrivetRoute><Services/></PrivetRoute>
       },
       {
-        path: "/popular-destination-details/:id",
-        element: <PopularDestinationDetails/>,
-        loader: ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/popular_destination/${params.id}`)
+        path: "/next_tour_details/:id",
+        element: <NextTourDetails/>,
+        loader: ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/next_tour/${params.id}`)
       },
       {
         path: "/popular-destination-details/:id",

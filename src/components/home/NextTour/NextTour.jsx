@@ -100,18 +100,18 @@ const [packages, setPackages] = useState([]);
           </motion.h1>
           <div className="flex items-center justify-center gap-4 mt-3">
             <p className="flex text-white font-nunito items-center gap-1">
-              {" "}
+         
               <span className="text-xl">
                 <MdOutlineLocationOn />
-              </span>{" "}
-              <span>{packagedata.location}</span>{" "}
+              </span>
+              <span>{packagedata.location}</span>
             </p>
             <p className="flex text-white font-nunito items-center gap-1">
-              {" "}
+             
               <span className="text-xl">
                 <PiClockCountdownFill />
-              </span>{" "}
-              <span> {packagedata.duration}</span>{" "}
+              </span>
+              <span> {packagedata.duration}</span>
             </p>
             {/* <p className='flex text-white font-nunito items-center gap-1'> <span className='text-xl'>< BiCalendar/></span>  <span> 3 April To 7 April</span>  </p> */}
           </div>

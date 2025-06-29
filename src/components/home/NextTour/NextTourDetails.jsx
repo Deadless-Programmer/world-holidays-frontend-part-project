@@ -46,6 +46,9 @@ const NextTourDetails = () => {
   const navigate = useNavigate();
   const location_path = useLocation();
   const tourData = useLoaderData();
+  console.log(tourData)
+
+ 
 
   // const _Data = tourData.find(
   //   (next_data) => next_data._id === id
