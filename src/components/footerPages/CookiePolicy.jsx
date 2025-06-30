@@ -1,5 +1,6 @@
 // CookiePolicy.jsx
 import React from "react";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const cookieSections = [
   {
@@ -43,6 +44,9 @@ d. Marketing Cookies – Track interactions and deliver personalized ads.`
 
 const CookiePolicy = () => {
   return (
+
+    <>
+     <ScrollToTop />
     <div className="max-w-5xl mx-auto px-4 py-10 mt-24">
       <h1 className="text-3xl font-bold mb-8 text-center text-yellow-600">
         Cookie Policy
@@ -59,6 +63,7 @@ const CookiePolicy = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

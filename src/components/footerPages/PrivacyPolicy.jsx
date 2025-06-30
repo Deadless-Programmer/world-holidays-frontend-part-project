@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const policySections = [
   {
@@ -45,7 +46,9 @@ const policySections = [
 
 const PrivacyPolicy = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10 mt-24">
+    <>
+     <ScrollToTop />
+    <div onClick={() => window.scrollTo(0, 0)} className="max-w-5xl mx-auto px-4 py-10 mt-24">
       <h1 className="text-3xl font-bold mb-8 text-center text-teal-600">
         Privacy Policy
       </h1>
@@ -61,6 +64,7 @@ const PrivacyPolicy = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

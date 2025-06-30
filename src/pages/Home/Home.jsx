@@ -11,9 +11,12 @@ import CorporateService from '../../components/home/CorporateService/CorporateSe
 import TravelersReview from '../../components/home/TravelersReview/TravelersReview';
 import SearchBarSelected from '../../components/SearchBar/SearchBarSelected'
 import { Helmet} from 'react-helmet-async';
+import ScrollToTop from '../../components/utils/ScrollToTop';
 
 const Home = () => {
   return (
+    <>
+    <ScrollToTop/>
     <div>
      <Helmet>
      <title>W-holidays | Home</title>
@@ -40,6 +43,7 @@ const Home = () => {
       {/* <SearchBarSelected/> */}
      
   </div>
+    </>
   )
 }
 

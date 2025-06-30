@@ -8,6 +8,7 @@ import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useTicketCart from "../../hooks/useTicketCart";
 import Swal from "sweetalert2";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const TicketDetails = () => {
   const [selected, setSelected] = useState("one-way");
@@ -102,6 +103,8 @@ const TicketDetails = () => {
   };
 
   return (
+    <>
+    <ScrollToTop/>
     <div className="relative">
       <PageHeader
         heading={"Discover Cheap Flights and Airline Tickets!"}
@@ -251,6 +254,7 @@ const TicketDetails = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

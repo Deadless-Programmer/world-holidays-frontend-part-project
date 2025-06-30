@@ -3,9 +3,12 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 import ContactForm from '../../components/Contact/ContactForm/ContactForm'
 import Map from '../../components/Contact/Map'
 import { Helmet } from 'react-helmet-async'
+import ScrollToTop from '../../components/utils/ScrollToTop'
 
 const Contact = () => {
   return (
+    <>
+    <ScrollToTop />
     <div>
        <Helmet>
            <title>W-holidays | Contact</title>
@@ -15,6 +18,7 @@ const Contact = () => {
       <ContactForm/>
       <Map/>
     </div>
+    </>
   )
 }
 

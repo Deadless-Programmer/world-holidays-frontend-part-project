@@ -1,5 +1,6 @@
 // EasyEMI.jsx
 import React, { useState } from 'react';
+import ScrollToTop from '../utils/ScrollToTop';
 
 const EasyEMI = () => {
   const [price, setPrice] = useState(100000); // Default travel package price
@@ -20,6 +21,8 @@ const EasyEMI = () => {
   };
 
   return (
+    <>
+     <ScrollToTop />
     <div className="max-w-3xl mx-auto px-4 py-10 bg-gray-50 rounded-xl shadow-lg mt-36">
       <h2 className="text-3xl font-semibold text-center text-teal-600 mb-6">
         Easy EMI for Your Dream Trip
@@ -85,6 +88,7 @@ const EasyEMI = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

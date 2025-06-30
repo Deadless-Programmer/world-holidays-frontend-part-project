@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import ScrollToTop from '../utils/ScrollToTop';
 
 const faqs = [
   {
@@ -42,6 +43,8 @@ const FaqsWorldHolidays = () => {
   };
 
   return (
+    <>
+     <ScrollToTop />
     <div className="max-w-3xl mx-auto p-6 mt-32">
       <h2 className="text-3xl font-bold text-center text-teal-600 mb-8">
         Frequently Asked Questions
@@ -74,6 +77,7 @@ const FaqsWorldHolidays = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

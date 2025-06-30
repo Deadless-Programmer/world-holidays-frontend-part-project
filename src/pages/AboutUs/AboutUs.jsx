@@ -4,9 +4,12 @@ import Accordion from "../../components/about/Accordion/Accordion";
 import KeyStrategies from "../../components/about/KeyStrategies/KeyStrategies";
 import OurTeam from "../../components/about/OurTeam/OurTeam";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../../components/utils/ScrollToTop";
 
 const AboutUs = () => {
-  return <div>
+  return<>
+  <ScrollToTop/>
+  <div>
      <Helmet>
          <title>W-holidays | About Us</title>
          </Helmet>
@@ -15,7 +18,8 @@ const AboutUs = () => {
     <Accordion/>
     <KeyStrategies/>
     <OurTeam/>
-  </div>;
+  </div>
+  </>
 };
 
 export default AboutUs;

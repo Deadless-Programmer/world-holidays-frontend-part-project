@@ -1,5 +1,6 @@
 // TermsAndConditions.jsx
 import React from "react";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const terms = [
   {
@@ -56,6 +57,8 @@ const terms = [
 
 const TermsAndConditions = () => {
   return (
+    <>
+     <ScrollToTop />
     <div className="max-w-5xl mx-auto px-4 py-8 mt-24">
       <h1 className="text-3xl font-bold mb-6 text-center text-indigo-600">
         Terms & Conditions
@@ -69,6 +72,7 @@ const TermsAndConditions = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

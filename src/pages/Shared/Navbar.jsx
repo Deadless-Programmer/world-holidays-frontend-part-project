@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FaCartPlus } from "react-icons/fa";
 import { motion } from "motion/react"
@@ -53,11 +53,14 @@ const Navbar = () => {
     >
       <div className="container max-w-7xl mx-auto  flex justify-between items-center px-4 py-6 lg:px-6">
         {/* Logo */}
-        <div className="text-lg font-bold">
+        <Link to="/" onClick={() => {
+  Navigate('/');
+  window.scrollTo(0, 0);
+}}  className="text-lg font-bold">
         {isScrolled ? <img className="w-22 h-10" src='https://i.postimg.cc/Y2RkGbTK/Logo-World-holidays.png' alt="" />
         : <img className="w-22 h-10" src='https://i.postimg.cc/Y2RkGbTK/Logo-World-holidays.png' alt="" /> }
         
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6">

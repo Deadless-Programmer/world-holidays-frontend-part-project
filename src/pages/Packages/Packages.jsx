@@ -3,10 +3,13 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 import InternationalPackages from '../../components/Packages/PackagesGallery/InternationalPackages'
 import DomesticePackages from '../../components/Packages/PackagesGallery/DomesticePackages'
 import { Helmet } from 'react-helmet-async'
+import ScrollToTop from '../../components/utils/ScrollToTop'
 
 
 const Packages = () => {
   return (
+    <>
+    <ScrollToTop/>
     <div>
        <Helmet>
            <title>W-holidays | Packages</title>
@@ -17,6 +20,7 @@ const Packages = () => {
         <DomesticePackages/>
 
     </div>
+    </>
   )
 }
 

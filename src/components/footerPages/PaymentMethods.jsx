@@ -3,9 +3,12 @@ import React from 'react';
 import { FaCreditCard } from 'react-icons/fa'; // Bank icon (Credit Card)
 import { FaMobileAlt } from 'react-icons/fa';  // bKash / Mobile icon
 import { FaWallet } from 'react-icons/fa'; // Nogod / Wallet icon
+import ScrollToTop from '../utils/ScrollToTop';
 
 const PaymentMethods = () => {
   return (
+    <>
+     <ScrollToTop />
     <div className="max-w-2xl mx-auto px-4 py-10 bg-gray-50  shadow-lg mt-32">
       <h2 className="text-3xl font-semibold text-center text-teal-600 mb-6">
         Payment Methods for Easy Transactions
@@ -44,6 +47,7 @@ const PaymentMethods = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

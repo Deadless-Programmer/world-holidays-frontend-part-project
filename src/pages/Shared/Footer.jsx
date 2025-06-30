@@ -6,6 +6,7 @@ const Footer = () => {
     <footer className="  md:p-10   bg-gray-50  mt-6 ">
       <div className=" container shadow-md  max-w-7xl mx-auto pt-5  pb-10 pr-10 pl-6 grid grid-cols-1 md:grid-cols-4 gap-9 md:justify-items-center md:items-start">
         <div className=" ">
+          
           <img
             className="h-12 "
             src="https://i.postimg.cc/TwYXZn0T/Logo-World-holidays.png"
@@ -50,7 +51,7 @@ const Footer = () => {
     </div>
     <div className="flex flex-col justify-center items-center gap-3">
       <h2 className="text-slate-500 font-medium">Registered By</h2>
-      <img className="h-16" src="https://ops.caab.gov.bd/contact/8813212981692679801Logo.png" alt="" />
+      <img className="h-16" src="https://i.postimg.cc/L594738B/pngegg.png" alt="" />
     </div>
 
     <div className="flex flex-col justify-center items-center gap-3">

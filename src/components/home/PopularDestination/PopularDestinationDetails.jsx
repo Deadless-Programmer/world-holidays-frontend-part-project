@@ -28,6 +28,7 @@ import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useDomPackageCart from "../../../hooks/useDomPackageCart";
 import Swal from "sweetalert2";
+import ScrollToTop from "../../utils/ScrollToTop";
 
 const PopularDestinationDetails = () => {
  const [date, setDate] = useState(null);
@@ -104,6 +105,7 @@ const handleAddToCart = (e) => {
 
   return (
     <div>
+      <ScrollToTop/>
       <PageHeader
         heading={"Popular Destination"}
         paragraph={"Explore most popular destinations detail"}

@@ -1,5 +1,6 @@
 // BlogAccordion.jsx
 import React, { useState } from 'react';
+import ScrollToTop from '../utils/ScrollToTop';
 
 const blogPosts = [
   {
@@ -59,6 +60,8 @@ const Blog = () => {
   };
 
   return (
+    <>
+     <ScrollToTop />
     <div className="max-w-5xl mx-auto px-4 py-10 mt-24">
       <h1 className="text-3xl font-bold mb-8 text-center text-teal-600">Our Blog</h1>
       <div className="space-y-6">
@@ -88,6 +91,7 @@ const Blog = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

@@ -38,6 +38,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useIntPackageCart from "../../../hooks/useIntPackageCart";
+import ScrollToTop from "../../utils/ScrollToTop";
 const customStyles = {
   itemShapes: Star,
   activeFillColor: "#FFA500", // Gold color for active stars
@@ -129,6 +130,7 @@ const PackageDetails = () => {
 
   return (
     <section>
+      <ScrollToTop/>
       <PageHeader
         heading={"Package-Details"}
         paragraph={"Discover all of infomation for this package"}

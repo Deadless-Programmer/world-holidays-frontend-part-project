@@ -32,6 +32,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useDomPackageCart from "../../../hooks/useDomPackageCart";
 import Swal from "sweetalert2";
 import useNextTour from "../../../hooks/useNextTour";
+import ScrollToTop from "../../utils/ScrollToTop";
 const customStyles = {
   itemShapes: Star,
   activeFillColor: "#FFA500", // Gold color for active stars
@@ -134,6 +135,7 @@ const handleAddToCart = (e) => {
 
   return (
     <section>
+      <ScrollToTop/>
       <PageHeader
         heading={"Our Next Tour Details"}
         paragraph={"Discover all of infomation for this tour"}
