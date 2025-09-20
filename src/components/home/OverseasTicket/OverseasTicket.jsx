@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
-const DomesticTicket = () => {
+const OverseasTicket = () => {
   const [ticketData, setTicketData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
@@ -81,4 +81,4 @@ const DomesticTicket = () => {
   );
 };
 
-export default DomesticTicket;
+export default OverseasTicket;

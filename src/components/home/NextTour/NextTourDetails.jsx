@@ -22,8 +22,16 @@ import {
 } from "react-icons/md";
 import { SlCalender } from "react-icons/sl";
 import PageHeader from "../../PageHeader/PageHeader";
-import { HiMiniCalendarDateRange } from "react-icons/hi2";
-import { useLoaderData, useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  HiMiniCalendarDateRange,
+  HiOutlineCurrencyBangladeshi,
+} from "react-icons/hi2";
+import {
+  useLoaderData,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import { Rating, Star } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
@@ -41,15 +49,13 @@ const customStyles = {
 const NextTourDetails = () => {
   const [date, setDate] = useState(null);
   const { user } = useAuth();
-  const axiosSecure =useAxiosSecure();
-  const [,refetch]=useNextTour();
+  const axiosSecure = useAxiosSecure();
+  const [, refetch] = useNextTour();
   // const { id } = useParams();
   const navigate = useNavigate();
   const location_path = useLocation();
   const tourData = useLoaderData();
-  console.log(tourData)
-
- 
+  console.log(tourData);
 
   // const _Data = tourData.find(
   //   (next_data) => next_data._id === id
@@ -67,11 +73,14 @@ const NextTourDetails = () => {
     excluded,
     rating,
     tour_location_images,
-    overview,_id
+    overview,
+    _id,
+    CoverImage
+
   } = tourData;
+  console.log(tourData)
 
-
-const handleAddToCart = (e) => {
+  const handleAddToCart = (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -80,11 +89,9 @@ const handleAddToCart = (e) => {
     const totalGuest = form?.noOFGuest?.value;
     const selectedDate = date;
 
-   
-
     if (user && user.email) {
       const cartItem = {
-        packagesId :_id,
+        packagesId: _id,
         contact,
         userLocation,
         totalGuest,
@@ -92,26 +99,22 @@ const handleAddToCart = (e) => {
         name: user?.displayName,
         date: selectedDate,
         tourData,
-
-       
-      }; 
+      };
       console.log(cartItem);
-      axiosSecure.post('/next_tour_carts',cartItem ).then(res=>{
-      if(res.data.insertedId){
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Tour has been Added",
-          showConfirmButton: false,
-          timer: 1500
-        });
-      }
+      axiosSecure.post("/next_tour_carts", cartItem).then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Tour has been Added",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
 
-      refetch();
-     })
-    }
-
-    else {
+        refetch();
+      });
+    } else {
       Swal.fire({
         title: "You are not logged in",
         text: "Please login to book the tour",
@@ -126,22 +129,13 @@ const handleAddToCart = (e) => {
     }
   };
 
-
-
-
-
-
-
-
   return (
     <section>
-      <ScrollToTop/>
+      <ScrollToTop />
       <PageHeader
         heading={"Our Next Tour Details"}
         paragraph={"Discover all of infomation for this tour"}
-        bgImage={
-            image
-        }
+        bgImage={CoverImage}
       />
       <div></div>
       <div className="container max-w-7xl mx-auto md:grid grid-cols-12 gap-16 mt-8 p-6">
@@ -153,8 +147,11 @@ const handleAddToCart = (e) => {
               {destination}
             </h1>
             <h3 className="font-semibold font-nunito">
-              From{" "}
-              <span className="font-semibold text-2xl">${price.amount}</span>{" "}
+              BDT
+              <span className="font-semibold text-2xl">
+                {" "}
+                {((price.amount).toLocaleString('en-BD'))}
+              </span>{" "}
               per adult
             </h3>
           </div>
@@ -180,7 +177,7 @@ const handleAddToCart = (e) => {
                   </h1>
                   <h1 className="flex items-center gap-2 font-nunito mt-2">
                     <MdLocationOn className="text-orange-500 text-xl " />{" "}
-                   {location}
+                    {location}
                   </h1>
                 </div>
               </div>
@@ -273,63 +270,62 @@ const handleAddToCart = (e) => {
           <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">
             Input your info
           </h1>
-          <form onSubmit={ handleAddToCart} action="">
-                      <div class="flex flex-col items-center font-nunito justify-center ">
-                                    <input
-                                      defaultValue={user?.displayName}
-                                      type="text"
-                                      placeholder="Your Name"
-                                      className=" p-3 outline-none w-72 mt-8 "
-                                    />
-                                    <input
-                                      type="text"
-                                      name="contact"
-                                      placeholder="Your phone"
-                                      className=" p-3 outline-none w-72 mt-4 "
-                                    />
-                                    <input
-                                      type="email"
-                                      defaultValue={user?.email}
-                                      placeholder="Your email"
-                                      className=" p-3 outline-none w-72 mt-4 "
-                                    />
-                                    <input
-                                      type="text"
-                                      name="userLocation"
-                                      placeholder="Your location"
-                                      className=" p-3 outline-none w-72 mt-4 "
-                                    />
-                                    <input
-                                      type="text"
-                                      name="noOFGuest"
-                                      placeholder="Guest No. -input adult & child"
-                                      className=" p-3 outline-none w-72 mt-4 "
-                                    />
-                      
-                                    <div className="">
-                                      <Flatpickr
-                                       
-                                        value={date}
-                                        onChange={(selectedDates) => setDate(selectedDates[0])}
-                                        options={{
-                                          dateFormat: "Y-m-d",
-                      
-                                          enableTime: false, // Change to true if you want time
-                                          minDate: "today", // Restrict past dates
-                                        }}
-                                        placeholder="Select a date"
-                                        className="p-3 outline-none w-72 mt-4"
-                                      />
-                                    </div>
-                      
-                                    <button
-                                     type="submit"
-                                      className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center"
-                                    >
-                                      Book <IoIosArrowRoundForward className="text-2xl" />{" "}
-                                    </button>
-                                  </div>
-                    </form>
+          <form onSubmit={handleAddToCart} action="">
+            <div class="flex flex-col items-center font-nunito justify-center ">
+              <input
+                defaultValue={user?.displayName}
+                type="text"
+                placeholder="Your Name"
+                className=" p-3 outline-none w-72 mt-8 "
+              />
+              <input
+                type="text"
+                name="contact"
+                placeholder="Your phone"
+                className=" p-3 outline-none w-72 mt-4 "
+              />
+              <input
+                type="email"
+                defaultValue={user?.email}
+                placeholder="Your email"
+                className=" p-3 outline-none w-72 mt-4 "
+              />
+              <input
+                type="text"
+                name="userLocation"
+                placeholder="Your location"
+                className=" p-3 outline-none w-72 mt-4 "
+              />
+              <input
+                type="text"
+                name="noOFGuest"
+                placeholder="Guest No. -input adult & child"
+                className=" p-3 outline-none w-72 mt-4 "
+              />
+
+              <div className="">
+                <Flatpickr
+                  value={date}
+                  onChange={(selectedDates) => setDate(selectedDates[0])}
+                  options={{
+                    dateFormat: "Y-m-d",
+
+                    enableTime: false, // Change to true if you want time
+                    minDate: "today", // Restrict past dates
+                  }}
+                  placeholder="Select a date"
+                  className="p-3 outline-none w-72 mt-4"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center"
+              >
+                Book <IoIosArrowRoundForward className="text-2xl" />{" "}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

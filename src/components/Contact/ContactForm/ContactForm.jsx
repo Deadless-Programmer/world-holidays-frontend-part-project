@@ -53,14 +53,15 @@ const ContactForm = () => {
             <IoLocationOutline className='border p-1 text-3xl' />
               <div>
               <h2 className='font-medium'>Address</h2>
-              <p className='text-xs'>H-57, R-4, Dhaka-1213, Bangladesh</p>
+              <p className='text-xs'>H-57, R-4, Block C, Banani, Dhaka-1213, Bangladesh</p>
               </div>
             </div>
             <div className='flex items-center gap-4 mt-4 md:mt-0'>
             <MdOutlinePhone  className='border p-1 text-3xl' />
               <div>
               <h2 className='font-medium'>Mobile</h2>
-              <p className='text-xs'>+88 0197 0500188-95</p>
+              <p className='text-xs'>+88 0197 0500186-95</p>
+              <p className='text-xs'>+88 0195 5571083-84</p>
               </div>
             </div>
             <div className='flex items-center gap-4 mt-4 md:mt-0'>
@@ -74,7 +75,7 @@ const ContactForm = () => {
             <PiPhoneDisconnectLight className='border p-1 text-3xl' />
               <div>
               <h2 className='font-medium'>Tell</h2>
-              <p className='text-xs'>+8802 222276207-208</p>
+              <p className='text-xs'>+88 09644217 080</p>
               </div>
             </div>
             </div>

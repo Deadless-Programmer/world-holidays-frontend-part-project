@@ -130,7 +130,39 @@ const UpdateNextTour = () => {
 
         <div style={{ flex: 1 }}>
           <label style={labelStyle}>Price Amount</label>
-          <Controller name="price.amount" control={control} render={({ field }) => <input type="number" style={inputStyle} {...field} />} />
+          <Controller
+                       name="price.amount"
+                       control={control}
+                       render={({ field: { value, onChange, onBlur, ref } }) => {
+                         const formatWithComma = (val) => {
+                          const raw = val?.toString().replace(/,/g, '');
+                           if (!isNaN(raw) && raw !== "") {
+                             return Number(raw).toLocaleString("en-BD");
+                           }
+                           return "";
+                         };
+         
+                         const handleChange = (e) => {
+                           const raw = e.target.value.replace(/,/g, "");
+                           if (!isNaN(raw)) {
+                             onChange(raw); // এইখানে save হচ্ছে clean value (44999)
+                           }
+                         };
+         
+                         return (
+                           <input
+                             type="text"
+                             inputMode="numeric"
+                             pattern="[0-9,]*"
+                             style={inputStyle}
+                             ref={ref}
+                             value={formatWithComma(value)}
+                             onChange={handleChange}
+                             onBlur={onBlur}
+                           />
+                         );
+                       }}
+                     />
         </div>
       </div>
 

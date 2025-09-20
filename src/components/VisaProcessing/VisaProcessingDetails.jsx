@@ -4,36 +4,17 @@ import { GoCheckCircle } from "react-icons/go";
 import React, { useState } from "react";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-import {
-  IoIosArrowRoundForward,
-  
-} from "react-icons/io";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
-import {
- 
-  LiaThumbtackSolid,
-} from "react-icons/lia";
-import {
-  MdAddLocationAlt,
- 
-  MdOutlineLibraryBooks,
-} from "react-icons/md";
+import { LiaThumbtackSolid } from "react-icons/lia";
+import { MdAddLocationAlt, MdOutlineLibraryBooks } from "react-icons/md";
 
-
-
-import {
-  useLoaderData,
-  useLocation,
-  useNavigate,
-  
-} from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { Rating, Star } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 
-
 import Swal from "sweetalert2";
-
 
 // import useIntPackageCart from "../../../hooks/useIntPackageCart";
 import PageHeader from "../PageHeader/PageHeader";
@@ -51,13 +32,12 @@ const customStyles = {
 const VisaProcessingDetails = () => {
   const [date, setDate] = useState(null);
   const { user } = useAuth();
-  const axiosSecure =useAxiosSecure();
-  const [,refetch]=useVisaprocessingCart();
+  const axiosSecure = useAxiosSecure();
+  const [, refetch] = useVisaprocessingCart();
   // const { id } = useParams();
   const navigate = useNavigate();
   const location_path = useLocation();
   const countryData = useLoaderData();
-
 
   // const package_Data = packageData.find(
   //   (package_data) => package_data._id === id
@@ -66,11 +46,11 @@ const VisaProcessingDetails = () => {
   const {
     src,
     name,
-    overview,
+    overview : Eligibility,
     visaFee,
     Requirment,
     country_location_images,
-    _id
+    _id,
   } = countryData;
 
   const handleAddToCart = (e) => {
@@ -79,41 +59,35 @@ const VisaProcessingDetails = () => {
     const form = e.target;
     const contact = form?.contact?.value;
     const userLocation = form?.userLocation?.value;
-  
-    const selectedDate = date;
 
-   
+    const selectedDate = date;
 
     if (user && user.email) {
       const cartItem = {
-        countryId :_id,
+        countryId: _id,
         contact,
         userLocation,
-        
+
         email: user.email,
         name: user?.displayName,
         date: selectedDate,
-        countryData
-
-       
-      }; 
+        countryData,
+      };
       console.log(cartItem);
-      axiosSecure.post('/visa-processing-fee-cart',cartItem ).then(res=>{
-      if(res.data.insertedId){
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Order has been Added",
-          showConfirmButton: false,
-          timer: 1500
-        });
-      }
+      axiosSecure.post("/visa-processing-fee-cart", cartItem).then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Order has been Added",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
 
-      refetch();
-     })
-    }
-
-    else {
+        refetch();
+      });
+    } else {
       Swal.fire({
         title: "You are not logged in",
         text: "Please login to book the package",
@@ -137,7 +111,7 @@ const VisaProcessingDetails = () => {
           "https://images.unsplash.com/photo-1454496406107-dc34337da8d6?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       />
-      <div></div>
+      {/* <div></div> */}
       <div className="container max-w-7xl mx-auto md:grid grid-cols-12 gap-16 mt-8 p-6">
         {/* left side */}
         <div className="col-span-8">
@@ -147,22 +121,23 @@ const VisaProcessingDetails = () => {
               {name}
             </h1>
             <h3 className="font-semibold font-nunito flex items-center gap-3 mt-4 md:mt-0">
-              From{" "}
-              <span className="font-semibold text-2xl flex items-center gap-1"> <TbCoinTaka />
-              {visaFee} </span>{" "}
+              
+              <span className="font-semibold text-2xl flex items-center gap-1">
+                {" "}
+                <TbCoinTaka />
+                 {((visaFee).toLocaleString('en-BD'))}
+               
+              </span>{" "}
               per head
             </h3>
           </div>
-        
-
-         
 
           <div>
             <h1 className="flex items-center gap-2 font-playfair text-2xl mt-16">
               {" "}
-              <MdOutlineLibraryBooks /> Overview
+              <MdOutlineLibraryBooks /> Eligibility
             </h1>
-            <p className="mt-2 font-nunito">{overview}</p>
+            <p className="mt-2 font-nunito">{Eligibility}</p>
           </div>
 
           <div>
@@ -170,20 +145,16 @@ const VisaProcessingDetails = () => {
               {" "}
               <LiaThumbtackSolid /> Requirments for getting visa
             </h1>
-            <div className="mt-5 md:grid grid-cols-2 ">
+            <div className="mt-5  md:grid grid-cols-2 gap-3">
               {Requirment?.map((data, indx) => (
-                <p
-                  key={indx}
-                 
-                  className="flex items-center gap-3 font-nunito"
-                >
-                  {" "}
-                  <GoCheckCircle className="text-orange-500" /> {data}
-                </p>
+                <div key={indx} className="flex items-start mb-5 md:mb-0 gap-3 font-nunito">
+                  <GoCheckCircle className="text-orange-500 flex-shrink-0 text-xl" />
+                  <span className="break-words">{data}</span>
+                </div>
               ))}
             </div>
           </div>
-        
+
           <div>
             <h1 className="flex items-center gap-2 font-playfair text-2xl mt-16">
               {" "}
@@ -207,7 +178,7 @@ const VisaProcessingDetails = () => {
           <h1 className="text-2xl text-center mt-5 pt-5 md:pt-0 font-playfair">
             Input your info
           </h1>
-          <form  onSubmit={ handleAddToCart} action="">
+          <form onSubmit={handleAddToCart} action="">
             <div class="flex flex-col items-center font-nunito justify-center ">
               <input
                 defaultValue={user?.displayName}
@@ -233,11 +204,9 @@ const VisaProcessingDetails = () => {
                 placeholder="Your location"
                 className=" p-3 outline-none w-72 mt-4 "
               />
-              
 
               <div className="">
                 <Flatpickr
-                 
                   value={date}
                   onChange={(selectedDates) => setDate(selectedDates[0])}
                   options={{
@@ -252,7 +221,7 @@ const VisaProcessingDetails = () => {
               </div>
 
               <button
-               type="submit"
+                type="submit"
                 className="border px-3 py-2 w-72 text-center bg-orange-500  mt-5 hover:text-white font-nunito  flex justify-between items-center"
               >
                 Book <IoIosArrowRoundForward className="text-2xl" />{" "}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useForm, useFieldArray, Controller } from "react-hook-form";
 
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
@@ -30,27 +30,36 @@ import { useParams } from "react-router-dom";
   const [loading, setLoading] = useState(true);
         const [error, setError] = useState(null);
     
-        useEffect(() => {
-            const fetchData = async () => {
-                try {
-                    const response = await fetch(`https://world-holidays-backend-part-two.vercel.app/show-visa-processing-fee/${id}`);
-                    if (!response.ok) throw new Error('Failed to fetch data');
-                    
-                    const result = await response.json();
-                    
-                   
-                    Object.keys(result).forEach(key => setValue(key, result[key]));
-                    
-                    
-                    setLoading(false);
-                } catch (err) {
-                    setError(err.message);
-                    setLoading(false);
-                }
-            };
-            
-            fetchData();
-        }, [id, setValue]);
+      useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        `https://world-holidays-backend-part-two.vercel.app/show-visa-processing-fee/${id}`
+      );
+      if (!response.ok) throw new Error("Failed to fetch data");
+
+      const result = await response.json();
+
+      // format করার জায়গা
+      if (result.Requirment) {
+        result.Requirment = result.Requirment.map((r) => ({ value: r }));
+      }
+      if (result.country_location_images) {
+        result.country_location_images = result.country_location_images.map((i) => ({ value: i }));
+      }
+
+      Object.keys(result).forEach((key) => setValue(key, result[key]));
+
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
+  };
+
+  fetchData();
+}, [id, setValue]);
+
   
 
 
@@ -108,12 +117,44 @@ import { useParams } from "react-router-dom";
               className="w-full border px-3 py-2 rounded"
             />
     
-            <input
+            {/* <input
               placeholder="Visa Fee"
               type="number"
               {...register("visaFee", { required: true })}
               className="w-full border px-3 py-2 rounded"
+            /> */}
+
+
+ <Controller
+          name="visaFee"
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              type="text"
+              inputMode="numeric"
+              placeholder="Visa Fee"
+              value={
+                field.value
+                  ? new Intl.NumberFormat("en-BD").format(field.value)
+                  : ""
+              }
+              onChange={(e) => {
+                const raw = e.target.value.replace(/,/g, ""); // কমা বাদ
+                if (!isNaN(raw)) {
+                  field.onChange(Number(raw));
+                }
+              }}
+              className="w-full border px-3 py-2 rounded"
             />
+          )}
+        />
+
+            
+
+
+
     
             <input
               placeholder="Main Image URL (src)"

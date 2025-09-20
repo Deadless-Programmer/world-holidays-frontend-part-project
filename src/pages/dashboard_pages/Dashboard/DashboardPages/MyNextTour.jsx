@@ -10,7 +10,7 @@ const MyNextTour = () => {
     const [nextTourCart, refetch] = useNextTour();
     const axiosSecure = useAxiosSecure();
 //  console.log(domCart)
-
+console.log(nextTourCart)
 
  const handleDelete =(id)=>{
       console.log(id);
@@ -64,7 +64,7 @@ const MyNextTour = () => {
            return  <tr key={indx}>
              <th>{indx +1}</th>
              <td>{cartData.name}</td>
-             <td><img className='h-10 w-10 rounded' src={cartData.image} alt="" /></td>
+             <td><img className='h-10 w-10 rounded' src={cartData.tourData.CoverImage} alt="" /></td>
              <td>{cartData.email}</td>
              <td>{cartData.contact
              }</td>
