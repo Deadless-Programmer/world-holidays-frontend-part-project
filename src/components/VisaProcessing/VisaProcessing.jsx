@@ -72,7 +72,7 @@ const axiosPublic = useAxiosPublic();
                     />
                     <div className="absolute inset-1 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/50 transition-opacity duration-500">
                       <p className="text-white text-lg font-bold">
-                        Visa Fee: {country.visaFee} TK
+                        Visa Fee: {((country.visaFee).toLocaleString('en-BD'))} TK
                       </p>
                     </div>
                   </div>
