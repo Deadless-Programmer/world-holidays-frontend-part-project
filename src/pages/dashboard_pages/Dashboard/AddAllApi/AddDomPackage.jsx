@@ -20,7 +20,7 @@ const AddDomPackage = () => {
             duration: data.duration,
             location: data.location,
             image: data.image,
-            included_services: data.includedServices.split(',').map(item => item.trim()),
+            // included_services: data.includedServices.split(',').map(item => item.trim()),
             overview: data.overview,
             included: data.included.split(',').map(item => item.trim()),
             excluded: data.excluded.split(',').map(item => item.trim()),
@@ -28,14 +28,14 @@ const AddDomPackage = () => {
         };
 
         console.log('Formatted Data:', formattedData);
-        const reult = await axiosSecure.post("/domestic_packages" ,formattedData ).catch((error) => {
+        const reult = await axiosSecure.post("/popular_packages" ,formattedData ).catch((error) => {
           console.log("Error details:", error.response?.data); 
         });
            if(reult.data.insertedId){
             Swal.fire({
               position: "top-end",
               icon: "success",
-              title: "Domestice package has been saved to database",
+              title: "Popular package has been saved to database",
               showConfirmButton: false,
               timer: 1500
             });
@@ -47,7 +47,7 @@ const AddDomPackage = () => {
 
     return (
         <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg">
-            <h2 className="text-2xl font-bold mb-4">Create Domestice Travel Package</h2>
+            <h2 className="text-2xl font-bold mb-4">Create Popular Travel Package</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-4">
                 {/* First Row */}
                 <div className="flex gap-4">
@@ -108,10 +108,10 @@ const AddDomPackage = () => {
                 </div>
 
                 {/* Seventh Row */}
-                <div>
+                {/* <div>
                     <label className="block text-sm font-medium mb-1">Included Services (comma separated)</label>
                     <input {...register('includedServices')} className="w-full p-2 border border-gray-300" />
-                </div>
+                </div> */}
 
                 {/* Eighth Row */}
                 <div>

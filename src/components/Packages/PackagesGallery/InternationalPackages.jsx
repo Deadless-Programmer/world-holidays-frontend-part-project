@@ -11,7 +11,7 @@ const InternationalPackages = () => {
   // const notify = () => toast('Wow so easy !');
 
   useEffect(() => {
-    fetch("https://world-holidays-backend-part-two.vercel.app/interNational_packages")
+    fetch("https://world-holidays-backend-part.vercel.app/popular_packages")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");

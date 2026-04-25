@@ -17,7 +17,7 @@ const [destination, setDestination] = useState([]);
   // const notify = () => toast('Wow so easy !');
 
   useEffect(() => {
-    fetch("https://world-holidays-backend-part-two.vercel.app/popular_destination")
+    fetch("https://world-holidays-backend-part.vercel.app/popular_destination")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");

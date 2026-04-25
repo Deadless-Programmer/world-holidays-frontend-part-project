@@ -11,7 +11,7 @@ const DomesticePackages = () => {
     const [err, setErr] = useState(null);
 
       useEffect(() => {
-        fetch("https://world-holidays-backend-part-two.vercel.app/domestic_packages")
+        fetch("https://world-holidays-backend-part.vercel.app/popular_packages")
           .then((res) => {
             if (!res.ok) {
               throw new toast("Network response was not ok");
@@ -46,7 +46,7 @@ const DomesticePackages = () => {
   return (
     <div>
        <ToastContainer />
-       <DomesticePackageGallery loading={loading} packages={packages} packageHeading1={'Domestic'} packageHeading2={'Packages'}/>
+       <DomesticePackageGallery loading={loading} packages={packages} packageHeading1={'Popular'} packageHeading2={'Packages'}/>
         {/* <PackagesGallery /> */}
     </div>
   )

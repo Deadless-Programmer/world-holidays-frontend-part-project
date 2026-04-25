@@ -28,7 +28,7 @@ const PackagesGallery = ({packageHeading1, packageHeading2, packages, loading}) 
       <div className="flex flex-wrap justify-center items-center gap-4 mt-5 ">
       {packages && packages.length > 0 ? (
   packages.map((packageData) => (
-    <Link to={`/packageDetails/${packageData._id}`}
+    <Link to={`/popular-package-details/${packageData._id}`}
       key={packageData._id}
       className="relative max-w-[300px] max-h-[200px] overflow-hidden flex justify-center items-center group "
     >

@@ -19,7 +19,7 @@ const Home = () => {
     <ScrollToTop/>
     <div>
      <Helmet>
-     <title>W-holidays | Home</title>
+     <title>World Holidays | Home</title>
      </Helmet>
       <Banner></Banner>
       

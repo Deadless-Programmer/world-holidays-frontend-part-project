@@ -1,104 +1,101 @@
 [
-    {
-     
-      "name": "Fulhadoo",
-      "country": "Canada",
-      "image": "https://images.pexels.com/photos/12538151/pexels-photo-12538151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-        
-      }
-    },
-    {
-     
-      "name": "Maafushi",
-      "country": "France",
-      "image": "https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-    },
-    {
-     
-      "name": "Dhigurah",
-      "country": "Australia",
-      "image": "https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-    },
-    {
-      
-      "name": "Thoddoo",
-      "country": "Italy",
-      "image": "https://images.pexels.com/photos/2928012/pexels-photo-2928012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-    },
-    {
-      
-      "name": "Male",
-      "country": "Portugal",
-      "image": "https://images.pexels.com/photos/29237522/pexels-photo-29237522/free-photo-of-stunning-aerial-view-of-faraglioni-rocks-in-capri.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-    },
-    {
-    
-      "name": "Hulhumale",
-      "country": "England",
-      "image": "https://images.pexels.com/photos/16620071/pexels-photo-16620071/free-photo-of-boats-and-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-    },
-    {
-     
-      "name": "Rasdhoo",
-      "country": "Iceland",
-      "image": "https://images.pexels.com/photos/27199637/pexels-photo-27199637/free-photo-of-capri-e-il-suo-mare.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-      
-    },
-    {
-     
-      "name": "Dhangethi",
-      "country": "Usa",
-      "image": "https://images.pexels.com/photos/12671154/pexels-photo-12671154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
-      
-    },
-    {
-     
-      "name": "Guraidhoo",
-      "country": "Brazil",
-      "image": "https://images.pexels.com/photos/17599722/pexels-photo-17599722/free-photo-of-view-of-the-sea-and-the-natural-arch-on-capri-island.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "overview": {
-        "icon": "MdOutlineLibraryBooks",
-        "title": "Overview",
-         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.,Illo exercitationem blanditiis dignissimos quas qui hic recusandae.Magna cupiditate ullam maxime, reprehenderit consectetur eos."
-      }
+  {
+   
+    "name": "Bangkok",
+    "country": "Thailand",
+    "image": "https://images.pexels.com/photos/12538151/pexels-photo-12538151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Bangkok is the vibrant capital of **Thailand**, known for its ornate shrines, bustling street life, and iconic waterways. It is a city of contrasts, where tradition meets modernity, offering incredible food, shopping, and historical sites."
     }
-  ]
+  },
+  {
+   
+    "name": "Singapore City",
+    "country": "Singapore",
+    "image": "https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Singapore City, the capital of **Singapore**, is a global financial center and a tropical island city-state. Famous for its futuristic architecture, green spaces like Gardens by the Bay, and diverse culinary scene, it is a hub of innovation and culture."
+    }
+  },
+  {
+   
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "image": "https://images.pexels.com/photos/2587319/pexels-photo-2587319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Kuala Lumpur (KL) is the capital of **Malaysia**, recognizable worldwide by the iconic Petronas Twin Towers. It’s a dynamic city with a rich tapestry of different cultures, offering modern skyscrapers, colonial architecture, and vibrant markets."
+    }
+  },
+  {
+  
+    "name": "Thimphu",
+    "country": "Bhutan",
+    "image": "https://images.pexels.com/photos/2928012/pexels-photo-2928012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Thimphu is the capital and largest city of **Bhutan**. Unique for not having traffic lights, the city maintains its traditional architecture and values, focusing on Gross National Happiness. It’s a cultural center nestled in the Himalayan mountains."
+    }
+  },
+  {
+   
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "image": "https://images.pexels.com/photos/29237522/pexels-photo-29237522/free-photo-of-stunning-aerial-view-of-faraglioni-rocks-in-capri.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Kathmandu is the capital of **Nepal**, set in a valley surrounded by the Himalayas. It is famous for its history, ancient temples, shrines, and bustling city squares like Durbar Square, making it a cultural and historical jewel of South Asia."
+    }
+  },
+  {
+   
+    "name": "Colombo",
+    "country": "Sri Lanka",
+    "image": "https://images.pexels.com/photos/16620071/pexels-photo-16620071/free-photo-of-boats-and-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Colombo is the commercial capital and largest city of **Sri Lanka**. It is a busy port city on the island's west coast, blending colonial buildings with modern high-rises, reflecting its rich history and role as a major economic hub."
+    }
+  },
+  {
+
+    "name": "Tokyo",
+    "country": "Japan",
+    "image": "https://images.pexels.com/photos/27199637/pexels-photo-27199637/free-photo-of-capri-e-il-suo-mare.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Tokyo is the bustling capital of **Japan**, known for its ultramodern cityscapes, neon-lit skyscrapers, and deep-rooted traditional culture. It offers world-class dining, cutting-edge technology, and historical temples side by side."
+    }
+  },
+  {
+   
+    "name": "Paris",
+    "country": "France",
+    "image": "https://images.pexels.com/photos/12671154/pexels-photo-12671154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Paris is the capital of **France**, celebrated globally as the 'City of Love' and the home of the Eiffel Tower. It is a world center for art, fashion, gastronomy, and culture, defined by its beautiful architecture and historical landmarks."
+    }
+  },
+  {
+   
+    "name": "Moscow",
+    "country": "Russia",
+    "image": "https://images.unsplash.com/photo-1742505709683-e9aa7b51a699?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "overview": {
+      "icon": "MdOutlineLibraryBooks",
+      "title": "Overview",
+      "description": "Moscow is the capital city of **Russia** and a major political, economic, cultural, and scientific center. It is famous for its historic sites like the Kremlin and Red Square, iconic cathedrals, and world-renowned performing arts."
+    }
+  }
+]

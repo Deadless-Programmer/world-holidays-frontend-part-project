@@ -14,7 +14,7 @@ const DomesticTicket = () => {
   const [err, setErr] = useState(null);
 
   useEffect(() => {
-    fetch("https://world-holidays-backend-part-two.vercel.app/domestice_ticket")
+    fetch("https://world-holidays-backend-part.vercel.app/domestice_ticket")
       .then((res) => {
         if (!res.ok) {
           throw new toast("Network response was not ok");

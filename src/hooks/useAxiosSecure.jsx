@@ -3,8 +3,12 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 import { useEffect } from "react";
 
+// export const axiosSecure = axios.create({
+//   baseURL: "https://world-holidays-backend-part-two.vercel.app",
+// });
+
 export const axiosSecure = axios.create({
-  baseURL: "https://world-holidays-backend-part-two.vercel.app",
+  baseURL: "https://world-holidays-backend-part.vercel.app",
 });
 
 const useAxiosSecure = () => {

@@ -34,7 +34,7 @@ import { useParams } from "react-router-dom";
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://world-holidays-backend-part-two.vercel.app/show-visa-processing-fee/${id}`
+        `https://world-holidays-backend-part.vercel.app/show-visa-processing-fee/${id}`
       );
       if (!response.ok) throw new Error("Failed to fetch data");
 

@@ -66,6 +66,7 @@ import PaymentMethods from "../components/footerPages/paymentMethods";
 import FaqsWorldHolidays from "../components/footerPages/FaqsWorldHolidays";
 import DashboardErr from "../components/errPage/DashboardErr";
 import NextTour from "../components/home/NextTour/NextTour";
+import LatestTravelUpdate from "../pages/LatestTravelUpdate/LatestTravelUpdate";
 
 export const router = createBrowserRouter([
   {
@@ -76,6 +77,11 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+
+       {
+        path: "/LatestTravelUpdate",
+        element: <LatestTravelUpdate/>,
       },
       {
         path: "/about-us",
@@ -96,24 +102,24 @@ export const router = createBrowserRouter([
       {
         path: "/services/visa-processing/:id",
         element: <VisaProcessingDetails/>,
-        loader : ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/visa-processing-fee/${params.id}`)
+        loader : ({params})=>fetch(`https://world-holidays-backend-part.vercel.app/visa-processing-fee/${params.id}`)
       },
 
       
-      {path:'/domesticePackageDetails/:id',
+      {path:'/popular-package-details/:id',
         element:<DomesticPackageDetails/>,
         // loader:()=>fetch('/DomesticePackages.json')
 
-        loader : ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/domestic_packages/${params.id}`)
+        loader : ({params})=>fetch(`https://world-holidays-backend-part.vercel.app/popular_packages/${params.id}`)
       },
       {
         path: "/packageDetails/:id",
         element: <PackageDetails />,
-        // loader : ({params})=> fetch(`https://world-holidays-backend-part-two.vercel.app/interNational_packages${params.id}`)
+        // loader : ({params})=> fetch(`https://world-holidays-backend-part.vercel.app/interNational_packages${params.id}`)
         
         loader: async ({ params }) => {
           try {
-            const response = await fetch(`https://world-holidays-backend-part-two.vercel.app/interNational_packages/${params.id}`);
+            const response = await fetch(`https://world-holidays-backend-part.vercel.app/interNational_packages/${params.id}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
           } catch (error) {
@@ -124,17 +130,17 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <PrivetRoute><Services/></PrivetRoute>
+        element: <Services/>
       },
       {
         path: "/next_tour_details/:id",
         element: <NextTourDetails/>,
-        loader: ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/next_tour/${params.id}`)
+        loader: ({params})=>fetch(`https://world-holidays-backend-part.vercel.app/next_tour/${params.id}`)
       },
       {
         path: "/popular-destination-details/:id",
         element: <PopularDestinationDetails/>,
-        loader: ({params})=>fetch(`https://world-holidays-backend-part-two.vercel.app/popular_destination/${params.id}`)
+        loader: ({params})=>fetch(`https://world-holidays-backend-part.vercel.app/popular_destination/${params.id}`)
       },
       {
         path: "/ticket-details/:id",
@@ -205,18 +211,18 @@ export const router = createBrowserRouter([
      element:<AdminRoute> <AllUsers/></AdminRoute>
       },
       {
-        path:"add-dom-packages",
+        path:"popular-packages",
         element:<AddDomPackage/>
 
       },
       {
-        path:"/dashboard/update-dom-packages/:id",
+        path:"/dashboard/update-pupular-packages/:id",
         element:<UpdateDomPackage/>,
-        // loader :({params})=> fetch(`https://world-holidays-backend-part-two.vercel.app/show-all-domestic-packages/${params.id}`)
+        // loader :({params})=> fetch(`https://world-holidays-backend-part.vercel.app/show-all-domestic-packages/${params.id}`)
 
       },
       {
-        path:"show-all-dom-packages",
+        path:"show-all-popular-packages",
         element:<ShowDomPackages/>
 
       },

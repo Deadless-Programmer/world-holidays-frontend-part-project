@@ -3,14 +3,14 @@
 
     {
        
-        "name":"Mr. Md karuzzaman",
+    "name":"Mr. Md karuzzaman",
     "designation":"Propietor",
     "img":"https://i.postimg.cc/bYK4ygfP/Whats-App-Image-2025-04-07-at-16-55-38-b778caf7.jpg"
     },
 
     {
         
-        "name":"Mr. RIAZ UDDIN",
+    "name":"Mr. RIAZ UDDIN",
     "designation":"Manager",
     "img":"https://i.postimg.cc/0NDb4cvN/470890682-3704120503067377-2464172581989890247-n.jpg"
     },
@@ -37,16 +37,18 @@
 
     {
         
-        "name":"Mr. KARTICK CHANDRA",
+    "name":"Mr. KARTICK CHANDRA",
     "designation":"Reservation(Ticketing/Visa)",
     "img":"https://i.postimg.cc/MGvYjk1F/IMG-1017-JPEG.jpg"
     },
+
     {
        
-        "name":"Mr. MD SHAKIL",
+    "name":"Mr. MD SHAKIL",
     "designation":"Executive-(accounts)",
     "img":"https://i.postimg.cc/9FxvzMc4/Whats-App-Image-2025-03-05-at-12-45-12-97f18131.jpg"
     },
+    
 
     {
         "name":"Mr. MD TONMOY HOSSAIN",
@@ -74,14 +76,11 @@
 
    
 
-
-    
-
     {
         
         "name":"Jahin S M Tuhin",
-    "designation":"Software Developer",
-    "img":"https://i.postimg.cc/kgt4VfBy/470209992-3918247058443394-358559914561535546-n.jpg"
+    "designation":"Executive (It & Digital Marketing)",
+    "img":"https://i.postimg.cc/6355fksz/photo.jpg"
     }
 
 ]

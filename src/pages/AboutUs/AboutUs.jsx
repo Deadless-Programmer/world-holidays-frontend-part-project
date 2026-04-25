@@ -11,7 +11,7 @@ const AboutUs = () => {
   <ScrollToTop/>
   <div>
      <Helmet>
-         <title>W-holidays | About Us</title>
+         <title>World holidays | About Us</title>
          </Helmet>
     <  PageHeader bgImage='https://cdn.pixabay.com/photo/2023/03/31/14/39/ocean-7890172_1280.jpg' heading={'About Us'} paragraph={'Our Story In World Holidays'}/>
 

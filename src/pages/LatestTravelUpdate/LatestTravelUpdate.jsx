@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import PageHeader from "../../PageHeader/PageHeader";
-
+import PageHeader from "../../components/PageHeader/PageHeader";
+ // adjust path if needed
 
 // ─── Sample Data (replace with API call later) ────────────────────────────────
 const SAMPLE_UPDATES = [

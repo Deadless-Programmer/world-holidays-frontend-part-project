@@ -14,7 +14,7 @@ const UpdateDomPackage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://world-holidays-backend-part-two.vercel.app/show-all-domestic-packages/${id}`);
+                const response = await fetch(`https://world-holidays-backend-part.vercel.app/show-all-popular-packages/${id}`);
                 if (!response.ok) throw new Error('Failed to fetch data');
                 
                 const result = await response.json();
@@ -51,9 +51,9 @@ const UpdateDomPackage = () => {
             duration: formData.duration,
             location: formData.location,
             image: formData.image,
-            included_services: typeof formData.includedServices === 'string'
-                ? formData.includedServices.split(',').map(item => item.trim())
-                : formData.includedServices,
+            // included_services: typeof formData.includedServices === 'string'
+            //     ? formData.includedServices.split(',').map(item => item.trim())
+            //     : formData.includedServices,
             overview: formData.overview,
             included: typeof formData.included === 'string'
                 ? formData.included.split(',').map(item => item.trim())
@@ -69,7 +69,7 @@ const UpdateDomPackage = () => {
         console.log('Formatted Data:', formattedData);
     
         try {
-            const result = await axiosSecure.patch(`/show-all-domestic-packages/${id}`, formattedData);
+            const result = await axiosSecure.patch(`/show-all-popular-packages/${id}`, formattedData);
             
             if (result.data.modifiedCount > 0) {
                 Swal.fire({
@@ -145,10 +145,10 @@ const UpdateDomPackage = () => {
                     <input {...register('image')} className="w-full p-2 border" />
                 </div>
 
-                <div>
+                {/* <div>
                     <label>Included Services (comma separated)</label>
                     <input {...register('includedServices')} className="w-full p-2 border" />
-                </div>
+                </div> */}
 
                 <div>
                     <label>Overview</label>
@@ -156,12 +156,12 @@ const UpdateDomPackage = () => {
                 </div>
 
                 <div>
-                    <label>Included (comma separated)</label>
+                    <label>Included Services  (comma separated)</label>
                     <input {...register('included')} className="w-full p-2 border" />
                 </div>
 
                 <div>
-                    <label>Excluded (comma separated)</label>
+                    <label>Excluded Services  (comma separated)</label>
                     <input {...register('excluded')} className="w-full p-2 border" />
                 </div>
 

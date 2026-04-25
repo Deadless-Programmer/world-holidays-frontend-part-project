@@ -28,9 +28,7 @@ const AddNextTour = () => {
     const formattedData = {
       ...data,
       rating: parseFloat(data.rating),
-      included_services: data.included_services
-        .split(",")
-        .map((item) => item.trim()),
+      // included_services: data.included_services.split(",").map((item) => item.trim()),
       included: data.included.split(",").map((item) => item.trim()),
       excluded: data.excluded.split(",").map((item) => item.trim()),
       tour_location_images: data.tour_location_images
@@ -230,7 +228,7 @@ const AddNextTour = () => {
               )}
             />
           </div>
-
+{/* 
           <div style={{ flex: 1 }}>
             <label style={labelStyle}>
               Included Services (Comma Separated)
@@ -240,13 +238,13 @@ const AddNextTour = () => {
               control={control}
               render={({ field }) => <input style={inputStyle} {...field} />}
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Three-Line Flex Group */}
         <div style={{ display: "flex", gap: "20px", marginBottom: "16px" }}>
           <div style={{ flex: 1 }}>
-            <label style={labelStyle}>Included (Comma Separated)</label>
+            <label style={labelStyle}>Included Services (Comma Separated)</label>
             <Controller
               name="included"
               control={control}

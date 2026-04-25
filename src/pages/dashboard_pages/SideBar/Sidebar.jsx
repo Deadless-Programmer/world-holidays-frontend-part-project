@@ -54,18 +54,18 @@ const Sidebar = () => {
     <div>
       {isAdmin ? (
         <>
-          <NavLink to={"add-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
-            <TbSettingsSpark className="text-lg" /> Add Domestice Packages
+          <NavLink to={"popular-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbSettingsSpark className="text-lg" /> Popular Packages
           </NavLink>
-          <NavLink to={"show-all-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
-            <AiOutlineBlock className="text-lg" /> Show All Domestice Packages
+          <NavLink to={"show-all-popular-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <AiOutlineBlock className="text-lg" /> Show All  Popular Packages
           </NavLink>
-          <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+          {/* <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <RiAlignItemBottomLine className="text-lg" /> Add International Packages
-          </NavLink>
-          <NavLink to={"show-all-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+          </NavLink> */}
+          {/* <NavLink to={"show-all-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <LiaShoppingCartSolid className="text-lg" /> Show All International Packages
-          </NavLink>
+          </NavLink> */}
           <NavLink to={"add-next-tour"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <TbLayoutGridAdd className="text-lg" /> Add Next Tour
           </NavLink>
@@ -88,12 +88,12 @@ const Sidebar = () => {
 
 
           <div className="divider"></div>
-          <NavLink to={"int-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+          {/* <NavLink to={"int-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <FaCartArrowDown className="text-lg" /> International Package Cart
-          </NavLink>
-          <NavLink to={"domestice-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
+          </NavLink> */}
+          {/* <NavLink to={"domestice-package-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <AiOutlineShoppingCart className="text-lg" /> Domestice Package Cart
-          </NavLink>
+          </NavLink> */}
           <NavLink to={"next-tour-order-cart"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <MdOutlineShoppingCartCheckout className="text-lg" /> Next Tour Cart
           </NavLink>
@@ -121,18 +121,18 @@ const Sidebar = () => {
         </>
       ) : isModerator ? (
         <>
-        <NavLink to={"add-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
-            <TbSettingsSpark className="text-lg" /> Add Domestice Packages
+        <NavLink to={"popular-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <TbSettingsSpark className="text-lg" /> Popular Packages
           </NavLink>
-          <NavLink to={"show-all-dom-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
-            <AiOutlineBlock className="text-lg" /> Show All Domestice Packages
+          <NavLink to={"show-all-popular-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+            <AiOutlineBlock className="text-lg" /> Show All  Popular Packages
           </NavLink>
-          <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
+          {/* <NavLink to={"add-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <RiAlignItemBottomLine className="text-lg" /> Add International Packages
           </NavLink>
           <NavLink to={"show-all-int-packages"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <LiaShoppingCartSolid className="text-lg" /> Show All International Packages
-          </NavLink>
+          </NavLink> */}
           <NavLink to={"add-next-tour"} className="flex items-center gap-2 text-sm font-semibold p-2">
             <TbLayoutGridAdd className="text-lg" /> Add Next Tour
           </NavLink>

@@ -69,6 +69,11 @@ const Navbar = () => {
               Home
             </Link >
           </li>
+          {/* <li>
+            <Link to="/LatestTravelUpdate" className="hover:text-orange-500 transition-colors font-nunito ">
+             Latest Travel Update
+            </Link >
+          </li> */}
           <li>
             <Link  to="/about-us" className="hover:text-orange-500 transition-colors font-nunito">
               About Us
