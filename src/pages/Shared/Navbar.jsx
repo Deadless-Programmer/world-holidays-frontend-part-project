@@ -69,11 +69,11 @@ const Navbar = () => {
               Home
             </Link >
           </li>
-          {/* <li>
+          <li>
             <Link to="/LatestTravelUpdate" className="hover:text-orange-500 transition-colors font-nunito ">
              Latest Travel Update
             </Link >
-          </li> */}
+          </li>
           <li>
             <Link  to="/about-us" className="hover:text-orange-500 transition-colors font-nunito">
               About Us
@@ -146,6 +146,11 @@ const Navbar = () => {
             <Link  to="/" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
               Home
             </Link >
+             <li>
+            <Link  to="/LatestTravelUpdate" className="hover:text-orange-500 font-nunito " onClick={toggleMenu}>
+             Latest Travel Update
+            </Link >
+          </li>
           </li>
           <li>
             <Link 

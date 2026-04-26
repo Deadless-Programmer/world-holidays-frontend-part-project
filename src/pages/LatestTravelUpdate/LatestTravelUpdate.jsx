@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
- // adjust path if needed
 
-// ─── Sample Data (replace with API call later) ────────────────────────────────
 const SAMPLE_UPDATES = [
   {
     _id: "1",
@@ -94,7 +92,6 @@ const SAMPLE_UPDATES = [
   },
 ];
 
-// ─── Config ───────────────────────────────────────────────────────────────────
 const CATEGORIES = [
   { key: "all",     label: "All Updates", dotColor: "bg-gray-400" },
   { key: "visa",    label: "Visa",        dotColor: "bg-blue-500" },
@@ -104,30 +101,15 @@ const CATEGORIES = [
 ];
 
 const CATEGORY_CONFIG = {
-  visa: {
-    badge:  "bg-blue-50 text-blue-700",
-    accent: "bg-blue-500",
-  },
-  package: {
-    badge:  "bg-emerald-50 text-emerald-700",
-    accent: "bg-emerald-500",
-  },
-  ticket: {
-    badge:  "bg-amber-50 text-amber-700",
-    accent: "bg-amber-400",
-  },
-  general: {
-    badge:  "bg-pink-50 text-pink-700",
-    accent: "bg-pink-500",
-  },
+  visa:    { badge: "bg-blue-50 text-blue-700",       accent: "bg-blue-500"    },
+  package: { badge: "bg-emerald-50 text-emerald-700", accent: "bg-emerald-500" },
+  ticket:  { badge: "bg-amber-50 text-amber-700",     accent: "bg-amber-400"   },
+  general: { badge: "bg-pink-50 text-pink-700",       accent: "bg-pink-500"    },
 };
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
+    day: "numeric", month: "short", year: "numeric",
   });
 }
 
@@ -135,12 +117,15 @@ function getCategoryLabel(key) {
   return CATEGORIES.find((c) => c.key === key)?.label || key;
 }
 
-// ─── Filter Bar ───────────────────────────────────────────────────────────────
-function FilterBar({ active, onChange }) {
+// ── Sticky bar: Filter + Stats একসাথে, navbar এর ঠিক নিচে stick করে ──────────
+function StickyBar({ active, onChange, filteredCount }) {
   return (
-    <div className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <div className="flex items-center gap-2 py-3 overflow-x-auto scrollbar-hide">
+    // Navbar is fixed ~80px tall (py-6 + logo). top-[80px] keeps us just below it.
+    <div className="sticky top-[80px] z-40 bg-white border-b border-gray-100 shadow-sm">
+      <div className="max-w-5xl mx-auto px-4 md:px-8">
+
+        {/* Filter buttons row */}
+        <div className="flex items-center gap-2 pt-3 pb-2 overflow-x-auto scrollbar-hide">
           <span className="text-xs text-gray-400 font-medium whitespace-nowrap mr-1 font-nunito">
             Filter by:
           </span>
@@ -150,30 +135,42 @@ function FilterBar({ active, onChange }) {
               onClick={() => onChange(cat.key)}
               className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-nunito
                 whitespace-nowrap border transition-all duration-150 outline-none
-                ${
-                  active === cat.key
-                    ? "bg-slate-900 text-white border-slate-900 font-semibold"
-                    : "bg-transparent text-gray-600 border-gray-200 hover:bg-gray-50"
+                ${active === cat.key
+                  ? "bg-slate-800 text-white border-slate-800 font-semibold"
+                  : "bg-transparent text-gray-600 border-gray-200 hover:bg-gray-50"
                 }`}
             >
-              <span
-                className={`w-2 h-2 rounded-full flex-shrink-0
-                  ${active === cat.key ? "bg-white" : cat.dotColor}`}
+              <span className={`w-2 h-2 rounded-full flex-shrink-0
+                ${active === cat.key ? "bg-white" : cat.dotColor}`}
               />
               {cat.label}
             </button>
           ))}
         </div>
+
+        {/* Stats row — static */}
+        <div className="flex items-center gap-4 pb-2.5">
+          <p className="text-xs text-gray-400 font-nunito">
+            Showing{" "}
+            <span className="text-gray-700 font-semibold">{filteredCount}</span>{" "}
+            {active === "all" ? "total" : active} updates
+          </p>
+          <div className="h-3 w-px bg-gray-200" />
+          <p className="text-xs text-gray-400 font-nunito flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
+            Live updates
+          </p>
+        </div>
+
       </div>
     </div>
   );
 }
 
-// ─── Section Title ────────────────────────────────────────────────────────────
 function SectionTitle({ children }) {
   return (
     <div className="flex items-center gap-3 mt-8 mb-3">
-      <span className="text-sm font-semibold text-gray-400 font-playfair whitespace-nowrap uppercase tracking-wide">
+      <span className="text-xs font-semibold text-gray-400 font-nunito whitespace-nowrap uppercase tracking-widest">
         {children}
       </span>
       <div className="flex-1 h-px bg-gray-100" />
@@ -181,27 +178,22 @@ function SectionTitle({ children }) {
   );
 }
 
-// ─── Update Card ──────────────────────────────────────────────────────────────
 function UpdateCard({ update, index }) {
   const config = CATEGORY_CONFIG[update.category] || CATEGORY_CONFIG.general;
 
   return (
     <div
-      className={`bg-white rounded-xl border flex gap-3.5 p-5 cursor-pointer
-        transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md animate-fadeUp
-        ${
-          update.featured
-            ? "border-emerald-200 bg-gradient-to-br from-emerald-50/40 to-white"
-            : "border-gray-100 hover:border-gray-200"
+      className={`bg-white rounded-xl border flex gap-4 p-5 cursor-pointer
+        transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg animate-fadeUp
+        ${update.featured
+          ? "border-emerald-200 bg-gradient-to-br from-emerald-50/30 to-white"
+          : "border-gray-100 hover:border-gray-200"
         }`}
       style={{ animationDelay: `${index * 0.07}s` }}
     >
-      {/* Left accent bar */}
       <div className={`w-0.5 rounded-full flex-shrink-0 self-stretch ${config.accent}`} />
 
       <div className="flex-1 min-w-0">
-
-        {/* Featured label */}
         {update.featured && (
           <div className="flex items-center gap-1.5 mb-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -211,7 +203,6 @@ function UpdateCard({ update, index }) {
           </div>
         )}
 
-        {/* Badge + Date */}
         <div className="flex items-center gap-2 flex-wrap mb-2">
           <span className={`text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full font-nunito ${config.badge}`}>
             {getCategoryLabel(update.category)}
@@ -221,17 +212,14 @@ function UpdateCard({ update, index }) {
           </span>
         </div>
 
-        {/* Title */}
         <h3 className="font-playfair text-[17px] font-semibold text-gray-900 leading-snug mb-1.5">
           {update.title}
         </h3>
 
-        {/* Description */}
         <p className="text-sm text-gray-500 leading-relaxed font-nunito">
           {update.description}
         </p>
 
-        {/* Footer */}
         <div className="flex items-center gap-3 mt-3 flex-wrap">
           <span className="text-xs font-bold text-orange-500 font-nunito cursor-pointer
             flex items-center gap-1 hover:gap-2 transition-all duration-150">
@@ -239,10 +227,8 @@ function UpdateCard({ update, index }) {
           </span>
           <div className="flex gap-1.5 flex-wrap">
             {update.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[11px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg font-nunito"
-              >
+              <span key={tag}
+                className="text-[11px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-lg font-nunito">
                 {tag}
               </span>
             ))}
@@ -253,15 +239,11 @@ function UpdateCard({ update, index }) {
   );
 }
 
-// ─── Skeleton Loader ──────────────────────────────────────────────────────────
 function SkeletonLoader() {
   return (
-    <div className="mt-8 flex flex-col gap-3">
+    <div className="mt-6 flex flex-col gap-3">
       {[1, 2, 3].map((i) => (
-        <div
-          key={i}
-          className="bg-white rounded-xl border border-gray-100 p-5 flex gap-3.5"
-        >
+        <div key={i} className="bg-white rounded-xl border border-gray-100 p-5 flex gap-4">
           <div className="w-0.5 rounded-full bg-gray-100 animate-pulse" />
           <div className="flex-1 space-y-2.5">
             <div className="h-4 w-20 bg-gray-100 rounded animate-pulse" />
@@ -275,7 +257,6 @@ function SkeletonLoader() {
   );
 }
 
-// ─── Empty State ──────────────────────────────────────────────────────────────
 function EmptyState({ filter }) {
   return (
     <div className="text-center py-24">
@@ -290,19 +271,12 @@ function EmptyState({ filter }) {
   );
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
 export default function LatestTravelUpdate() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [visibleCount, setVisibleCount] = useState(5);
   const [updates, setUpdates]           = useState([]);
   const [loading, setLoading]           = useState(true);
 
-  // TODO: swap this with your real API call:
-  // useEffect(() => {
-  //   fetch("/api/updates")
-  //     .then(r => r.json())
-  //     .then(data => { setUpdates(data.filter(u => u.isActive)); setLoading(false); });
-  // }, []);
 
   useEffect(() => {
     const t = setTimeout(() => {
@@ -312,10 +286,9 @@ export default function LatestTravelUpdate() {
     return () => clearTimeout(t);
   }, []);
 
-  const filtered =
-    activeFilter === "all"
-      ? updates
-      : updates.filter((u) => u.category === activeFilter);
+  const filtered = activeFilter === "all"
+    ? updates
+    : updates.filter((u) => u.category === activeFilter);
 
   const featured       = filtered.filter((u) => u.featured);
   const regular        = filtered.filter((u) => !u.featured);
@@ -328,26 +301,28 @@ export default function LatestTravelUpdate() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-16">
+    <div className=" bg-white">
 
-      {/* ── Page Header ── */}
+      {/* Page Header */}
       <PageHeader
-        heading="World Holidays"
+        heading=""
         paragraph={
           <>
-            Latest Travel{" "}
-            <span className="text-orange-500">Updates</span>
-            {" "}& Announcements
+            Latest Travel <span className="text-green-300">Updates</span> & Announcements
           </>
         }
-        bgImage="/assets/images/updates-hero.jpg"
+        bgImage="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
 
-      {/* ── Sticky Filter Bar ── */}
-      <FilterBar active={activeFilter} onChange={handleFilterChange} />
+      {/* Sticky bar — Filter + Stats, sticks just below the fixed navbar */}
+      <StickyBar
+        active={activeFilter}
+        onChange={handleFilterChange}
+        filteredCount={filtered.length}
+      />
 
-      {/* ── Content ── */}
-      <div className="max-w-4xl mx-auto px-4 md:px-6">
+      {/* Content */}
+      <div className="max-w-5xl mx-auto px-4 md:px-8 py-6">
         {loading ? (
           <SkeletonLoader />
         ) : filtered.length === 0 ? (
@@ -381,9 +356,9 @@ export default function LatestTravelUpdate() {
             {hasMore && (
               <button
                 onClick={() => setVisibleCount((c) => c + 4)}
-                className="w-full mt-4 py-3 text-sm text-gray-400 font-nunito
-                  border border-gray-200 rounded-lg bg-transparent
-                  hover:bg-gray-100 hover:text-gray-600 transition-all duration-150"
+                className="w-full mt-5 py-3 text-sm text-gray-400 font-nunito
+                  border border-gray-200 rounded-xl bg-white
+                  hover:bg-gray-50 hover:text-gray-600 transition-all duration-150"
               >
                 Load more updates
               </button>
@@ -392,7 +367,6 @@ export default function LatestTravelUpdate() {
         )}
       </div>
 
-      {/* Fade-up animation */}
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(12px); }

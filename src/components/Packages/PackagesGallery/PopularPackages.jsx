@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 
 import BeatLoader from "react-spinners/BeatLoader";
 
-const InternationalPackages = () => {
+const PopularPackages = () => {
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null);
@@ -56,4 +56,4 @@ const InternationalPackages = () => {
   );
 };
 
-export default InternationalPackages;
+export default PopularPackages;
